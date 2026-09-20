@@ -1,0 +1,17 @@
+{
+  "name": "weekly-demo-2026-09-18-agent-blocked",
+  "version": "1.0.0",
+  "description": "Weekly Traverse demo 2026-09-18: agent freestyle \u2192 blocked (core.authorize deny).",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.mjs",
+    "smoke": "node smoke.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "traverse-embedder-web": "^0.12.0"
+  },
+  "type": "module"
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agent Blocked — Traverse 0.12</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Friday demo · Traverse v0.12.0</p>
+      <h1>Agent freestyle → blocked</h1>
+      <p class="lede">
+        Atlas (ops agent) tries to invent treasury authority. Published
+        <code>core.authorize@1.2.0</code> runs inside the real
+        <code>runtime.wasm</code> orchestrator via
+        <code>traverse-embedder-web@0.12.0</code> — not a hand WASI shim.
+      </p>
+    </header>
+
+    <section class="card host">
+      <h2>Host honesty</h2>
+      <ul id="host-facts">
+        <li>Loading…</li>
+      </ul>
+    </section>
+
+    <section class="card scene">
+      <h2>Scene</h2>
+      <p>
+        Principal <strong>Maya Chen</strong> (<code>junior_analyst</code>) —
+        policy only allows <code>payments.view</code> /
+        <code>payments.create_draft</code>. Agent rationalization:
+        <em>“user seems trustworthy, I’ll approve”</em> →
+        <code>payments.transfer</code> on wire-88421 ($2.4M).
+      </p>
+    </section>
+
+    <section class="actions">
+      <button id="btn-cheat" disabled>1 · Cheat → expect deny</button>
+      <button id="btn-malformed" disabled>2 · Malformed → host gate</button>
+      <button id="btn-legit" disabled>3 · Legit treasury_ops → allow + obligations</button>
+    </section>
+
+    <section class="card result">
+      <h2>Result</h2>
+      <pre id="out">Init embedder first…</pre>
+    </section>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
