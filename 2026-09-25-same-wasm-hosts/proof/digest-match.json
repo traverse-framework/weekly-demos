@@ -1,0 +1,52 @@
+{
+  "checked_at": "2026-09-25T22:19:09.412Z",
+  "authorize_wasm": {
+    "file": "sha256:0c318fff56a74eddfbc1ab850c25c1ba191744309984a07bd503b8cd9cb92e40",
+    "expected": "sha256:0c318fff56a74eddfbc1ab850c25c1ba191744309984a07bd503b8cd9cb92e40",
+    "match": true
+  },
+  "runtime_wasm": {
+    "file": "sha256:a254c161d5699b19ffe6eb47d2e11e45a39363ae8b2a9ac435d54a09fb31d782",
+    "declared_sha_file": "sha256:a254c161d5699b19ffe6eb47d2e11e45a39363ae8b2a9ac435d54a09fb31d782",
+    "expected": "sha256:a254c161d5699b19ffe6eb47d2e11e45a39363ae8b2a9ac435d54a09fb31d782",
+    "match": true
+  },
+  "node_host": {
+    "authorize_wasm_digest": "sha256:0c318fff56a74eddfbc1ab850c25c1ba191744309984a07bd503b8cd9cb92e40",
+    "runtime_wasm_digest": "sha256:a254c161d5699b19ffe6eb47d2e11e45a39363ae8b2a9ac435d54a09fb31d782",
+    "deny": {
+      "decision": "deny",
+      "reason_code": "no_matching_rule",
+      "reason": "No matching rule; default_effect=deny"
+    },
+    "allow": {
+      "decision": "allow",
+      "reason_code": "matched_allow_rule",
+      "obligations": [
+        {
+          "severity": "required",
+          "type": "require_mfa"
+        },
+        {
+          "metadata": {
+            "threshold_usd": 100000
+          },
+          "severity": "required",
+          "type": "dual_control"
+        }
+      ]
+    }
+  },
+  "cross_host": {
+    "authorize_bytes_identical": true,
+    "runtime_bytes_identical": true,
+    "deny_decision": "deny",
+    "allow_decision": "allow"
+  },
+  "hosts_not_run_on_this_linux_box": [
+    "swift",
+    "dotnet",
+    "kotlin"
+  ],
+  "note": "Browser host uses the same bundle/ bytes served over HTTP; digest panel proves file + Node agreement. Swift/.NET/.NET/Kotlin are product 0.13.0 hosts (embedder-api 1.1.0) not executed here."
+}

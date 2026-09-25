@@ -24,6 +24,7 @@ See that week’s `README.md` for ports, screenshots, and honest gaps.
 | Date | Folder | One-line | Capability | Blog |
 |------|--------|----------|------------|------|
 | 2026-09-18 | [`2026-09-18-agent-blocked`](2026-09-18-agent-blocked/) | Agent freestyle → blocked (junior_analyst $2.4M wire deny) | `core.authorize@1.2.0` | [agent-freestyle-blocked](https://traverse-framework.com/blog/agent-freestyle-blocked.html) |
+| 2026-09-25 | [`2026-09-25-same-wasm-hosts`](2026-09-25-same-wasm-hosts/) | Same `core.authorize` WASM on Browser + Node (+ digest fingerprint); $2.4M wire cheat denied — Traverse v0.13.0 multi-host | `core.authorize@1.2.0` | [same-wasm-multi-host](https://traverse-framework.com/blog/same-wasm-multi-host.html) |
 
 ## Topic index
 

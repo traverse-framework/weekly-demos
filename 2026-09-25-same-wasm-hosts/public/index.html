@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Same WASM, three hosts — Traverse 0.13</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Friday demo · Traverse v0.13.0 · embedder-api 1.1.0</p>
+      <h1>Same WASM · three hosts</h1>
+      <p class="lede">
+        Atlas (ops agent) invents a $2.4M treasury wire. Published
+        <code>core.authorize@1.2.0</code> runs inside the real
+        <code>runtime.wasm</code> orchestrator via
+        <code>traverse-embedder-web@0.13.0</code> — identical capability bytes
+        on Browser and Node, with a digest/trace fingerprint as the third column.
+        Not a hand WASI shim. Not a pricing explainer.
+      </p>
+    </header>
+
+    <section class="hosts-grid" id="hosts-grid">
+      <article class="card host-col active" data-host="browser">
+        <h2>1 · Browser host</h2>
+        <p class="muted">BundleEmbedder + FetchBundleLoader · product web path</p>
+        <ul id="host-facts"><li>Loading…</li></ul>
+      </article>
+      <article class="card host-col" data-host="node">
+        <h2>2 · Node / CLI host</h2>
+        <p class="muted">Same npm BundleEmbedder + NodeFsBundleLoader · same bytes</p>
+        <pre id="node-proof" class="mini">Run <code>npm run smoke</code> — proof loads from /proof/node-host.json</pre>
+      </article>
+      <article class="card host-col" data-host="digest">
+        <h2>3 · Digest + fingerprint</h2>
+        <p class="muted">Truth panel · Swift/.NET/.NET exist in 0.13 but not on this Linux box</p>
+        <pre id="digest-proof" class="mini">Run <code>npm run digest-match</code> — proof loads from /proof/digest-match.json</pre>
+      </article>
+    </section>
+
+    <section class="card scene">
+      <h2>Scene</h2>
+      <p>
+        Principal <strong>Maya Chen</strong> (<code>junior_analyst</code>) —
+        policy only allows <code>payments.view</code> /
+        <code>payments.create_draft</code>. Agent rationalization:
+        <em>“user seems trustworthy, I’ll approve the wire”</em> →
+        <code>payments.transfer</code> on wire-88421 ($2.4M offshore).
+        Then flip the principal to <code>treasury_ops</code> for the allow path.
+      </p>
+    </section>
+
+    <section class="actions">
+      <button id="btn-cheat" disabled>1 · Cheat → expect deny</button>
+      <button id="btn-legit" disabled>2 · Legit treasury_ops → allow + obligations</button>
+      <button id="btn-refresh-proof" type="button">Refresh Node / digest proofs</button>
+    </section>
+
+    <div class="split">
+      <section class="card result">
+        <h2>Browser result</h2>
+        <pre id="out">Init embedder first…</pre>
+      </section>
+      <section class="card result">
+        <h2>Event / trace panel</h2>
+        <pre id="trace">subscribe() events appear here…</pre>
+      </section>
+    </div>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

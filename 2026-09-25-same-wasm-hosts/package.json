@@ -1,0 +1,15 @@
+{
+  "name": "2026-09-25-same-wasm-hosts",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Same WASM, three hosts — Traverse v0.13.0 weekly demo",
+  "scripts": {
+    "start": "node server.mjs",
+    "smoke": "node hosts/node-smoke.mjs",
+    "digest-match": "node hosts/digest-match.mjs"
+  },
+  "dependencies": {
+    "traverse-embedder-web": "0.13.0"
+  }
+}
