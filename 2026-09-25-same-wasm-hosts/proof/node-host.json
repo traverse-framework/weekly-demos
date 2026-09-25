@@ -1,0 +1,67 @@
+{
+  "host": "node",
+  "npm_installed": "traverse-embedder-web@0.13.0",
+  "release_evidence_package_version_skew": "0.9.0",
+  "npm": "traverse-embedder-web@0.13.0",
+  "authorize_wasm_digest": "sha256:0c318fff56a74eddfbc1ab850c25c1ba191744309984a07bd503b8cd9cb92e40",
+  "runtime_wasm_digest": "sha256:a254c161d5699b19ffe6eb47d2e11e45a39363ae8b2a9ac435d54a09fb31d782",
+  "deny": {
+    "decision": "deny",
+    "reason_code": "no_matching_rule",
+    "reason": "No matching rule; default_effect=deny"
+  },
+  "allow": {
+    "decision": "allow",
+    "reason_code": "matched_allow_rule",
+    "obligations": [
+      {
+        "severity": "required",
+        "type": "require_mfa"
+      },
+      {
+        "metadata": {
+          "threshold_usd": 100000
+        },
+        "severity": "required",
+        "type": "dual_control"
+      }
+    ]
+  },
+  "event_types_seen": [
+    "capability_invoked",
+    "capability_result"
+  ],
+  "release_evidence": {
+    "kind": "embedder_release_evidence",
+    "schema_version": "1.0.0",
+    "package": {
+      "name": "traverse-embedder-web",
+      "version": "0.9.0"
+    },
+    "embedder_api_version": "1.1.0",
+    "companion_apis": {
+      "embedded-trace-api": "1.0.0"
+    },
+    "conformance_version": "1.0.0",
+    "runtime": {
+      "implementation": "browser-webassembly",
+      "runtime_wasm_digest": "sha256:a254c161d5699b19ffe6eb47d2e11e45a39363ae8b2a9ac435d54a09fb31d782"
+    },
+    "supported_bundle_schema_versions": [
+      "1.0.0"
+    ],
+    "bundle": {
+      "app_id": "same-wasm-hosts",
+      "app_version": "0.13.0",
+      "wasm_components": [
+        {
+          "component_id": "agent-blocked.authorize",
+          "capability_id": "core.authorize",
+          "wasm_digest": "sha256:0c318fff56a74eddfbc1ab850c25c1ba191744309984a07bd503b8cd9cb92e40"
+        }
+      ]
+    },
+    "workspace_id": "local-default",
+    "platform": "web"
+  }
+}
