@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Signed exact-ref · digits-mlp — Traverse 0.14</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Friday demo · Traverse v0.14.0 · Spec 138 exact-ref</p>
+      <h1>Signed model. Exact pin. Bit-identical hosts.</h1>
+      <p class="lede">
+        An agent tries to freestyle a swapped MLP. Traverse only admits the
+        <strong>exact signed package</strong> pinned by manifest SHA-256 —
+        <code>digits-mlp-1.0.0</code> on
+        <code>traverse-embedder-web@0.14.0</code>. Same bytes classify a digit
+        on Browser and Node. Tamper one WASM byte → fail closed.
+        Not Hugging Face. Not catalog <code>model.execute</code>.
+      </p>
+    </header>
+
+    <section class="hosts-grid" id="hosts-grid">
+      <article class="card host-col" data-host="pin">
+        <h2>1 · Pin + trust root</h2>
+        <p class="muted">Host-owned Ed25519 roots · apps cannot add trust</p>
+        <pre id="pin-panel" class="mini">Loading pin…</pre>
+      </article>
+      <article class="card host-col" data-host="browser">
+        <h2>2 · Browser host</h2>
+        <p class="muted">ExactModelBrowserHost · WebCrypto verify · zero network</p>
+        <pre id="browser-panel" class="mini">Register package to start…</pre>
+      </article>
+      <article class="card host-col" data-host="node">
+        <h2>3 · Node host</h2>
+        <p class="muted">Same npm ExactModelBrowserHost under Node · proof JSON</p>
+        <pre id="node-panel" class="mini">Run <code>npm run smoke</code> — loads /proof/node-host.json</pre>
+      </article>
+    </section>
+
+    <section class="card scene">
+      <h2>Scene</h2>
+      <p>
+        Package <code>traverse.digits-mlp@1.0.0</code> — 64→32→10 MLP, UCI
+        optdigits, 96.10% held-out. Signed with the <strong>test-only</strong>
+        Spec 138 fixture key (production signing is #1567). Pick a sample digit
+        or draw an 8×8 grid. Classify on the browser host, then compare to the
+        Node smoke proof. Hit <em>Attack</em> to mutate one WASM byte and watch
+        <code>digest_mismatch</code>.
+      </p>
+    </section>
+
+    <section class="digit-row">
+      <div class="card digit-pad">
+        <h2>Digit input</h2>
+        <canvas id="digit-canvas" width="256" height="256" aria-label="8x8 digit pad"></canvas>
+        <div class="pad-actions">
+          <label>Sample
+            <select id="sample-select"></select>
+          </label>
+          <button type="button" id="btn-clear">Clear</button>
+        </div>
+      </div>
+      <div class="card predict">
+        <h2>Prediction</h2>
+        <div class="big-digit" id="big-digit">—</div>
+        <pre id="logits" class="mini">Logits appear after classify…</pre>
+      </div>
+    </section>
+
+    <section class="actions">
+      <button id="btn-register" type="button">1 · Register signed package</button>
+      <button id="btn-classify" type="button" disabled>2 · Classify digit</button>
+      <button id="btn-attack" type="button" disabled class="danger">3 · Attack · tamper WASM</button>
+      <button id="btn-refresh" type="button">Refresh Node proof</button>
+    </section>
+
+    <div class="split">
+      <section class="card result">
+        <h2>Browser ↔ Node match</h2>
+        <pre id="match">Register + classify, then refresh Node proof…</pre>
+      </section>
+      <section class="card result">
+        <h2>Trace / evidence / fail-closed</h2>
+        <pre id="trace">Redacted model.execute evidence appears here…</pre>
+      </section>
+    </div>
+
+    <footer class="muted">
+      Pins bind SHA-256 of <em>manifest bytes</em>. Host trust roots only.
+      Swift/Kotlin/.NET exact-ref execute not on published 0.14.0.
+      Catalog still 227 caps — no <code>model.execute</code>.
+    </footer>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
