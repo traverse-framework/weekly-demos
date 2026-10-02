@@ -1,0 +1,16 @@
+{
+  "generated_at": "2026-10-02T22:25:50Z",
+  "host": "browser",
+  "product_path": "ExactModelBrowserHost from traverse-embedder-web@0.14.0 in Chrome headless",
+  "note": "Captured during screenshot automation on Prototype Builder box",
+  "register_digest": "3068f3ae464fbbb43b45b089ab225a1371060a94a214c10629b4d8e402e8eadf",
+  "sample": "conformance label 0",
+  "predicted": 0,
+  "bit_identical_to_node_case_0": true,
+  "attack": {
+    "event": "attack_tamper_wasm",
+    "fail_closed": true,
+    "code": "model_incompatible",
+    "reason": "digest_mismatch"
+  }
+}

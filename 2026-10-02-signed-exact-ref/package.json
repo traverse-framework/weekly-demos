@@ -1,0 +1,15 @@
+{
+  "name": "2026-10-02-signed-exact-ref",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Signed exact-ref digits-mlp — Traverse v0.14.0 Spec 138 weekly demo",
+  "scripts": {
+    "start": "node server.mjs",
+    "smoke": "node hosts/node-smoke.mjs",
+    "proof": "node hosts/node-smoke.mjs"
+  },
+  "dependencies": {
+    "traverse-embedder-web": "0.14.0"
+  }
+}
