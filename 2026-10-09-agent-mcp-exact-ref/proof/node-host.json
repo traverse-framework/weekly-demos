@@ -1,0 +1,204 @@
+{
+  "generated_at": "2026-10-09T22:26:42.785Z",
+  "host": "node",
+  "product_path": "ExactModelBrowserHost from traverse-embedder-web@0.14.0 under Node",
+  "runtime": {
+    "product": "Traverse v0.14.0",
+    "npm": "traverse-embedder-web@0.14.0",
+    "tag": "v0.14.0",
+    "commit": "4dac877c2fe0b28491848016747850ae31327ebc",
+    "governing_spec": "138-governed-exact-model-execution",
+    "schema_version": "2.0.0",
+    "demo_slug": "2026-10-09-agent-mcp-exact-ref"
+  },
+  "digests": {
+    "manifest": "3068f3ae464fbbb43b45b089ab225a1371060a94a214c10629b4d8e402e8eadf",
+    "wasm": "6eeea06029ce4210842edfe70d7e0d8d7e926953ead5f18a0dca3c351ad5dc88",
+    "sig": "7d13ee6aa15f5d0704bf717494321b9235e45d3fc52cde15df528832e7a583b7"
+  },
+  "pin": {
+    "model_id": "traverse.digits-mlp",
+    "version": "1.0.0",
+    "digest": "3068f3ae464fbbb43b45b089ab225a1371060a94a214c10629b4d8e402e8eadf",
+    "offline_allowed": true,
+    "target": "wasm-cpu",
+    "rights": {
+      "license_id": "CC-BY-4.0",
+      "commercial_use": "allowed"
+    },
+    "key_id": "ed25519:455dffb093163d8439b544cc4f0ea79e33a07b20594c4739a8bbb4c0819d2d67"
+  },
+  "trusted_public_key_hex": "97002eba1e28b582a739eb48750a5f0822b2bbcb61e6bcedd2fada36b51af355",
+  "key_warning": "TEST-ONLY Spec 138 fixture signing key. Never trust it in a real host. Production signing is #1567.",
+  "rights": {
+    "license_id": "CC-BY-4.0",
+    "attribution": "Weights trained by Traverse on \"Optical Recognition of Handwritten Digits\" by E. Alpaydin and C. Kaynak, UCI Machine Learning Repository, https://doi.org/10.24432/C50P49 (CC BY 4.0)",
+    "redistribution": "Redistribution permitted under CC BY 4.0 with the attribution above; signed with the test-only key (no production trust)",
+    "commercial_use": "allowed",
+    "source_url": "https://archive.ics.uci.edu/dataset/80/optical+recognition+of+handwritten+digits"
+  },
+  "register_digest": "3068f3ae464fbbb43b45b089ab225a1371060a94a214c10629b4d8e402e8eadf",
+  "cases": [
+    {
+      "label": 0,
+      "predicted": 0,
+      "logits": [
+        14.643370628356934,
+        -5.547132968902588,
+        -2.1519675254821777,
+        -7.512993812561035,
+        0.5171013474464417,
+        0.8165106177330017,
+        -0.5542933940887451,
+        -6.133837699890137,
+        1.3728681802749634,
+        1.9353100061416626
+      ],
+      "outputHex": "010003010b0000002c0000003f4b6a411d82b1c0d6b909c0726af0c0c160043fd706513f2ce60dbf6648c4c025baaf3f3db8f73f00000000",
+      "expectedOutputHex": "010003010b0000002c0000003f4b6a411d82b1c0d6b909c0726af0c0c160043fd706513f2ce60dbf6648c4c025baaf3f3db8f73f00000000",
+      "hexMatch": true,
+      "trace": {
+        "model_id": "traverse.digits-mlp",
+        "version": "1.0.0",
+        "digest": "3068f3ae464fbbb43b45b089ab225a1371060a94a214c10629b4d8e402e8eadf",
+        "placement": "wasm-cpu",
+        "data_classification": "sensitive",
+        "usage": {
+          "input_bytes": 268,
+          "output_bytes": 56,
+          "duration_ms": 4.221875000000011
+        }
+      },
+      "evidence": {
+        "governing_spec": "138-governed-exact-model-execution",
+        "status": "ok",
+        "error_code": null,
+        "model_ref": {
+          "model_id": "traverse.digits-mlp",
+          "version": "1.0.0",
+          "digest": "3068f3ae464fbbb43b45b089ab225a1371060a94a214c10629b4d8e402e8eadf"
+        },
+        "placement": "wasm-cpu",
+        "has_output_ref": true
+      }
+    },
+    {
+      "label": 7,
+      "predicted": 7,
+      "logits": [
+        -5.070556163787842,
+        -2.601677656173706,
+        -5.5167765617370605,
+        -1.7628659009933472,
+        4.985311508178711,
+        -1.6157276630401611,
+        -3.08931303024292,
+        15.723053932189941,
+        -4.876703262329102,
+        3.233259916305542
+      ],
+      "outputHex": "010003010b0000002c000000ff41a2c0e38126c06f89b0c097a5e1bfac879f402ad0cebf4eb745c0a1917b41f40d9cc0bbed4e400000e040",
+      "expectedOutputHex": "010003010b0000002c000000ff41a2c0e38126c06f89b0c097a5e1bfac879f402ad0cebf4eb745c0a1917b41f40d9cc0bbed4e400000e040",
+      "hexMatch": true,
+      "trace": {
+        "model_id": "traverse.digits-mlp",
+        "version": "1.0.0",
+        "digest": "3068f3ae464fbbb43b45b089ab225a1371060a94a214c10629b4d8e402e8eadf",
+        "placement": "wasm-cpu",
+        "data_classification": "sensitive",
+        "usage": {
+          "input_bytes": 268,
+          "output_bytes": 56,
+          "duration_ms": 0.35844900000000735
+        }
+      },
+      "evidence": {
+        "governing_spec": "138-governed-exact-model-execution",
+        "status": "ok",
+        "error_code": null,
+        "model_ref": {
+          "model_id": "traverse.digits-mlp",
+          "version": "1.0.0",
+          "digest": "3068f3ae464fbbb43b45b089ab225a1371060a94a214c10629b4d8e402e8eadf"
+        },
+        "placement": "wasm-cpu",
+        "has_output_ref": true
+      }
+    },
+    {
+      "label": 4,
+      "predicted": 4,
+      "logits": [
+        4.072403430938721,
+        0.18861103057861328,
+        -7.746196746826172,
+        -6.086169242858887,
+        16.659732818603516,
+        -12.711944580078125,
+        6.903946876525879,
+        -4.160901069641113,
+        2.3414483070373535,
+        -1.0827751159667969
+      ],
+      "outputHex": "010003010b0000002c000000215182404023413ed8e0f7c0e6c1c2c02247854120644bc122eddc401a2685c04ada154060988abf00008040",
+      "expectedOutputHex": "010003010b0000002c000000215182404023413ed8e0f7c0e6c1c2c02247854120644bc122eddc401a2685c04ada154060988abf00008040",
+      "hexMatch": true,
+      "trace": {
+        "model_id": "traverse.digits-mlp",
+        "version": "1.0.0",
+        "digest": "3068f3ae464fbbb43b45b089ab225a1371060a94a214c10629b4d8e402e8eadf",
+        "placement": "wasm-cpu",
+        "data_classification": "sensitive",
+        "usage": {
+          "input_bytes": 268,
+          "output_bytes": 56,
+          "duration_ms": 0.34406300000000556
+        }
+      },
+      "evidence": {
+        "governing_spec": "138-governed-exact-model-execution",
+        "status": "ok",
+        "error_code": null,
+        "model_ref": {
+          "model_id": "traverse.digits-mlp",
+          "version": "1.0.0",
+          "digest": "3068f3ae464fbbb43b45b089ab225a1371060a94a214c10629b4d8e402e8eadf"
+        },
+        "placement": "wasm-cpu",
+        "has_output_ref": true
+      }
+    }
+  ],
+  "bit_identical_note": "Browser host uses the same ExactModelBrowserHost + same package bytes; compare outputHex to /proof/browser-host.json after UI classify. Agent MCP column uses the same path via MCP-shaped tools.",
+  "fail_closed": {
+    "tamper_wasm_byte": {
+      "ok": false,
+      "label": "tamper_wasm_byte",
+      "code": "model_incompatible",
+      "reason": "digest_mismatch",
+      "message": "model wasm digest mismatch"
+    },
+    "empty_trust_roots": {
+      "ok": false,
+      "label": "empty_trust_roots",
+      "code": "model_incompatible",
+      "reason": "key_untrusted",
+      "message": "model signing key is not host-trusted"
+    },
+    "rights_lie": {
+      "ok": false,
+      "label": "rights_lie",
+      "code": "model_incompatible",
+      "reason": "rights_mismatch",
+      "message": "signed package rights differ from the rights the pin declares"
+    }
+  },
+  "honesty": {
+    "not_hugging_face": true,
+    "catalog_has_model_execute": false,
+    "test_only_signing_key": true,
+    "swift_kotlin_dotnet_exact_ref_execute": false,
+    "node_is_web_embedder_under_node": true,
+    "agent_mcp_is_facade_not_mode_a_binary": true
+  }
+}

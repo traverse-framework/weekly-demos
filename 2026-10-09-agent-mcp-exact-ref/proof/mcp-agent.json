@@ -1,0 +1,470 @@
+{
+  "generated_at": "2026-10-09T22:26:43.422Z",
+  "host": "agent-mcp-facade",
+  "product_path": "MCP-shaped JSON-RPC tools over ExactModelBrowserHost from traverse-embedder-web@0.14.0 under Node",
+  "not_mode_a_binary": true,
+  "mode_a_note": "Mode A packaged traverse-mcp pin-and-verify is the longer-term product story; this demo intentionally uses the published web exact-ref host under Node so we do not spend the night compiling Rust.",
+  "runtime": {
+    "product": "Traverse v0.14.0",
+    "npm": "traverse-embedder-web@0.14.0",
+    "tag": "v0.14.0",
+    "commit": "4dac877c2fe0b28491848016747850ae31327ebc",
+    "governing_spec": "138-governed-exact-model-execution",
+    "schema_version": "2.0.0",
+    "demo_slug": "2026-10-09-agent-mcp-exact-ref"
+  },
+  "digests": {
+    "manifest": "3068f3ae464fbbb43b45b089ab225a1371060a94a214c10629b4d8e402e8eadf",
+    "wasm": "6eeea06029ce4210842edfe70d7e0d8d7e926953ead5f18a0dca3c351ad5dc88",
+    "sig": "7d13ee6aa15f5d0704bf717494321b9235e45d3fc52cde15df528832e7a583b7"
+  },
+  "pin": {
+    "model_id": "traverse.digits-mlp",
+    "version": "1.0.0",
+    "digest": "3068f3ae464fbbb43b45b089ab225a1371060a94a214c10629b4d8e402e8eadf",
+    "offline_allowed": true,
+    "target": "wasm-cpu",
+    "rights": {
+      "license_id": "CC-BY-4.0",
+      "commercial_use": "allowed"
+    },
+    "key_id": "ed25519:455dffb093163d8439b544cc4f0ea79e33a07b20594c4739a8bbb4c0819d2d67"
+  },
+  "trusted_public_key_hex": "97002eba1e28b582a739eb48750a5f0822b2bbcb61e6bcedd2fada36b51af355",
+  "key_warning": "TEST-ONLY Spec 138 fixture signing key. Never trust it in a real host. Production signing is #1567.",
+  "tools": [
+    "exact_model_register",
+    "exact_model_execute",
+    "exact_model_rights"
+  ],
+  "success": {
+    "register_digest": "3068f3ae464fbbb43b45b089ab225a1371060a94a214c10629b4d8e402e8eadf",
+    "rights": {
+      "license_id": "CC-BY-4.0",
+      "attribution": "Weights trained by Traverse on \"Optical Recognition of Handwritten Digits\" by E. Alpaydin and C. Kaynak, UCI Machine Learning Repository, https://doi.org/10.24432/C50P49 (CC BY 4.0)",
+      "redistribution": "Redistribution permitted under CC BY 4.0 with the attribution above; signed with the test-only key (no production trust)",
+      "commercial_use": "allowed",
+      "source_url": "https://archive.ics.uci.edu/dataset/80/optical+recognition+of+handwritten+digits"
+    },
+    "execute": {
+      "label": 0,
+      "predicted": 0,
+      "output_frame_hex": "010003010b0000002c0000003f4b6a411d82b1c0d6b909c0726af0c0c160043fd706513f2ce60dbf6648c4c025baaf3f3db8f73f00000000",
+      "expected_output_frame_hex": "010003010b0000002c0000003f4b6a411d82b1c0d6b909c0726af0c0c160043fd706513f2ce60dbf6648c4c025baaf3f3db8f73f00000000",
+      "hexMatch": true,
+      "trace": {
+        "model_id": "traverse.digits-mlp",
+        "version": "1.0.0",
+        "digest": "3068f3ae464fbbb43b45b089ab225a1371060a94a214c10629b4d8e402e8eadf",
+        "placement": "wasm-cpu",
+        "data_classification": "sensitive",
+        "usage": {
+          "input_bytes": 268,
+          "output_bytes": 56,
+          "duration_ms": 1.2070150000000126
+        }
+      },
+      "evidence": {
+        "governing_spec": "138-governed-exact-model-execution",
+        "status": "ok",
+        "error_code": null,
+        "model_ref": {
+          "model_id": "traverse.digits-mlp",
+          "version": "1.0.0",
+          "digest": "3068f3ae464fbbb43b45b089ab225a1371060a94a214c10629b4d8e402e8eadf"
+        },
+        "placement": "wasm-cpu",
+        "has_output_ref": true
+      }
+    }
+  },
+  "fail_closed": {
+    "tamper_wasm_byte": {
+      "ok": false,
+      "code": "model_incompatible",
+      "reason": "digest_mismatch",
+      "message": "model wasm digest mismatch"
+    },
+    "empty_trust_roots": {
+      "ok": false,
+      "code": "model_incompatible",
+      "reason": "key_untrusted",
+      "message": "model signing key is not host-trusted"
+    },
+    "rights_lie": {
+      "ok": false,
+      "code": "model_incompatible",
+      "reason": "rights_mismatch",
+      "message": "signed package rights differ from the rights the pin declares"
+    }
+  },
+  "transcript": [
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "initialize",
+        "params": {
+          "protocolVersion": "2024-11-05",
+          "clientInfo": {
+            "name": "prototype-builder-agent",
+            "version": "2026-10-09"
+          },
+          "capabilities": {}
+        }
+      },
+      "response": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "result": {
+          "protocolVersion": "2024-11-05",
+          "serverInfo": {
+            "name": "traverse-exact-ref-mcp-facade",
+            "version": "0.14.0-demo",
+            "note": "In-process façade over ExactModelBrowserHost; not packaged traverse-mcp Mode A"
+          },
+          "capabilities": {
+            "tools": {}
+          }
+        }
+      },
+      "at": "2026-10-09T22:26:43.403Z"
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 2,
+        "method": "tools/list",
+        "params": {}
+      },
+      "response": {
+        "jsonrpc": "2.0",
+        "id": 2,
+        "result": {
+          "tools": [
+            {
+              "name": "exact_model_register",
+              "description": "Register a Spec 138 signed exact-ref model package against host pins + trust roots. Returns pin digest on success.",
+              "inputSchema": {
+                "type": "object",
+                "properties": {
+                  "package_id": {
+                    "type": "string"
+                  },
+                  "attack": {
+                    "type": "string",
+                    "enum": [
+                      "none",
+                      "tamper_wasm",
+                      "empty_trust",
+                      "rights_lie"
+                    ]
+                  }
+                },
+                "required": [
+                  "package_id"
+                ]
+              }
+            },
+            {
+              "name": "exact_model_execute",
+              "description": "Execute a registered exact-ref model (digits-mlp classify). Returns predicted digit + output_frame_hex + redacted trace.",
+              "inputSchema": {
+                "type": "object",
+                "properties": {
+                  "digest": {
+                    "type": "string"
+                  },
+                  "input_frame_hex": {
+                    "type": "string"
+                  },
+                  "case_label": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "digest",
+                  "input_frame_hex"
+                ]
+              }
+            },
+            {
+              "name": "exact_model_rights",
+              "description": "Read machine-readable rights for a registered digest.",
+              "inputSchema": {
+                "type": "object",
+                "properties": {
+                  "digest": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "digest"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "at": "2026-10-09T22:26:43.404Z"
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 3,
+        "method": "tools/call",
+        "params": {
+          "name": "exact_model_register",
+          "arguments": {
+            "package_id": "digits-mlp-1.0.0",
+            "attack": "none"
+          }
+        }
+      },
+      "response": {
+        "jsonrpc": "2.0",
+        "id": 3,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"ok\": true,\n  \"digest\": \"3068f3ae464fbbb43b45b089ab225a1371060a94a214c10629b4d8e402e8eadf\",\n  \"pin_match\": true,\n  \"attack\": \"none\",\n  \"rights\": {\n    \"license_id\": \"CC-BY-4.0\",\n    \"attribution\": \"Weights trained by Traverse on \\\"Optical Recognition of Handwritten Digits\\\" by E. Alpaydin and C. Kaynak, UCI Machine Learning Repository, https://doi.org/10.24432/C50P49 (CC BY 4.0)\",\n    \"redistribution\": \"Redistribution permitted under CC BY 4.0 with the attribution above; signed with the test-only key (no production trust)\",\n    \"commercial_use\": \"allowed\",\n    \"source_url\": \"https://archive.ics.uci.edu/dataset/80/optical+recognition+of+handwritten+digits\"\n  },\n  \"product_path\": \"ExactModelBrowserHost.registerPackage\"\n}"
+            }
+          ],
+          "structuredContent": {
+            "ok": true,
+            "digest": "3068f3ae464fbbb43b45b089ab225a1371060a94a214c10629b4d8e402e8eadf",
+            "pin_match": true,
+            "attack": "none",
+            "rights": {
+              "license_id": "CC-BY-4.0",
+              "attribution": "Weights trained by Traverse on \"Optical Recognition of Handwritten Digits\" by E. Alpaydin and C. Kaynak, UCI Machine Learning Repository, https://doi.org/10.24432/C50P49 (CC BY 4.0)",
+              "redistribution": "Redistribution permitted under CC BY 4.0 with the attribution above; signed with the test-only key (no production trust)",
+              "commercial_use": "allowed",
+              "source_url": "https://archive.ics.uci.edu/dataset/80/optical+recognition+of+handwritten+digits"
+            },
+            "product_path": "ExactModelBrowserHost.registerPackage"
+          },
+          "isError": false
+        }
+      },
+      "at": "2026-10-09T22:26:43.412Z"
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 4,
+        "method": "tools/call",
+        "params": {
+          "name": "exact_model_rights",
+          "arguments": {
+            "digest": "3068f3ae464fbbb43b45b089ab225a1371060a94a214c10629b4d8e402e8eadf"
+          }
+        }
+      },
+      "response": {
+        "jsonrpc": "2.0",
+        "id": 4,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"ok\": true,\n  \"digest\": \"3068f3ae464fbbb43b45b089ab225a1371060a94a214c10629b4d8e402e8eadf\",\n  \"rights\": {\n    \"license_id\": \"CC-BY-4.0\",\n    \"attribution\": \"Weights trained by Traverse on \\\"Optical Recognition of Handwritten Digits\\\" by E. Alpaydin and C. Kaynak, UCI Machine Learning Repository, https://doi.org/10.24432/C50P49 (CC BY 4.0)\",\n    \"redistribution\": \"Redistribution permitted under CC BY 4.0 with the attribution above; signed with the test-only key (no production trust)\",\n    \"commercial_use\": \"allowed\",\n    \"source_url\": \"https://archive.ics.uci.edu/dataset/80/optical+recognition+of+handwritten+digits\"\n  }\n}"
+            }
+          ],
+          "structuredContent": {
+            "ok": true,
+            "digest": "3068f3ae464fbbb43b45b089ab225a1371060a94a214c10629b4d8e402e8eadf",
+            "rights": {
+              "license_id": "CC-BY-4.0",
+              "attribution": "Weights trained by Traverse on \"Optical Recognition of Handwritten Digits\" by E. Alpaydin and C. Kaynak, UCI Machine Learning Repository, https://doi.org/10.24432/C50P49 (CC BY 4.0)",
+              "redistribution": "Redistribution permitted under CC BY 4.0 with the attribution above; signed with the test-only key (no production trust)",
+              "commercial_use": "allowed",
+              "source_url": "https://archive.ics.uci.edu/dataset/80/optical+recognition+of+handwritten+digits"
+            }
+          },
+          "isError": false
+        }
+      },
+      "at": "2026-10-09T22:26:43.412Z"
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 5,
+        "method": "tools/call",
+        "params": {
+          "name": "exact_model_execute",
+          "arguments": {
+            "digest": "3068f3ae464fbbb43b45b089ab225a1371060a94a214c10629b4d8e402e8eadf",
+            "input_frame_hex": "01000201400000000001000000000000000000000000a04000005041000010410000803f00000000000000000000000000000000000050410000704100002041000070410000a0400000000000000000000040400000704100000040000000000000304100000041000000000000000000008040000040410000000000000000000000410000004100000000000000000000a040000000410000000000000000000010410000004100000000000000000000804000003041000000000000803f000040410000e040000000000000000000000040000060410000a0400000204100004041000000000000000000000000000000000000c0400000504100002041000000000000000000000000",
+            "case_label": 0
+          }
+        }
+      },
+      "response": {
+        "jsonrpc": "2.0",
+        "id": 5,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"ok\": true,\n  \"case_label\": 0,\n  \"predicted\": 0,\n  \"logits\": [\n    14.643370628356934,\n    -5.547132968902588,\n    -2.1519675254821777,\n    -7.512993812561035,\n    0.5171013474464417,\n    0.8165106177330017,\n    -0.5542933940887451,\n    -6.133837699890137,\n    1.3728681802749634,\n    1.9353100061416626\n  ],\n  \"output_frame_hex\": \"010003010b0000002c0000003f4b6a411d82b1c0d6b909c0726af0c0c160043fd706513f2ce60dbf6648c4c025baaf3f3db8f73f00000000\",\n  \"trace\": {\n    \"model_id\": \"traverse.digits-mlp\",\n    \"version\": \"1.0.0\",\n    \"digest\": \"3068f3ae464fbbb43b45b089ab225a1371060a94a214c10629b4d8e402e8eadf\",\n    \"placement\": \"wasm-cpu\",\n    \"data_classification\": \"sensitive\",\n    \"usage\": {\n      \"input_bytes\": 268,\n      \"output_bytes\": 56,\n      \"duration_ms\": 1.2070150000000126\n    }\n  },\n  \"evidence\": {\n    \"governing_spec\": \"138-governed-exact-model-execution\",\n    \"status\": \"ok\",\n    \"error_code\": null,\n    \"model_ref\": {\n      \"model_id\": \"traverse.digits-mlp\",\n      \"version\": \"1.0.0\",\n      \"digest\": \"3068f3ae464fbbb43b45b089ab225a1371060a94a214c10629b4d8e402e8eadf\"\n    },\n    \"placement\": \"wasm-cpu\",\n    \"has_output_ref\": true\n  }\n}"
+            }
+          ],
+          "structuredContent": {
+            "ok": true,
+            "case_label": 0,
+            "predicted": 0,
+            "logits": [
+              14.643370628356934,
+              -5.547132968902588,
+              -2.1519675254821777,
+              -7.512993812561035,
+              0.5171013474464417,
+              0.8165106177330017,
+              -0.5542933940887451,
+              -6.133837699890137,
+              1.3728681802749634,
+              1.9353100061416626
+            ],
+            "output_frame_hex": "010003010b0000002c0000003f4b6a411d82b1c0d6b909c0726af0c0c160043fd706513f2ce60dbf6648c4c025baaf3f3db8f73f00000000",
+            "trace": {
+              "model_id": "traverse.digits-mlp",
+              "version": "1.0.0",
+              "digest": "3068f3ae464fbbb43b45b089ab225a1371060a94a214c10629b4d8e402e8eadf",
+              "placement": "wasm-cpu",
+              "data_classification": "sensitive",
+              "usage": {
+                "input_bytes": 268,
+                "output_bytes": 56,
+                "duration_ms": 1.2070150000000126
+              }
+            },
+            "evidence": {
+              "governing_spec": "138-governed-exact-model-execution",
+              "status": "ok",
+              "error_code": null,
+              "model_ref": {
+                "model_id": "traverse.digits-mlp",
+                "version": "1.0.0",
+                "digest": "3068f3ae464fbbb43b45b089ab225a1371060a94a214c10629b4d8e402e8eadf"
+              },
+              "placement": "wasm-cpu",
+              "has_output_ref": true
+            }
+          },
+          "isError": false
+        }
+      },
+      "at": "2026-10-09T22:26:43.418Z"
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 6,
+        "method": "tools/call",
+        "params": {
+          "name": "exact_model_register",
+          "arguments": {
+            "package_id": "digits-mlp-1.0.0",
+            "attack": "tamper_wasm"
+          }
+        }
+      },
+      "response": {
+        "jsonrpc": "2.0",
+        "id": 6,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"ok\": false,\n  \"fail_closed\": true,\n  \"code\": \"model_incompatible\",\n  \"reason\": \"digest_mismatch\",\n  \"message\": \"model wasm digest mismatch\",\n  \"attack\": \"tamper_wasm\"\n}"
+            }
+          ],
+          "isError": true,
+          "_exact_model": {
+            "code": "model_incompatible",
+            "reason": "digest_mismatch",
+            "message": "model wasm digest mismatch"
+          }
+        }
+      },
+      "at": "2026-10-09T22:26:43.420Z"
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 7,
+        "method": "tools/call",
+        "params": {
+          "name": "exact_model_register",
+          "arguments": {
+            "package_id": "digits-mlp-1.0.0",
+            "attack": "empty_trust"
+          }
+        }
+      },
+      "response": {
+        "jsonrpc": "2.0",
+        "id": 7,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"ok\": false,\n  \"fail_closed\": true,\n  \"code\": \"model_incompatible\",\n  \"reason\": \"key_untrusted\",\n  \"message\": \"model signing key is not host-trusted\",\n  \"attack\": \"empty_trust\"\n}"
+            }
+          ],
+          "isError": true,
+          "_exact_model": {
+            "code": "model_incompatible",
+            "reason": "key_untrusted",
+            "message": "model signing key is not host-trusted"
+          }
+        }
+      },
+      "at": "2026-10-09T22:26:43.420Z"
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 8,
+        "method": "tools/call",
+        "params": {
+          "name": "exact_model_register",
+          "arguments": {
+            "package_id": "digits-mlp-1.0.0",
+            "attack": "rights_lie"
+          }
+        }
+      },
+      "response": {
+        "jsonrpc": "2.0",
+        "id": 8,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"ok\": false,\n  \"fail_closed\": true,\n  \"code\": \"model_incompatible\",\n  \"reason\": \"rights_mismatch\",\n  \"message\": \"signed package rights differ from the rights the pin declares\",\n  \"attack\": \"rights_lie\"\n}"
+            }
+          ],
+          "isError": true,
+          "_exact_model": {
+            "code": "model_incompatible",
+            "reason": "rights_mismatch",
+            "message": "signed package rights differ from the rights the pin declares"
+          }
+        }
+      },
+      "at": "2026-10-09T22:26:43.422Z"
+    }
+  ],
+  "honesty": {
+    "not_hugging_face": true,
+    "catalog_has_model_execute": false,
+    "test_only_signing_key": true,
+    "swift_kotlin_dotnet_exact_ref_execute": false,
+    "agent_mcp_is_facade_not_mode_a_binary": true,
+    "bit_identical_with_browser_node": true
+  }
+}

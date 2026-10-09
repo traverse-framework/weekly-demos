@@ -1,0 +1,17 @@
+{
+  "name": "2026-10-09-agent-mcp-exact-ref",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Agent MCP-shaped tools over Spec 138 signed exact-ref digits-mlp — Traverse v0.14.0 weekly demo",
+  "scripts": {
+    "start": "PORT=8772 node server.mjs",
+    "smoke": "node hosts/node-smoke.mjs",
+    "smoke:mcp": "node hosts/mcp-agent-smoke.mjs",
+    "smoke:all": "npm run smoke && npm run smoke:mcp",
+    "proof": "npm run smoke:all"
+  },
+  "dependencies": {
+    "traverse-embedder-web": "0.14.0"
+  }
+}
