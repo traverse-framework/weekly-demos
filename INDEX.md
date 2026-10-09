@@ -10,10 +10,12 @@ Links point into dated folders under this repo.
 
 ### Signed exact-ref models (Spec 138)
 
+- [2026-10-09-agent-mcp-exact-ref](2026-10-09-agent-mcp-exact-ref/) — Same `digits-mlp-1.0.0` via Browser + Node + MCP-shaped agent façade; tamper → `digest_mismatch`, empty trust → `key_untrusted`, rights lie → `rights_mismatch`. Blog: [agent-mcp-exact-ref](https://traverse-framework.com/blog/agent-mcp-exact-ref.html).
 - [2026-10-02-signed-exact-ref](2026-10-02-signed-exact-ref/) — `digits-mlp-1.0.0` signed package; Browser+Node bit-identical; tamper → `digest_mismatch`. Blog: [signed-exact-ref-digits](https://traverse-framework.com/blog/signed-exact-ref-digits.html).
 
 ### Agent guardrails / deny authority
 
+- [2026-10-09-agent-mcp-exact-ref](2026-10-09-agent-mcp-exact-ref/) — MCP-shaped agent freestyle against a signed exact-ref model → fail-closed stable reasons. Façade over `ExactModelBrowserHost` under Node — not the Mode A `traverse-mcp` binary.
 - [2026-09-25-same-wasm-hosts](2026-09-25-same-wasm-hosts/) — Same `core.authorize` WASM on Browser + Node; junior_analyst $2.4M treasury cheat → **deny**; agent proposes, runtime decides (v0.13.0 multi-host).
 - [2026-09-18-agent-blocked](2026-09-18-agent-blocked/) — Ops agent freestyles `junior_analyst` + `payments.transfer` on a $2.4M wire → **`deny` / `no_matching_rule`**. Agent proposes; runtime decides.
 
@@ -24,6 +26,7 @@ Links point into dated folders under this repo.
 
 ### Browser embedder + `runtime.wasm`
 
+- [2026-10-09-agent-mcp-exact-ref](2026-10-09-agent-mcp-exact-ref/) — `traverse-embedder-web@0.14.0` `ExactModelBrowserHost` on Browser; same npm host under Node backs the Node proof and the agent MCP façade.
 - [2026-10-02-signed-exact-ref](2026-10-02-signed-exact-ref/) — `traverse-embedder-web@0.14.0` `ExactModelBrowserHost` + `registerPackage` on Browser; same npm host under Node (not a separate native CLI).
 - [2026-09-25-same-wasm-hosts](2026-09-25-same-wasm-hosts/) — `traverse-embedder-web@0.13.0` + app-owned `runtime.wasm` (digest `a254c161…`) on Browser; same npm BundleEmbedder under Node.
 - [2026-09-18-agent-blocked](2026-09-18-agent-blocked/) — Host uses `traverse-embedder-web@0.12.0` + nested-wasmi `runtime.wasm` (digest-checked), same path as the product — not a hand WASI shim.
@@ -39,6 +42,7 @@ Links point into dated folders under this repo.
 
 ### Multi-host / same-bytes
 
+- [2026-10-09-agent-mcp-exact-ref](2026-10-09-agent-mcp-exact-ref/) — Browser ↔ Node ↔ agent MCP façade bit-identical classify on one pin digest (`3068f3ae…`).
 - [2026-10-02-signed-exact-ref](2026-10-02-signed-exact-ref/) — Same signed model package on Browser + Node (`ExactModelBrowserHost` from `traverse-embedder-web@0.14.0`).
 - [2026-09-25-same-wasm-hosts](2026-09-25-same-wasm-hosts/) — Same `authorize.wasm` digest and deny/allow JSON on Browser + Node; fingerprint column stands in for Swift/.NET/Kotlin (not run on Linux demo box). Traverse v0.13.0 / embedder-api 1.1.0 / Spec 139.
 
@@ -48,6 +52,7 @@ Links point into dated folders under this repo.
 
 ### `traverse.digits-mlp@1.0.0` (exact-ref)
 
+- [2026-10-09-agent-mcp-exact-ref](2026-10-09-agent-mcp-exact-ref/) — Agent MCP tools + three fail-closed attacks. Blog: [agent-mcp-exact-ref](https://traverse-framework.com/blog/agent-mcp-exact-ref.html).
 - [2026-10-02-signed-exact-ref](2026-10-02-signed-exact-ref/) — Spec 138 signed pin; classify digit; fail-closed attack. Blog: [signed-exact-ref-digits](https://traverse-framework.com/blog/signed-exact-ref-digits.html).
 
 ### `core.authorize@1.2.0`
@@ -59,6 +64,8 @@ Links point into dated folders under this repo.
 
 ## By date
 
+- **2026-10-09** — [`2026-10-09-agent-mcp-exact-ref`](./2026-10-09-agent-mcp-exact-ref/) — Agent MCP tools over signed exact-ref `digits-mlp-1.0.0`; freestyle fail-closed with `digest_mismatch` / `key_untrusted` / `rights_mismatch` (v0.14.0).
+
 - **2026-10-02** — [`2026-10-02-signed-exact-ref`](./2026-10-02-signed-exact-ref/) — Signed exact-ref `digits-mlp-1.0.0` on Browser + Node; tamper fail-closed (v0.14.0).
 
 - **2026-09-25** — [`2026-09-25-same-wasm-hosts`](./2026-09-25-same-wasm-hosts/) — Same WASM across hosts; agent treasury cheat blocked by `core.authorize@1.2.0` (v0.13.0).
@@ -68,5 +75,6 @@ Links point into dated folders under this repo.
 | 2026-09-18 | [2026-09-18-agent-blocked](2026-09-18-agent-blocked/) | agent-guardrails, deny-authority, core.authorize, browser-embedder, runtime.wasm, contract-fail-closed, MFA, dual-control |
 | 2026-09-25 | [2026-09-25-same-wasm-hosts](2026-09-25-same-wasm-hosts/) | multi-host, same-bytes, agent-guardrails, deny-authority, core.authorize, browser-embedder, runtime.wasm, MFA, dual-control |
 | 2026-10-02 | [2026-10-02-signed-exact-ref](2026-10-02-signed-exact-ref/) | signed-exact-ref, same-bytes, multi-host, browser-embedder, runtime.wasm, digits-mlp, fail-closed |
+| 2026-10-09 | [2026-10-09-agent-mcp-exact-ref](2026-10-09-agent-mcp-exact-ref/) | agent-guardrails, agent-mcp, signed-exact-ref, same-bytes, multi-host, browser-embedder, digits-mlp, fail-closed, key-untrusted, rights-mismatch |
 
 Full week table (with blog links): [README.md](README.md).

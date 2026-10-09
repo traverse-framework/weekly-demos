@@ -4,7 +4,7 @@ Runnable progress demos for [Traverse](https://traverse-framework.com) — one f
 
 This repository stays **private**. The public story for a week is the blog post in the table (plus screenshots). The clone snippet below is for people who already have access — it is not a public invite. Unauthenticated clone fails until [`.github`#30](https://github.com/traverse-framework/.github/issues/30) says otherwise.
 
-Each week shows a concrete capability path you can clone, install, and run locally **if you can see this repo**. Prefer the [topic index](INDEX.md) when you are hunting for an *example* (guardrails, authorize, MFA, contract fail-closed, browser embedder, signed exact-ref, …) rather than a calendar date.
+Each week shows a concrete capability path you can clone, install, and run locally **if you can see this repo**. Prefer the [topic index](INDEX.md) when you are hunting for an *example* (guardrails, authorize, MFA, contract fail-closed, browser embedder, signed exact-ref, agent MCP, …) rather than a calendar date.
 
 ## How to run a week
 
@@ -28,6 +28,7 @@ See that week’s `README.md` for ports, screenshots, and honest gaps.
 | 2026-09-18 | [`2026-09-18-agent-blocked`](2026-09-18-agent-blocked/) | Agent freestyle → blocked (junior_analyst $2.4M wire deny) | `core.authorize@1.2.0` | [agent-freestyle-blocked](https://traverse-framework.com/blog/agent-freestyle-blocked.html) |
 | 2026-09-25 | [`2026-09-25-same-wasm-hosts`](2026-09-25-same-wasm-hosts/) | Same `core.authorize` WASM on Browser + Node (+ digest fingerprint); $2.4M wire cheat denied — Traverse v0.13.0 multi-host | `core.authorize@1.2.0` | [same-wasm-multi-host](https://traverse-framework.com/blog/same-wasm-multi-host.html) |
 | 2026-10-02 | [`2026-10-02-signed-exact-ref`](2026-10-02-signed-exact-ref/) | Signed exact-ref `digits-mlp-1.0.0` bit-identical on Browser+Node; tamper fail-closed — Traverse v0.14.0 Spec 138 | `traverse.digits-mlp@1.0.0` | [signed-exact-ref-digits](https://traverse-framework.com/blog/signed-exact-ref-digits.html) |
+| 2026-10-09 | [`2026-10-09-agent-mcp-exact-ref`](2026-10-09-agent-mcp-exact-ref/) | Agent MCP tools over signed exact-ref `digits-mlp`; freestyle → `digest_mismatch` / `key_untrusted` / `rights_mismatch`; Browser+Node bit-identical — Traverse v0.14.0 Spec 138 | `traverse.digits-mlp@1.0.0` | [agent-mcp-exact-ref](https://traverse-framework.com/blog/agent-mcp-exact-ref.html) |
 
 ## Topic index
 
