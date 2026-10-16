@@ -1,0 +1,145 @@
+{
+  "host": "native",
+  "product_path": "traverse-cli-rs 0.15.0 (crates.io) (wasmtime + wasmi engines)",
+  "release": {
+    "tag": "v0.15.0",
+    "commit": "4491553969ce31beee3590aa3bbcc8087b07c943",
+    "npm": "traverse-embedder-web@0.15.0",
+    "cli": "traverse-cli-rs 0.15.0 (crates.io)",
+    "label": "published Traverse v0.15.0 (npm traverse-embedder-web@0.15.0 · crates.io traverse-cli-rs 0.15.0)"
+  },
+  "verify": {
+    "exit": 0,
+    "ms": 3027,
+    "json": {
+      "digest": "d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a",
+      "imports": 0,
+      "key_id": "ed25519:986edbcb29edbb2b1b937ffd1547c7526ac71a7e7308d86093693b3228fba8ce",
+      "model_id": "hf.onnxmodelzoo.mnist-12",
+      "ok": true,
+      "package_dir": "/workspace/weekly-demo-2026-10-16-catalog-model-execute/package/mnist-12-1.0.0",
+      "rights_record": {
+        "digest": "d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a",
+        "effective_usage": "non_commercial",
+        "model_id": "hf.onnxmodelzoo.mnist-12",
+        "rights": {
+          "attribution": "MNIST-12 (opset 12) CNN from the ONNX Model Zoo, hosted on Hugging Face at onnxmodelzoo/mnist-12 (commit 1cd752f4a3d818fa215aa621c78b8a10a4a1a3a5); trained in CNTK per the CNTK 103D tutorial. Packaged on the Traverse ONNX runner guest by the hf-proto-signed-onnx prototype.",
+          "commercial_use": "allowed",
+          "derivation": {
+            "kind": "converted",
+            "source_commercial_use": "allowed",
+            "source_digest": "5c688690f8bacf667d4c2074af5ad0646ca328d7ab03eccf944a65b320171bdd",
+            "source_license_id": "Apache-2.0",
+            "source_url": "https://huggingface.co/onnxmodelzoo/mnist-12/blob/1cd752f4a3d818fa215aa621c78b8a10a4a1a3a5/mnist-12.onnx"
+          },
+          "license_id": "Apache-2.0",
+          "redistribution": "Redistribution permitted under Apache-2.0 (HF repo license field); signed with a throwaway prototype key (no production trust)",
+          "source_url": "https://huggingface.co/onnxmodelzoo/mnist-12"
+        },
+        "status": "active",
+        "version": "1.0.0"
+      },
+      "verification_usage": "non_commercial",
+      "version": "1.0.0"
+    }
+  },
+  "conformance_check": {
+    "exit": 0,
+    "ms": 11247,
+    "json": {
+      "cases": 4,
+      "engines": [
+        "wasmtime",
+        "wasmi"
+      ],
+      "failed_cases": [],
+      "ok": true,
+      "vector_path": "/workspace/weekly-demo-2026-10-16-catalog-model-execute/package/conformance-mnist-12.json"
+    }
+  },
+  "pin": {
+    "exit": 0,
+    "ms": 14,
+    "json": {
+      "digest": "d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a",
+      "key_id": "ed25519:986edbcb29edbb2b1b937ffd1547c7526ac71a7e7308d86093693b3228fba8ce",
+      "model_id": "hf.onnxmodelzoo.mnist-12",
+      "offline_allowed": true,
+      "rights": {
+        "commercial_use": "allowed",
+        "license_id": "Apache-2.0"
+      },
+      "target": "wasm-cpu",
+      "version": "1.0.0"
+    }
+  },
+  "cases": [
+    {
+      "name": "mnist-test-0-label7",
+      "predicted": 7,
+      "output_frame_hex": "01000302010000000a00000028000000469d7cbf857cea3ec35a0a4139e211410d1c58c1d3d6c2c073afb7c17614dd410a08cec0635e6440"
+    },
+    {
+      "name": "mnist-test-1-label2",
+      "predicted": 2,
+      "output_frame_hex": "01000302010000000a0000002800000073aa134004b1d64051c6a4416c786dbf7e1539c1906a59c1c27c88bd2f5cdfc0696490bfff2728c1"
+    },
+    {
+      "name": "mnist-test-2-label1",
+      "predicted": 1,
+      "output_frame_hex": "01000302010000000a000000280000003f299dc0145227418d7684c00402c1c03575953ff860eabf24a36ac06b715740be2e80c0e77182c0"
+    },
+    {
+      "name": "mnist-test-3-label0",
+      "predicted": 0,
+      "output_frame_hex": "01000302010000000a000000280000009edb8841f23475c1fa7943403382cfc0d166d0c0925e33c0bdfbd740803fa1c091d720c01f58393e"
+    }
+  ],
+  "engines": [
+    "wasmtime",
+    "wasmi"
+  ],
+  "attacks": {
+    "tamper_one_weight_bit": {
+      "exit": 2,
+      "ms": 2515,
+      "json": {
+        "digest": "d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a",
+        "error": {
+          "code": "model_incompatible",
+          "message": "model wasm digest mismatch",
+          "reason": "digest_mismatch"
+        },
+        "imports": 0,
+        "key_id": "ed25519:986edbcb29edbb2b1b937ffd1547c7526ac71a7e7308d86093693b3228fba8ce",
+        "model_id": "hf.onnxmodelzoo.mnist-12",
+        "ok": false,
+        "package_dir": "/tmp/wk1016-onnx-tamper",
+        "verification_usage": "non_commercial",
+        "version": "1.0.0"
+      },
+      "stream": "stdout"
+    },
+    "untrusted_key": {
+      "exit": 2,
+      "ms": 22,
+      "json": {
+        "digest": "d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a",
+        "error": {
+          "code": "model_incompatible",
+          "message": "model signing key is not host-trusted",
+          "reason": "key_untrusted"
+        },
+        "imports": 0,
+        "key_id": "ed25519:986edbcb29edbb2b1b937ffd1547c7526ac71a7e7308d86093693b3228fba8ce",
+        "model_id": "hf.onnxmodelzoo.mnist-12",
+        "ok": false,
+        "package_dir": "/workspace/weekly-demo-2026-10-16-catalog-model-execute/package/mnist-12-1.0.0",
+        "verification_usage": "non_commercial",
+        "version": "1.0.0"
+      },
+      "stream": "stdout"
+    }
+  },
+  "generated_at": "2026-10-16T22:33:08.013Z"
+}

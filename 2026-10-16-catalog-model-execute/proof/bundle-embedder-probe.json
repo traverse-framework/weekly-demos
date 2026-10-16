@@ -1,0 +1,42 @@
+{
+  "probe": "BundleEmbedder@0.15.0 + runtime.wasm a254c161 -> model.execute@1.0.0",
+  "at": "2026-10-16T22:25:14.510Z",
+  "steps": [
+    {
+      "init": "ok"
+    },
+    {
+      "registerHostConnectorAdapter": "ok (Spec 137/139 app-command port, not guest connector_invoke)"
+    },
+    {
+      "submit": {
+        "sessionId": "sess-00000001",
+        "status": "accepted",
+        "error": null
+      }
+    }
+  ],
+  "events": [
+    {
+      "event_type": "capability_invoked",
+      "data": {
+        "execution_id": "exec_req-00000001",
+        "capability_id": "model.execute",
+        "capability_version": "1.0.0"
+      }
+    },
+    {
+      "event_type": "error",
+      "data": {
+        "execution_id": "exec_req-00000001",
+        "capability_id": "model.execute",
+        "status": "error",
+        "error": {
+          "code": "constraint_violated",
+          "message": "instantiate: cannot find definition for import (traverse_host,connector_invoke) with type Func(FuncType { core: FuncType { params: [I32, I32, I32, I32], results: [I32] } })",
+          "details": {}
+        }
+      }
+    }
+  ]
+}

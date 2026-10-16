@@ -1,0 +1,18 @@
+{
+  "_comment": "App-level exact-model declaration (Spec 138). Since v0.15.0 an app with pins MUST declare model_usage (commercial|non_commercial) or hosts fail closed with usage_undeclared.",
+  "exact_model_dependencies": [
+    {
+      "digest": "d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a",
+      "key_id": "ed25519:986edbcb29edbb2b1b937ffd1547c7526ac71a7e7308d86093693b3228fba8ce",
+      "model_id": "hf.onnxmodelzoo.mnist-12",
+      "offline_allowed": true,
+      "rights": {
+        "commercial_use": "allowed",
+        "license_id": "Apache-2.0"
+      },
+      "target": "wasm-cpu",
+      "version": "1.0.0"
+    }
+  ],
+  "model_usage": "commercial"
+}

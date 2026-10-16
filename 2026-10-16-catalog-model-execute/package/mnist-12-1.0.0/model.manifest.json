@@ -1,0 +1,37 @@
+{
+  "schema_version": "2.2.0",
+  "model_id": "hf.onnxmodelzoo.mnist-12",
+  "version": "1.0.0",
+  "wasm_digest": "fd0735e421c5a64b816e73930b091fc97ace8c168bbb90ff002f377ea7b7f973",
+  "registry_ref": "registry:hf.onnxmodelzoo.mnist-12@1.0.0",
+  "executable_format": "traverse-model-wasm",
+  "abi_version": 3,
+  "input_schema_ref": "schema:mnist-28x28-f32",
+  "input_schema_version": "1.0.0",
+  "output_schema_ref": "schema:mnist-logits-10",
+  "output_schema_version": "1.0.0",
+  "rights": {
+    "license_id": "Apache-2.0",
+    "attribution": "MNIST-12 (opset 12) CNN from the ONNX Model Zoo, hosted on Hugging Face at onnxmodelzoo/mnist-12 (commit 1cd752f4a3d818fa215aa621c78b8a10a4a1a3a5); trained in CNTK per the CNTK 103D tutorial. Packaged on the Traverse ONNX runner guest by the hf-proto-signed-onnx prototype.",
+    "redistribution": "Redistribution permitted under Apache-2.0 (HF repo license field); signed with a throwaway prototype key (no production trust)",
+    "commercial_use": "allowed",
+    "source_url": "https://huggingface.co/onnxmodelzoo/mnist-12",
+    "derivation": {
+      "kind": "converted",
+      "source_digest": "5c688690f8bacf667d4c2074af5ad0646ca328d7ab03eccf944a65b320171bdd",
+      "source_license_id": "Apache-2.0",
+      "source_commercial_use": "allowed",
+      "source_url": "https://huggingface.co/onnxmodelzoo/mnist-12/blob/1cd752f4a3d818fa215aa621c78b8a10a4a1a3a5/mnist-12.onnx"
+    }
+  },
+  "supported_profiles": [
+    "wasm-cpu"
+  ],
+  "max_memory_bytes": 33554432,
+  "max_fuel": 20000000000,
+  "max_input_bytes": 3160,
+  "max_output_bytes": 56,
+  "max_execution_ms": 10000,
+  "offline_allowed": true,
+  "max_prepare_fuel": 20000000000
+}

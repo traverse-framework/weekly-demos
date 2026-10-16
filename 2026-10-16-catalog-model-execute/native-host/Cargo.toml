@@ -1,0 +1,15 @@
+[package]
+name = "model-execute-native-host"
+version = "0.1.0"
+edition = "2024"
+publish = false
+description = "Native host: catalog model.execute@1.0.0 on crates.io traverse-runtime 0.15.0 WasmExecutor::run_bytes_with_mediated_connectors, bridged to the crate's own Spec 138 ExactModelHostConnector."
+
+[dependencies]
+traverse-runtime = { version = "=0.15.0", default-features = false, features = ["wasmtime-executor"] }
+traverse-contracts = "=0.15.0"
+serde_json = "1"
+sha2 = "0.10"
+
+[profile.release]
+debug = false
