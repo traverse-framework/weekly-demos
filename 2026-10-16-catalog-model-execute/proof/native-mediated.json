@@ -1,0 +1,338 @@
+{
+  "capability_wasm_sha256": "5ccfa3721db61b42a598d703c2a110c57beaf57cde26e1c5cb7f9c5fbc8b4275",
+  "host": "native: crates.io traverse-runtime 0.15.0 WasmExecutor::run_bytes_with_mediated_connectors (wasmtime) + exact_model::ExactModelHostConnector",
+  "results": [
+    {
+      "capability_output": {
+        "model_evidence": {
+          "commercial_use": "allowed",
+          "derivation": "converted",
+          "effective_usage": "commercial",
+          "license_id": "Apache-2.0",
+          "status": "active"
+        },
+        "model_ref": {
+          "digest": "sha256:d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a",
+          "model_id": "hf.onnxmodelzoo.mnist-12",
+          "version": "1.0.0"
+        },
+        "output_ref": "host:output:1",
+        "output_schema_ref": "schema:mnist-12-logits-f32",
+        "placement": "wasm-cpu",
+        "result_class": "ok",
+        "status": "ok"
+      },
+      "connector_evidence": [
+        "ConnectorInvocationEvidence { connector_id: \"traverse.model-runtime\", resolved_version: Some(\"2.3.0\"), result_class: \"ok\", failure_class: None }"
+      ],
+      "id": "mnist-test-0-label7",
+      "model_ran": true,
+      "ms": 2675,
+      "output_frame_hex": "01000302010000000a00000028000000469d7cbf857cea3ec35a0a4139e211410d1c58c1d3d6c2c073afb7c17614dd410a08cec0635e6440"
+    },
+    {
+      "capability_output": {
+        "model_evidence": {
+          "commercial_use": "allowed",
+          "derivation": "converted",
+          "effective_usage": "commercial",
+          "license_id": "Apache-2.0",
+          "status": "active"
+        },
+        "model_ref": {
+          "digest": "sha256:d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a",
+          "model_id": "hf.onnxmodelzoo.mnist-12",
+          "version": "1.0.0"
+        },
+        "output_ref": "host:output:2",
+        "output_schema_ref": "schema:mnist-12-logits-f32",
+        "placement": "wasm-cpu",
+        "result_class": "ok",
+        "status": "ok"
+      },
+      "connector_evidence": [
+        "ConnectorInvocationEvidence { connector_id: \"traverse.model-runtime\", resolved_version: Some(\"2.3.0\"), result_class: \"ok\", failure_class: None }"
+      ],
+      "id": "mnist-test-1-label2",
+      "model_ran": true,
+      "ms": 8,
+      "output_frame_hex": "01000302010000000a0000002800000073aa134004b1d64051c6a4416c786dbf7e1539c1906a59c1c27c88bd2f5cdfc0696490bfff2728c1"
+    },
+    {
+      "capability_output": {
+        "model_evidence": {
+          "commercial_use": "allowed",
+          "derivation": "converted",
+          "effective_usage": "commercial",
+          "license_id": "Apache-2.0",
+          "status": "active"
+        },
+        "model_ref": {
+          "digest": "sha256:d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a",
+          "model_id": "hf.onnxmodelzoo.mnist-12",
+          "version": "1.0.0"
+        },
+        "output_ref": "host:output:3",
+        "output_schema_ref": "schema:mnist-12-logits-f32",
+        "placement": "wasm-cpu",
+        "result_class": "ok",
+        "status": "ok"
+      },
+      "connector_evidence": [
+        "ConnectorInvocationEvidence { connector_id: \"traverse.model-runtime\", resolved_version: Some(\"2.3.0\"), result_class: \"ok\", failure_class: None }"
+      ],
+      "id": "mnist-test-2-label1",
+      "model_ran": true,
+      "ms": 8,
+      "output_frame_hex": "01000302010000000a000000280000003f299dc0145227418d7684c00402c1c03575953ff860eabf24a36ac06b715740be2e80c0e77182c0"
+    },
+    {
+      "capability_output": {
+        "model_evidence": {
+          "commercial_use": "allowed",
+          "derivation": "converted",
+          "effective_usage": "commercial",
+          "license_id": "Apache-2.0",
+          "status": "active"
+        },
+        "model_ref": {
+          "digest": "sha256:d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a",
+          "model_id": "hf.onnxmodelzoo.mnist-12",
+          "version": "1.0.0"
+        },
+        "output_ref": "host:output:4",
+        "output_schema_ref": "schema:mnist-12-logits-f32",
+        "placement": "wasm-cpu",
+        "result_class": "ok",
+        "status": "ok"
+      },
+      "connector_evidence": [
+        "ConnectorInvocationEvidence { connector_id: \"traverse.model-runtime\", resolved_version: Some(\"2.3.0\"), result_class: \"ok\", failure_class: None }"
+      ],
+      "id": "mnist-test-3-label0",
+      "model_ran": true,
+      "ms": 8,
+      "output_frame_hex": "01000302010000000a000000280000009edb8841f23475c1fa7943403382cfc0d166d0c0925e33c0bdfbd740803fa1c091d720c01f58393e"
+    },
+    {
+      "capability_output": {
+        "model_ref": {
+          "digest": "",
+          "model_id": "",
+          "version": ""
+        },
+        "output_ref": "",
+        "output_schema_ref": "",
+        "placement": "",
+        "reason": "usage_undeclared",
+        "result_class": "error",
+        "status": "error"
+      },
+      "connector_evidence": [],
+      "id": "no_usage",
+      "model_ran": false,
+      "ms": 0,
+      "output_frame_hex": null
+    },
+    {
+      "capability_output": {
+        "model_ref": {
+          "digest": "",
+          "model_id": "",
+          "version": ""
+        },
+        "output_ref": "",
+        "output_schema_ref": "",
+        "placement": "",
+        "reason": "usage_undeclared",
+        "result_class": "error",
+        "status": "error"
+      },
+      "connector_evidence": [],
+      "id": "bad_usage",
+      "model_ran": false,
+      "ms": 0,
+      "output_frame_hex": null
+    },
+    {
+      "capability_output": {
+        "model_ref": {
+          "digest": "",
+          "model_id": "",
+          "version": ""
+        },
+        "output_ref": "",
+        "output_schema_ref": "",
+        "placement": "",
+        "reason": "key_untrusted",
+        "result_class": "error",
+        "status": "error"
+      },
+      "connector_evidence": [],
+      "id": "empty_trust",
+      "model_ran": false,
+      "ms": 0,
+      "output_frame_hex": null
+    },
+    {
+      "capability_output": {
+        "model_ref": {
+          "digest": "",
+          "model_id": "",
+          "version": ""
+        },
+        "output_ref": "",
+        "output_schema_ref": "",
+        "placement": "",
+        "reason": "key_untrusted",
+        "result_class": "error",
+        "status": "error"
+      },
+      "connector_evidence": [
+        "ConnectorInvocationEvidence { connector_id: \"traverse.model-runtime\", resolved_version: Some(\"2.3.0\"), result_class: \"model_incompatible\", failure_class: None }"
+      ],
+      "id": "fake_signer",
+      "model_ran": false,
+      "ms": 2,
+      "output_frame_hex": null
+    },
+    {
+      "capability_output": {
+        "model_ref": {
+          "digest": "",
+          "model_id": "",
+          "version": ""
+        },
+        "output_ref": "",
+        "output_schema_ref": "",
+        "placement": "",
+        "reason": "pin_mismatch",
+        "result_class": "error",
+        "status": "error"
+      },
+      "connector_evidence": [
+        "ConnectorInvocationEvidence { connector_id: \"traverse.model-runtime\", resolved_version: Some(\"2.3.0\"), result_class: \"model_unavailable\", failure_class: None }"
+      ],
+      "id": "swap_digest",
+      "model_ran": false,
+      "ms": 0,
+      "output_frame_hex": null
+    },
+    {
+      "capability_output": {
+        "model_ref": {
+          "digest": "",
+          "model_id": "",
+          "version": ""
+        },
+        "output_ref": "",
+        "output_schema_ref": "",
+        "placement": "",
+        "reason": "pin_mismatch",
+        "result_class": "error",
+        "status": "error"
+      },
+      "connector_evidence": [
+        "ConnectorInvocationEvidence { connector_id: \"traverse.model-runtime\", resolved_version: Some(\"2.3.0\"), result_class: \"model_unavailable\", failure_class: None }"
+      ],
+      "id": "bigger_model",
+      "model_ran": false,
+      "ms": 0,
+      "output_frame_hex": null
+    },
+    {
+      "capability_output": {
+        "model_ref": {
+          "digest": "",
+          "model_id": "",
+          "version": ""
+        },
+        "output_ref": "",
+        "output_schema_ref": "",
+        "placement": "",
+        "reason": "digest_mismatch",
+        "result_class": "error",
+        "status": "error"
+      },
+      "connector_evidence": [
+        "ConnectorInvocationEvidence { connector_id: \"traverse.model-runtime\", resolved_version: Some(\"2.3.0\"), result_class: \"model_incompatible\", failure_class: None }"
+      ],
+      "id": "tamper",
+      "model_ran": false,
+      "ms": 2052,
+      "output_frame_hex": null
+    },
+    {
+      "capability_output": {
+        "model_ref": {
+          "digest": "",
+          "model_id": "",
+          "version": ""
+        },
+        "output_ref": "",
+        "output_schema_ref": "",
+        "placement": "",
+        "reason": "package_revoked",
+        "result_class": "error",
+        "status": "error"
+      },
+      "connector_evidence": [
+        "ConnectorInvocationEvidence { connector_id: \"traverse.model-runtime\", resolved_version: Some(\"2.3.0\"), result_class: \"model_unavailable\", failure_class: None }"
+      ],
+      "id": "revoked",
+      "model_ran": false,
+      "ms": 2510,
+      "output_frame_hex": null
+    },
+    {
+      "capability_output": {
+        "model_ref": {
+          "digest": "",
+          "model_id": "",
+          "version": ""
+        },
+        "output_ref": "",
+        "output_schema_ref": "",
+        "placement": "",
+        "reason": "connector_unavailable",
+        "result_class": "error",
+        "status": "error"
+      },
+      "connector_evidence": [
+        "ConnectorInvocationEvidence { connector_id: \"traverse.model-runtime\", resolved_version: None, result_class: \"failure\", failure_class: Some(\"unbound\") }"
+      ],
+      "id": "unbound",
+      "model_ran": false,
+      "ms": 0,
+      "output_frame_hex": null
+    },
+    {
+      "capability_output": {
+        "model_evidence": {
+          "commercial_use": "allowed",
+          "derivation": "converted",
+          "effective_usage": "commercial",
+          "license_id": "Apache-2.0",
+          "status": "active"
+        },
+        "model_ref": {
+          "digest": "sha256:d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a",
+          "model_id": "hf.onnxmodelzoo.mnist-12",
+          "version": "1.0.0"
+        },
+        "output_ref": "host:output:5",
+        "output_schema_ref": "schema:mnist-12-logits-f32",
+        "placement": "wasm-cpu",
+        "result_class": "ok",
+        "status": "ok"
+      },
+      "connector_evidence": [
+        "ConnectorInvocationEvidence { connector_id: \"traverse.model-runtime\", resolved_version: Some(\"2.3.0\"), result_class: \"ok\", failure_class: None }"
+      ],
+      "id": "extra_field",
+      "model_ran": true,
+      "ms": 7,
+      "output_frame_hex": "01000302010000000a00000028000000469d7cbf857cea3ec35a0a4139e211410d1c58c1d3d6c2c073afb7c17614dd410a08cec0635e6440"
+    }
+  ]
+}

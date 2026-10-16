@@ -1,0 +1,731 @@
+{
+  "host": "browser Chrome/154.0.0.0",
+  "release": {
+    "tag": "v0.15.0",
+    "commit": "4491553969ce31beee3590aa3bbcc8087b07c943",
+    "npm": "traverse-embedder-web@0.15.0",
+    "cli": "traverse-cli-rs 0.15.0 (crates.io)",
+    "label": "published Traverse v0.15.0 (npm traverse-embedder-web@0.15.0 · crates.io traverse-cli-rs 0.15.0)"
+  },
+  "catalog": {
+    "ref": "model/model.execute@1.0.0",
+    "wasm_digest": "5ccfa3721db61b42a598d703c2a110c57beaf57cde26e1c5cb7f9c5fbc8b4275",
+    "contract_digest": "a96db38bb2c012b66a322e61a01d7407e5bd961396809207a447ce51279aef1c",
+    "registry_pr": "traverse-framework/registry#639",
+    "artifact_url": "https://github.com/traverse-framework/registry/releases/download/artifacts/model.execute-1.0.0/model-execute-agent.wasm"
+  },
+  "digests": {
+    "capability_wasm": "5ccfa3721db61b42a598d703c2a110c57beaf57cde26e1c5cb7f9c5fbc8b4275",
+    "contract": "a96db38bb2c012b66a322e61a01d7407e5bd961396809207a447ce51279aef1c",
+    "model_manifest": "d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a",
+    "model_wasm": "fd0735e421c5a64b816e73930b091fc97ace8c168bbb90ff002f377ea7b7f973",
+    "capability_matches_catalog": true,
+    "contract_matches_catalog": true
+  },
+  "cases": [
+    {
+      "name": "mnist-test-0-label7",
+      "label": 7,
+      "predicted": 7,
+      "capability_stdout": "{\"status\":\"ok\",\"output_ref\":\"host:output:1\",\"output_schema_ref\":\"schema:mnist-12-logits-f32\",\"model_ref\":{\"model_id\":\"hf.onnxmodelzoo.mnist-12\",\"version\":\"1.0.0\",\"digest\":\"sha256:d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a\"},\"placement\":\"wasm-cpu\",\"result_class\":\"ok\",\"model_evidence\":{\"license_id\":\"Apache-2.0\",\"commercial_use\":\"allowed\",\"derivation\":\"converted\",\"effective_usage\":\"commercial\",\"status\":\"active\"}}",
+      "output_frame_hex": "01000302010000000a00000028000000469d7cbf857cea3ec35a0a4139e211410d1c58c1d3d6c2c073afb7c17614dd410a08cec0635e6440",
+      "matches_native_conformance_vector": true,
+      "passes": 2,
+      "replay_request_identical": true,
+      "connector_request": {
+        "abi_version": "1.0.0",
+        "connector_id": "traverse.model-runtime",
+        "operation": "model.execute",
+        "payload": {
+          "model_ref": {
+            "model_id": "hf.onnxmodelzoo.mnist-12",
+            "version": "1.0.0",
+            "digest": "sha256:d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a"
+          },
+          "input_ref": "host:input:frame-1",
+          "policy_ref": "policy:default-wasm-cpu",
+          "data_classification": "public",
+          "input_schema_ref": "schema:mnist-28x28-f32",
+          "input_schema_version": "1.0.0",
+          "max_output_bytes": 56,
+          "model_usage": "commercial",
+          "trust_root": {
+            "allowed_signers": [
+              "ed25519:986edbcb29edbb2b1b937ffd1547c7526ac71a7e7308d86093693b3228fba8ce"
+            ]
+          }
+        }
+      },
+      "ms": 217
+    },
+    {
+      "name": "mnist-test-1-label2",
+      "label": 2,
+      "predicted": 2,
+      "capability_stdout": "{\"status\":\"ok\",\"output_ref\":\"host:output:2\",\"output_schema_ref\":\"schema:mnist-12-logits-f32\",\"model_ref\":{\"model_id\":\"hf.onnxmodelzoo.mnist-12\",\"version\":\"1.0.0\",\"digest\":\"sha256:d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a\"},\"placement\":\"wasm-cpu\",\"result_class\":\"ok\",\"model_evidence\":{\"license_id\":\"Apache-2.0\",\"commercial_use\":\"allowed\",\"derivation\":\"converted\",\"effective_usage\":\"commercial\",\"status\":\"active\"}}",
+      "output_frame_hex": "01000302010000000a0000002800000073aa134004b1d64051c6a4416c786dbf7e1539c1906a59c1c27c88bd2f5cdfc0696490bfff2728c1",
+      "matches_native_conformance_vector": true,
+      "passes": 2,
+      "replay_request_identical": true,
+      "connector_request": {
+        "abi_version": "1.0.0",
+        "connector_id": "traverse.model-runtime",
+        "operation": "model.execute",
+        "payload": {
+          "model_ref": {
+            "model_id": "hf.onnxmodelzoo.mnist-12",
+            "version": "1.0.0",
+            "digest": "sha256:d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a"
+          },
+          "input_ref": "host:input:frame-2",
+          "policy_ref": "policy:default-wasm-cpu",
+          "data_classification": "public",
+          "input_schema_ref": "schema:mnist-28x28-f32",
+          "input_schema_version": "1.0.0",
+          "max_output_bytes": 56,
+          "model_usage": "commercial",
+          "trust_root": {
+            "allowed_signers": [
+              "ed25519:986edbcb29edbb2b1b937ffd1547c7526ac71a7e7308d86093693b3228fba8ce"
+            ]
+          }
+        }
+      },
+      "ms": 76
+    },
+    {
+      "name": "mnist-test-2-label1",
+      "label": 1,
+      "predicted": 1,
+      "capability_stdout": "{\"status\":\"ok\",\"output_ref\":\"host:output:3\",\"output_schema_ref\":\"schema:mnist-12-logits-f32\",\"model_ref\":{\"model_id\":\"hf.onnxmodelzoo.mnist-12\",\"version\":\"1.0.0\",\"digest\":\"sha256:d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a\"},\"placement\":\"wasm-cpu\",\"result_class\":\"ok\",\"model_evidence\":{\"license_id\":\"Apache-2.0\",\"commercial_use\":\"allowed\",\"derivation\":\"converted\",\"effective_usage\":\"commercial\",\"status\":\"active\"}}",
+      "output_frame_hex": "01000302010000000a000000280000003f299dc0145227418d7684c00402c1c03575953ff860eabf24a36ac06b715740be2e80c0e77182c0",
+      "matches_native_conformance_vector": true,
+      "passes": 2,
+      "replay_request_identical": true,
+      "connector_request": {
+        "abi_version": "1.0.0",
+        "connector_id": "traverse.model-runtime",
+        "operation": "model.execute",
+        "payload": {
+          "model_ref": {
+            "model_id": "hf.onnxmodelzoo.mnist-12",
+            "version": "1.0.0",
+            "digest": "sha256:d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a"
+          },
+          "input_ref": "host:input:frame-3",
+          "policy_ref": "policy:default-wasm-cpu",
+          "data_classification": "public",
+          "input_schema_ref": "schema:mnist-28x28-f32",
+          "input_schema_version": "1.0.0",
+          "max_output_bytes": 56,
+          "model_usage": "commercial",
+          "trust_root": {
+            "allowed_signers": [
+              "ed25519:986edbcb29edbb2b1b937ffd1547c7526ac71a7e7308d86093693b3228fba8ce"
+            ]
+          }
+        }
+      },
+      "ms": 76
+    },
+    {
+      "name": "mnist-test-3-label0",
+      "label": 0,
+      "predicted": 0,
+      "capability_stdout": "{\"status\":\"ok\",\"output_ref\":\"host:output:4\",\"output_schema_ref\":\"schema:mnist-12-logits-f32\",\"model_ref\":{\"model_id\":\"hf.onnxmodelzoo.mnist-12\",\"version\":\"1.0.0\",\"digest\":\"sha256:d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a\"},\"placement\":\"wasm-cpu\",\"result_class\":\"ok\",\"model_evidence\":{\"license_id\":\"Apache-2.0\",\"commercial_use\":\"allowed\",\"derivation\":\"converted\",\"effective_usage\":\"commercial\",\"status\":\"active\"}}",
+      "output_frame_hex": "01000302010000000a000000280000009edb8841f23475c1fa7943403382cfc0d166d0c0925e33c0bdfbd740803fa1c091d720c01f58393e",
+      "matches_native_conformance_vector": true,
+      "passes": 2,
+      "replay_request_identical": true,
+      "connector_request": {
+        "abi_version": "1.0.0",
+        "connector_id": "traverse.model-runtime",
+        "operation": "model.execute",
+        "payload": {
+          "model_ref": {
+            "model_id": "hf.onnxmodelzoo.mnist-12",
+            "version": "1.0.0",
+            "digest": "sha256:d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a"
+          },
+          "input_ref": "host:input:frame-4",
+          "policy_ref": "policy:default-wasm-cpu",
+          "data_classification": "public",
+          "input_schema_ref": "schema:mnist-28x28-f32",
+          "input_schema_version": "1.0.0",
+          "max_output_bytes": 56,
+          "model_usage": "commercial",
+          "trust_root": {
+            "allowed_signers": [
+              "ed25519:986edbcb29edbb2b1b937ffd1547c7526ac71a7e7308d86093693b3228fba8ce"
+            ]
+          }
+        }
+      },
+      "ms": 69
+    }
+  ],
+  "attempts": [
+    {
+      "id": "no_usage",
+      "who": "agent",
+      "title": "Agent drops model_usage",
+      "layer": "capability WASM",
+      "expect": "usage_undeclared",
+      "status": "error",
+      "reason": "usage_undeclared",
+      "refused": true,
+      "model_ran": false,
+      "connector_calls": 0,
+      "connector_evidence": [],
+      "capability_stdout": "{\"status\":\"error\",\"output_ref\":\"\",\"output_schema_ref\":\"\",\"model_ref\":{\"model_id\":\"\",\"version\":\"\",\"digest\":\"\"},\"placement\":\"\",\"result_class\":\"error\",\"reason\":\"usage_undeclared\"}",
+      "output_frame_hex": null,
+      "finding": false
+    },
+    {
+      "id": "bad_usage",
+      "who": "agent",
+      "title": "Agent invents model_usage \"research\"",
+      "layer": "capability WASM",
+      "expect": "usage_undeclared",
+      "status": "error",
+      "reason": "usage_undeclared",
+      "refused": true,
+      "model_ran": false,
+      "connector_calls": 0,
+      "connector_evidence": [],
+      "capability_stdout": "{\"status\":\"error\",\"output_ref\":\"\",\"output_schema_ref\":\"\",\"model_ref\":{\"model_id\":\"\",\"version\":\"\",\"digest\":\"\"},\"placement\":\"\",\"result_class\":\"error\",\"reason\":\"usage_undeclared\"}",
+      "output_frame_hex": null,
+      "finding": false
+    },
+    {
+      "id": "empty_trust",
+      "who": "agent",
+      "title": "Agent sends an empty trust_root",
+      "layer": "capability WASM",
+      "expect": "key_untrusted",
+      "status": "error",
+      "reason": "key_untrusted",
+      "refused": true,
+      "model_ran": false,
+      "connector_calls": 0,
+      "connector_evidence": [],
+      "capability_stdout": "{\"status\":\"error\",\"output_ref\":\"\",\"output_schema_ref\":\"\",\"model_ref\":{\"model_id\":\"\",\"version\":\"\",\"digest\":\"\"},\"placement\":\"\",\"result_class\":\"error\",\"reason\":\"key_untrusted\"}",
+      "output_frame_hex": null,
+      "finding": false
+    },
+    {
+      "id": "fake_signer",
+      "who": "agent",
+      "title": "Agent trusts a signer it made up",
+      "layer": "Spec 138 host",
+      "expect": "key_untrusted",
+      "status": "error",
+      "reason": "key_untrusted",
+      "refused": true,
+      "model_ran": false,
+      "connector_calls": 1,
+      "connector_evidence": [
+        {
+          "connector_id": "traverse.model-runtime",
+          "resolved_version": "2.3.0",
+          "result_class": "model_incompatible",
+          "failure_class": null
+        }
+      ],
+      "capability_stdout": "{\"status\":\"error\",\"output_ref\":\"\",\"output_schema_ref\":\"\",\"model_ref\":{\"model_id\":\"\",\"version\":\"\",\"digest\":\"\"},\"placement\":\"\",\"result_class\":\"error\",\"reason\":\"key_untrusted\"}",
+      "output_frame_hex": null,
+      "finding": false
+    },
+    {
+      "id": "swap_digest",
+      "who": "agent",
+      "title": "Agent swaps in the catalog example model digest (traverse.digits-onnx)",
+      "layer": "Spec 138 host",
+      "expect": "pin_mismatch",
+      "status": "error",
+      "reason": "pin_mismatch",
+      "refused": true,
+      "model_ran": false,
+      "connector_calls": 1,
+      "connector_evidence": [
+        {
+          "connector_id": "traverse.model-runtime",
+          "resolved_version": "2.3.0",
+          "result_class": "model_unavailable",
+          "failure_class": null
+        }
+      ],
+      "capability_stdout": "{\"status\":\"error\",\"output_ref\":\"\",\"output_schema_ref\":\"\",\"model_ref\":{\"model_id\":\"\",\"version\":\"\",\"digest\":\"\"},\"placement\":\"\",\"result_class\":\"error\",\"reason\":\"pin_mismatch\"}",
+      "output_frame_hex": null,
+      "finding": false
+    },
+    {
+      "id": "bigger_model",
+      "who": "agent",
+      "title": "Agent asks for a bigger model under the same digest",
+      "layer": "Spec 138 host",
+      "expect": "pin_mismatch",
+      "status": "error",
+      "reason": "pin_mismatch",
+      "refused": true,
+      "model_ran": false,
+      "connector_calls": 1,
+      "connector_evidence": [
+        {
+          "connector_id": "traverse.model-runtime",
+          "resolved_version": "2.3.0",
+          "result_class": "model_unavailable",
+          "failure_class": null
+        }
+      ],
+      "capability_stdout": "{\"status\":\"error\",\"output_ref\":\"\",\"output_schema_ref\":\"\",\"model_ref\":{\"model_id\":\"\",\"version\":\"\",\"digest\":\"\"},\"placement\":\"\",\"result_class\":\"error\",\"reason\":\"pin_mismatch\"}",
+      "output_frame_hex": null,
+      "finding": false
+    },
+    {
+      "id": "tamper",
+      "who": "host",
+      "title": "Model bytes tampered on disk (1 bit in the ONNX weights)",
+      "layer": "Spec 138 host",
+      "expect": "digest_mismatch",
+      "status": "error",
+      "reason": "digest_mismatch",
+      "refused": true,
+      "model_ran": false,
+      "connector_calls": 1,
+      "connector_evidence": [
+        {
+          "connector_id": "traverse.model-runtime",
+          "resolved_version": "2.3.0",
+          "result_class": "model_incompatible",
+          "failure_class": null
+        }
+      ],
+      "capability_stdout": "{\"status\":\"error\",\"output_ref\":\"\",\"output_schema_ref\":\"\",\"model_ref\":{\"model_id\":\"\",\"version\":\"\",\"digest\":\"\"},\"placement\":\"\",\"result_class\":\"error\",\"reason\":\"digest_mismatch\"}",
+      "output_frame_hex": null,
+      "finding": false
+    },
+    {
+      "id": "revoked",
+      "who": "host",
+      "title": "Host revokes this exact package digest",
+      "layer": "Spec 138 host",
+      "expect": "package_revoked",
+      "status": "error",
+      "reason": "package_revoked",
+      "refused": true,
+      "model_ran": false,
+      "connector_calls": 1,
+      "connector_evidence": [
+        {
+          "connector_id": "traverse.model-runtime",
+          "resolved_version": "2.3.0",
+          "result_class": "model_unavailable",
+          "failure_class": null
+        }
+      ],
+      "capability_stdout": "{\"status\":\"error\",\"output_ref\":\"\",\"output_schema_ref\":\"\",\"model_ref\":{\"model_id\":\"\",\"version\":\"\",\"digest\":\"\"},\"placement\":\"\",\"result_class\":\"error\",\"reason\":\"package_revoked\"}",
+      "output_frame_hex": null,
+      "finding": false
+    },
+    {
+      "id": "unbound",
+      "who": "host",
+      "title": "No connector bound (default deny, no ambient authority)",
+      "layer": "Spec 104 ABI",
+      "expect": "connector_unavailable",
+      "status": "error",
+      "reason": "connector_unavailable",
+      "refused": true,
+      "model_ran": false,
+      "connector_calls": 1,
+      "connector_evidence": [
+        {
+          "connector_id": "traverse.model-runtime",
+          "resolved_version": null,
+          "result_class": "failure",
+          "failure_class": "unbound"
+        }
+      ],
+      "capability_stdout": "{\"status\":\"error\",\"output_ref\":\"\",\"output_schema_ref\":\"\",\"model_ref\":{\"model_id\":\"\",\"version\":\"\",\"digest\":\"\"},\"placement\":\"\",\"result_class\":\"error\",\"reason\":\"connector_unavailable\"}",
+      "output_frame_hex": null,
+      "finding": false
+    },
+    {
+      "id": "extra_field",
+      "who": "agent",
+      "title": "Agent adds an undeclared \"prompt\" field",
+      "layer": "finding",
+      "expect": "(contract: additionalProperties:false)",
+      "status": "ok",
+      "reason": null,
+      "refused": false,
+      "model_ran": true,
+      "connector_calls": 1,
+      "connector_evidence": [
+        {
+          "connector_id": "traverse.model-runtime",
+          "resolved_version": "2.3.0",
+          "result_class": "ok",
+          "failure_class": null
+        }
+      ],
+      "capability_stdout": "{\"status\":\"ok\",\"output_ref\":\"host:output:5\",\"output_schema_ref\":\"schema:mnist-12-logits-f32\",\"model_ref\":{\"model_id\":\"hf.onnxmodelzoo.mnist-12\",\"version\":\"1.0.0\",\"digest\":\"sha256:d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a\"},\"placement\":\"wasm-cpu\",\"result_class\":\"ok\",\"model_evidence\":{\"license_id\":\"Apache-2.0\",\"commercial_use\":\"allowed\",\"derivation\":\"converted\",\"effective_usage\":\"commercial\",\"status\":\"active\"}}",
+      "output_frame_hex": "01000302010000000a00000028000000469d7cbf857cea3ec35a0a4139e211410d1c58c1d3d6c2c073afb7c17614dd410a08cec0635e6440",
+      "finding": true
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "mnist-test-0-label7",
+      "frame": "mnist-test-0-label7",
+      "variant": "normal",
+      "bind": true,
+      "input": {
+        "model_ref": {
+          "model_id": "hf.onnxmodelzoo.mnist-12",
+          "version": "1.0.0",
+          "digest": "sha256:d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a"
+        },
+        "input_ref": "host:input:frame-1",
+        "policy_ref": "policy:default-wasm-cpu",
+        "data_classification": "public",
+        "input_schema_ref": "schema:mnist-28x28-f32",
+        "input_schema_version": "1.0.0",
+        "max_output_bytes": 56,
+        "model_usage": "commercial",
+        "trust_root": {
+          "allowed_signers": [
+            "ed25519:986edbcb29edbb2b1b937ffd1547c7526ac71a7e7308d86093693b3228fba8ce"
+          ]
+        }
+      }
+    },
+    {
+      "id": "mnist-test-1-label2",
+      "frame": "mnist-test-1-label2",
+      "variant": "normal",
+      "bind": true,
+      "input": {
+        "model_ref": {
+          "model_id": "hf.onnxmodelzoo.mnist-12",
+          "version": "1.0.0",
+          "digest": "sha256:d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a"
+        },
+        "input_ref": "host:input:frame-2",
+        "policy_ref": "policy:default-wasm-cpu",
+        "data_classification": "public",
+        "input_schema_ref": "schema:mnist-28x28-f32",
+        "input_schema_version": "1.0.0",
+        "max_output_bytes": 56,
+        "model_usage": "commercial",
+        "trust_root": {
+          "allowed_signers": [
+            "ed25519:986edbcb29edbb2b1b937ffd1547c7526ac71a7e7308d86093693b3228fba8ce"
+          ]
+        }
+      }
+    },
+    {
+      "id": "mnist-test-2-label1",
+      "frame": "mnist-test-2-label1",
+      "variant": "normal",
+      "bind": true,
+      "input": {
+        "model_ref": {
+          "model_id": "hf.onnxmodelzoo.mnist-12",
+          "version": "1.0.0",
+          "digest": "sha256:d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a"
+        },
+        "input_ref": "host:input:frame-3",
+        "policy_ref": "policy:default-wasm-cpu",
+        "data_classification": "public",
+        "input_schema_ref": "schema:mnist-28x28-f32",
+        "input_schema_version": "1.0.0",
+        "max_output_bytes": 56,
+        "model_usage": "commercial",
+        "trust_root": {
+          "allowed_signers": [
+            "ed25519:986edbcb29edbb2b1b937ffd1547c7526ac71a7e7308d86093693b3228fba8ce"
+          ]
+        }
+      }
+    },
+    {
+      "id": "mnist-test-3-label0",
+      "frame": "mnist-test-3-label0",
+      "variant": "normal",
+      "bind": true,
+      "input": {
+        "model_ref": {
+          "model_id": "hf.onnxmodelzoo.mnist-12",
+          "version": "1.0.0",
+          "digest": "sha256:d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a"
+        },
+        "input_ref": "host:input:frame-4",
+        "policy_ref": "policy:default-wasm-cpu",
+        "data_classification": "public",
+        "input_schema_ref": "schema:mnist-28x28-f32",
+        "input_schema_version": "1.0.0",
+        "max_output_bytes": 56,
+        "model_usage": "commercial",
+        "trust_root": {
+          "allowed_signers": [
+            "ed25519:986edbcb29edbb2b1b937ffd1547c7526ac71a7e7308d86093693b3228fba8ce"
+          ]
+        }
+      }
+    },
+    {
+      "id": "no_usage",
+      "frame": "mnist-test-0-label7",
+      "variant": "normal",
+      "bind": true,
+      "input": {
+        "model_ref": {
+          "model_id": "hf.onnxmodelzoo.mnist-12",
+          "version": "1.0.0",
+          "digest": "sha256:d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a"
+        },
+        "input_ref": "host:input:frame-5",
+        "policy_ref": "policy:default-wasm-cpu",
+        "data_classification": "public",
+        "input_schema_ref": "schema:mnist-28x28-f32",
+        "input_schema_version": "1.0.0",
+        "max_output_bytes": 56,
+        "trust_root": {
+          "allowed_signers": [
+            "ed25519:986edbcb29edbb2b1b937ffd1547c7526ac71a7e7308d86093693b3228fba8ce"
+          ]
+        }
+      }
+    },
+    {
+      "id": "bad_usage",
+      "frame": "mnist-test-0-label7",
+      "variant": "normal",
+      "bind": true,
+      "input": {
+        "model_ref": {
+          "model_id": "hf.onnxmodelzoo.mnist-12",
+          "version": "1.0.0",
+          "digest": "sha256:d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a"
+        },
+        "input_ref": "host:input:frame-6",
+        "policy_ref": "policy:default-wasm-cpu",
+        "data_classification": "public",
+        "input_schema_ref": "schema:mnist-28x28-f32",
+        "input_schema_version": "1.0.0",
+        "max_output_bytes": 56,
+        "model_usage": "research",
+        "trust_root": {
+          "allowed_signers": [
+            "ed25519:986edbcb29edbb2b1b937ffd1547c7526ac71a7e7308d86093693b3228fba8ce"
+          ]
+        }
+      }
+    },
+    {
+      "id": "empty_trust",
+      "frame": "mnist-test-0-label7",
+      "variant": "normal",
+      "bind": true,
+      "input": {
+        "model_ref": {
+          "model_id": "hf.onnxmodelzoo.mnist-12",
+          "version": "1.0.0",
+          "digest": "sha256:d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a"
+        },
+        "input_ref": "host:input:frame-7",
+        "policy_ref": "policy:default-wasm-cpu",
+        "data_classification": "public",
+        "input_schema_ref": "schema:mnist-28x28-f32",
+        "input_schema_version": "1.0.0",
+        "max_output_bytes": 56,
+        "model_usage": "commercial",
+        "trust_root": {
+          "allowed_signers": []
+        }
+      }
+    },
+    {
+      "id": "fake_signer",
+      "frame": "mnist-test-0-label7",
+      "variant": "normal",
+      "bind": true,
+      "input": {
+        "model_ref": {
+          "model_id": "hf.onnxmodelzoo.mnist-12",
+          "version": "1.0.0",
+          "digest": "sha256:d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a"
+        },
+        "input_ref": "host:input:frame-8",
+        "policy_ref": "policy:default-wasm-cpu",
+        "data_classification": "public",
+        "input_schema_ref": "schema:mnist-28x28-f32",
+        "input_schema_version": "1.0.0",
+        "max_output_bytes": 56,
+        "model_usage": "commercial",
+        "trust_root": {
+          "allowed_signers": [
+            "ed25519:agent-made-this-up"
+          ]
+        }
+      }
+    },
+    {
+      "id": "swap_digest",
+      "frame": "mnist-test-0-label7",
+      "variant": "normal",
+      "bind": true,
+      "input": {
+        "model_ref": {
+          "model_id": "traverse.digits-onnx",
+          "version": "1.0.0",
+          "digest": "sha256:ecc32b909bd495c975e2c07a0f73ed85929026325bd8cf7865b9eec9293e03cb"
+        },
+        "input_ref": "host:input:frame-9",
+        "policy_ref": "policy:default-wasm-cpu",
+        "data_classification": "public",
+        "input_schema_ref": "schema:mnist-28x28-f32",
+        "input_schema_version": "1.0.0",
+        "max_output_bytes": 56,
+        "model_usage": "commercial",
+        "trust_root": {
+          "allowed_signers": [
+            "ed25519:986edbcb29edbb2b1b937ffd1547c7526ac71a7e7308d86093693b3228fba8ce"
+          ]
+        }
+      }
+    },
+    {
+      "id": "bigger_model",
+      "frame": "mnist-test-0-label7",
+      "variant": "normal",
+      "bind": true,
+      "input": {
+        "model_ref": {
+          "model_id": "hf.openai.whisper-large-v3",
+          "version": "1.0.0",
+          "digest": "sha256:d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a"
+        },
+        "input_ref": "host:input:frame-10",
+        "policy_ref": "policy:default-wasm-cpu",
+        "data_classification": "public",
+        "input_schema_ref": "schema:mnist-28x28-f32",
+        "input_schema_version": "1.0.0",
+        "max_output_bytes": 56,
+        "model_usage": "commercial",
+        "trust_root": {
+          "allowed_signers": [
+            "ed25519:986edbcb29edbb2b1b937ffd1547c7526ac71a7e7308d86093693b3228fba8ce"
+          ]
+        }
+      }
+    },
+    {
+      "id": "tamper",
+      "frame": "mnist-test-0-label7",
+      "variant": "tamper",
+      "bind": true,
+      "input": {
+        "model_ref": {
+          "model_id": "hf.onnxmodelzoo.mnist-12",
+          "version": "1.0.0",
+          "digest": "sha256:d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a"
+        },
+        "input_ref": "host:input:frame-1",
+        "policy_ref": "policy:default-wasm-cpu",
+        "data_classification": "public",
+        "input_schema_ref": "schema:mnist-28x28-f32",
+        "input_schema_version": "1.0.0",
+        "max_output_bytes": 56,
+        "model_usage": "commercial",
+        "trust_root": {
+          "allowed_signers": [
+            "ed25519:986edbcb29edbb2b1b937ffd1547c7526ac71a7e7308d86093693b3228fba8ce"
+          ]
+        }
+      }
+    },
+    {
+      "id": "revoked",
+      "frame": "mnist-test-0-label7",
+      "variant": "revoke",
+      "bind": true,
+      "input": {
+        "model_ref": {
+          "model_id": "hf.onnxmodelzoo.mnist-12",
+          "version": "1.0.0",
+          "digest": "sha256:d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a"
+        },
+        "input_ref": "host:input:frame-1",
+        "policy_ref": "policy:default-wasm-cpu",
+        "data_classification": "public",
+        "input_schema_ref": "schema:mnist-28x28-f32",
+        "input_schema_version": "1.0.0",
+        "max_output_bytes": 56,
+        "model_usage": "commercial",
+        "trust_root": {
+          "allowed_signers": [
+            "ed25519:986edbcb29edbb2b1b937ffd1547c7526ac71a7e7308d86093693b3228fba8ce"
+          ]
+        }
+      }
+    },
+    {
+      "id": "unbound",
+      "frame": "mnist-test-0-label7",
+      "variant": "normal",
+      "bind": false,
+      "input": {
+        "model_ref": {
+          "model_id": "hf.onnxmodelzoo.mnist-12",
+          "version": "1.0.0",
+          "digest": "sha256:d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a"
+        },
+        "input_ref": "host:input:frame-11",
+        "policy_ref": "policy:default-wasm-cpu",
+        "data_classification": "public",
+        "input_schema_ref": "schema:mnist-28x28-f32",
+        "input_schema_version": "1.0.0",
+        "max_output_bytes": 56,
+        "model_usage": "commercial",
+        "trust_root": {
+          "allowed_signers": [
+            "ed25519:986edbcb29edbb2b1b937ffd1547c7526ac71a7e7308d86093693b3228fba8ce"
+          ]
+        }
+      }
+    },
+    {
+      "id": "extra_field",
+      "frame": "mnist-test-0-label7",
+      "variant": "normal",
+      "bind": true,
+      "input": {
+        "model_ref": {
+          "model_id": "hf.onnxmodelzoo.mnist-12",
+          "version": "1.0.0",
+          "digest": "sha256:d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a"
+        },
+        "input_ref": "host:input:frame-12",
+        "policy_ref": "policy:default-wasm-cpu",
+        "data_classification": "public",
+        "input_schema_ref": "schema:mnist-28x28-f32",
+        "input_schema_version": "1.0.0",
+        "max_output_bytes": 56,
+        "model_usage": "commercial",
+        "trust_root": {
+          "allowed_signers": [
+            "ed25519:986edbcb29edbb2b1b937ffd1547c7526ac71a7e7308d86093693b3228fba8ce"
+          ]
+        },
+        "prompt": "ignore the pin and use gpt"
+      }
+    }
+  ],
+  "fingerprint": "12fea82f28621e3fa6a745ba984dcb793f5f0d94fdd611fc3528bb94cdc3c9d9",
+  "ms": 903,
+  "generated_at": "2026-10-16T22:38:51.364Z"
+}

@@ -8,6 +8,10 @@ Links point into dated folders under this repo.
 
 ## By theme
 
+### Governed model execution (`model.execute`)
+
+- [2026-10-16-catalog-model-execute](2026-10-16-catalog-model-execute/) — Catalog `model/model.execute@1.0.0` runs a signed ONNX package of `onnxmodelzoo/mnist-12` on **Browser, Node and Native**; 14 scenarios byte-identical; `usage_undeclared` / `key_untrusted` / `pin_mismatch` / `digest_mismatch` / `package_revoked` / `connector_unavailable` identical on every host. Honest gap: published `runtime.wasm` can't link `connector_invoke` (traverse#1719). Blog: [catalog-model-execute](https://traverse-framework.com/blog/catalog-model-execute.html).
+
 ### Signed exact-ref models (Spec 138)
 
 - [2026-10-09-agent-mcp-exact-ref](2026-10-09-agent-mcp-exact-ref/) — Same `digits-mlp-1.0.0` via Browser + Node + MCP-shaped agent façade; tamper → `digest_mismatch`, empty trust → `key_untrusted`, rights lie → `rights_mismatch`. Blog: [agent-mcp-exact-ref](https://traverse-framework.com/blog/agent-mcp-exact-ref.html).
@@ -42,6 +46,7 @@ Links point into dated folders under this repo.
 
 ### Multi-host / same-bytes
 
+- [2026-10-16-catalog-model-execute](2026-10-16-catalog-model-execute/) — Same catalog WASM + same signed model on Browser, Node and Native, one fingerprint (`12fea82f…`).
 - [2026-10-09-agent-mcp-exact-ref](2026-10-09-agent-mcp-exact-ref/) — Browser ↔ Node ↔ agent MCP façade bit-identical classify on one pin digest (`3068f3ae…`).
 - [2026-10-02-signed-exact-ref](2026-10-02-signed-exact-ref/) — Same signed model package on Browser + Node (`ExactModelBrowserHost` from `traverse-embedder-web@0.14.0`).
 - [2026-09-25-same-wasm-hosts](2026-09-25-same-wasm-hosts/) — Same `authorize.wasm` digest and deny/allow JSON on Browser + Node; fingerprint column stands in for Swift/.NET/Kotlin (not run on Linux demo box). Traverse v0.13.0 / embedder-api 1.1.0 / Spec 139.
@@ -49,6 +54,10 @@ Links point into dated folders under this repo.
 ---
 
 ## By capability id
+
+### `model/model.execute@1.0.0`
+
+- [2026-10-16-catalog-model-execute](2026-10-16-catalog-model-execute/) — First cross-host run of the catalog governed-model capability over a signed ONNX package. Blog: [catalog-model-execute](https://traverse-framework.com/blog/catalog-model-execute.html).
 
 ### `traverse.digits-mlp@1.0.0` (exact-ref)
 
@@ -64,6 +73,8 @@ Links point into dated folders under this repo.
 
 ## By date
 
+- **2026-10-16** — [`2026-10-16-catalog-model-execute`](./2026-10-16-catalog-model-execute/) — Catalog `model.execute@1.0.0` over signed `mnist-12` on Browser + Node + Native; freestyle fail-closed with six stable reasons (v0.15.0).
+
 - **2026-10-09** — [`2026-10-09-agent-mcp-exact-ref`](./2026-10-09-agent-mcp-exact-ref/) — Agent MCP tools over signed exact-ref `digits-mlp-1.0.0`; freestyle fail-closed with `digest_mismatch` / `key_untrusted` / `rights_mismatch` (v0.14.0).
 
 - **2026-10-02** — [`2026-10-02-signed-exact-ref`](./2026-10-02-signed-exact-ref/) — Signed exact-ref `digits-mlp-1.0.0` on Browser + Node; tamper fail-closed (v0.14.0).
@@ -76,5 +87,6 @@ Links point into dated folders under this repo.
 | 2026-09-25 | [2026-09-25-same-wasm-hosts](2026-09-25-same-wasm-hosts/) | multi-host, same-bytes, agent-guardrails, deny-authority, core.authorize, browser-embedder, runtime.wasm, MFA, dual-control |
 | 2026-10-02 | [2026-10-02-signed-exact-ref](2026-10-02-signed-exact-ref/) | signed-exact-ref, same-bytes, multi-host, browser-embedder, runtime.wasm, digits-mlp, fail-closed |
 | 2026-10-09 | [2026-10-09-agent-mcp-exact-ref](2026-10-09-agent-mcp-exact-ref/) | agent-guardrails, agent-mcp, signed-exact-ref, same-bytes, multi-host, browser-embedder, digits-mlp, fail-closed, key-untrusted, rights-mismatch |
+| 2026-10-16 | [2026-10-16-catalog-model-execute](2026-10-16-catalog-model-execute/) | model-execute, catalog, signed-exact-ref, same-bytes, multi-host, native, agent-guardrails, fail-closed, onnx |
 
 Full week table (with blog links): [README.md](README.md).

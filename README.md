@@ -29,6 +29,7 @@ See that week’s `README.md` for ports, screenshots, and honest gaps.
 | 2026-09-25 | [`2026-09-25-same-wasm-hosts`](2026-09-25-same-wasm-hosts/) | Same `core.authorize` WASM on Browser + Node (+ digest fingerprint); $2.4M wire cheat denied — Traverse v0.13.0 multi-host | `core.authorize@1.2.0` | [same-wasm-multi-host](https://traverse-framework.com/blog/same-wasm-multi-host.html) |
 | 2026-10-02 | [`2026-10-02-signed-exact-ref`](2026-10-02-signed-exact-ref/) | Signed exact-ref `digits-mlp-1.0.0` bit-identical on Browser+Node; tamper fail-closed — Traverse v0.14.0 Spec 138 | `traverse.digits-mlp@1.0.0` | [signed-exact-ref-digits](https://traverse-framework.com/blog/signed-exact-ref-digits.html) |
 | 2026-10-09 | [`2026-10-09-agent-mcp-exact-ref`](2026-10-09-agent-mcp-exact-ref/) | Agent MCP tools over signed exact-ref `digits-mlp`; freestyle → `digest_mismatch` / `key_untrusted` / `rights_mismatch`; Browser+Node bit-identical — Traverse v0.14.0 Spec 138 | `traverse.digits-mlp@1.0.0` | [agent-mcp-exact-ref](https://traverse-framework.com/blog/agent-mcp-exact-ref.html) |
+| 2026-10-16 | [`2026-10-16-catalog-model-execute`](2026-10-16-catalog-model-execute/) | Catalog `model.execute@1.0.0` runs a signed ONNX `mnist-12` package bit-identically on Browser + Node + Native; agent freestyle fails closed — Traverse v0.15.0 | `model/model.execute@1.0.0` | [catalog-model-execute](https://traverse-framework.com/blog/catalog-model-execute.html) |
 
 ## Topic index
 

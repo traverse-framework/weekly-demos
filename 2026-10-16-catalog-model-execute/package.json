@@ -1,0 +1,19 @@
+{
+  "name": "traverse-weekly-2026-10-16-catalog-model-execute",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Catalog model/model.execute@1.0.0 runs a signed Hugging Face ONNX model on Browser, Node and Native (published Traverse v0.15.0)",
+  "scripts": {
+    "start": "PORT=8776 node server.mjs",
+    "node": "node hosts/node-run.mjs",
+    "native:build": "cd native-host && cargo +1.94.0 build --release",
+    "native": "jq '.scenarios' proof/node.json > proof/scenarios.json && ./native-host/target/release/model-execute-native-host $PWD proof/scenarios.json > proof/native-mediated.json",
+    "native:verify": "node hosts/native-run.mjs",
+    "match": "node hosts/digest-match.mjs",
+    "probe": "node hosts/bundle-probe.mjs"
+  },
+  "dependencies": {
+    "traverse-embedder-web": "0.15.0"
+  }
+}

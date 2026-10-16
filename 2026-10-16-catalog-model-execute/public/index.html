@@ -1,0 +1,19 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Traverse · catalog model.execute → signed HF model on 3 hosts</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="styles.css"></head><body>
+<header>
+  <div class="eyebrow">Traverse weekly demo · 2026-10-16 · published v0.15.0 + registry catalog (228 caps)</div>
+  <h1>An agent picks a model off the shelf. <span>The contract still decides.</span></h1>
+  <p class="lede">The new catalog capability <code>model/model.execute@1.0.0</code> (8&nbsp;KB WASM) runs a <b>signed Hugging Face ONNX model</b> (<code>onnxmodelzoo/mnist-12</code>) on <b>Browser, Node and Native</b>. Same capability bytes, same pin, same output bytes. Agent freestyle fails closed.</p>
+  <div id="pins" class="pins"></div>
+</header>
+<main>
+  <section><h2>1 · Same capability, three hosts, bit-identical</h2>
+    <div class="hostbar"><span class="host b">Browser · live</span><span class="host n">Node · <button id="rerunNode">re-run</button></span><span class="host x">Native · <button id="rerunNative">re-run</button></span><span id="verdict" class="verdict">running…</span></div>
+    <div id="digits" class="digits"></div></section>
+  <section><h2>2 · The agent freestyles. Every host refuses the same way.</h2>
+    <table id="attempts"><thead><tr><th>What the agent / world tried</th><th>Refused by</th><th>Browser</th><th>Node</th><th>Native</th><th>Model ran?</th></tr></thead><tbody></tbody></table></section>
+  <section class="two"><div><h2>3 · Trace: what the WASM actually asked the host</h2><pre id="trace">…</pre></div>
+    <div><h2>4 · Product-path truth</h2><div id="truth"></div></div></section>
+</main>
+<footer>Traverse v0.15.0 (tag @44915539) · npm traverse-embedder-web@0.15.0 · crates.io traverse-runtime 0.15.0 · catalog model.execute@1.0.0 (registry#639) · HF onnxmodelzoo/mnist-12 @1cd752f4 · throwaway prototype signing key, no production trust</footer>
+<script type="module" src="app.js"></script></body></html>

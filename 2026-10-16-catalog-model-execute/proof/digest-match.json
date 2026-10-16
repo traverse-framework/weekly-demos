@@ -1,0 +1,111 @@
+{
+  "hosts": [
+    "browser",
+    "node",
+    "native"
+  ],
+  "all_identical": true,
+  "browser_fingerprint": "12fea82f28621e3fa6a745ba984dcb793f5f0d94fdd611fc3528bb94cdc3c9d9",
+  "node_fingerprint": "12fea82f28621e3fa6a745ba984dcb793f5f0d94fdd611fc3528bb94cdc3c9d9",
+  "rows": [
+    {
+      "id": "mnist-test-0-label7",
+      "stdout_identical": true,
+      "frame_identical": true,
+      "matches_native_conformance_vector": true,
+      "result": "ok"
+    },
+    {
+      "id": "mnist-test-1-label2",
+      "stdout_identical": true,
+      "frame_identical": true,
+      "matches_native_conformance_vector": true,
+      "result": "ok"
+    },
+    {
+      "id": "mnist-test-2-label1",
+      "stdout_identical": true,
+      "frame_identical": true,
+      "matches_native_conformance_vector": true,
+      "result": "ok"
+    },
+    {
+      "id": "mnist-test-3-label0",
+      "stdout_identical": true,
+      "frame_identical": true,
+      "matches_native_conformance_vector": true,
+      "result": "ok"
+    },
+    {
+      "id": "no_usage",
+      "stdout_identical": true,
+      "frame_identical": true,
+      "matches_native_conformance_vector": null,
+      "result": "usage_undeclared"
+    },
+    {
+      "id": "bad_usage",
+      "stdout_identical": true,
+      "frame_identical": true,
+      "matches_native_conformance_vector": null,
+      "result": "usage_undeclared"
+    },
+    {
+      "id": "empty_trust",
+      "stdout_identical": true,
+      "frame_identical": true,
+      "matches_native_conformance_vector": null,
+      "result": "key_untrusted"
+    },
+    {
+      "id": "fake_signer",
+      "stdout_identical": true,
+      "frame_identical": true,
+      "matches_native_conformance_vector": null,
+      "result": "key_untrusted"
+    },
+    {
+      "id": "swap_digest",
+      "stdout_identical": true,
+      "frame_identical": true,
+      "matches_native_conformance_vector": null,
+      "result": "pin_mismatch"
+    },
+    {
+      "id": "bigger_model",
+      "stdout_identical": true,
+      "frame_identical": true,
+      "matches_native_conformance_vector": null,
+      "result": "pin_mismatch"
+    },
+    {
+      "id": "tamper",
+      "stdout_identical": true,
+      "frame_identical": true,
+      "matches_native_conformance_vector": null,
+      "result": "digest_mismatch"
+    },
+    {
+      "id": "revoked",
+      "stdout_identical": true,
+      "frame_identical": true,
+      "matches_native_conformance_vector": null,
+      "result": "package_revoked"
+    },
+    {
+      "id": "unbound",
+      "stdout_identical": true,
+      "frame_identical": true,
+      "matches_native_conformance_vector": null,
+      "result": "connector_unavailable"
+    },
+    {
+      "id": "extra_field",
+      "stdout_identical": true,
+      "frame_identical": true,
+      "matches_native_conformance_vector": null,
+      "result": "ok"
+    }
+  ],
+  "generated_at": "2026-10-16T22:40:26.620Z"
+}

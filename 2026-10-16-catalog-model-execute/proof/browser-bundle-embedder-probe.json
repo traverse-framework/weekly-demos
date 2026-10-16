@@ -1,0 +1,5 @@
+{
+  "probe": "constraint_violated: instantiate: cannot find definition for import (traverse_host,connector_invoke) with type Func(FuncType { core: FuncType { params: [I32, I32, I32, I32], results: [I32] } })",
+  "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+  "at": "2026-10-16T22:38:52.928Z"
+}

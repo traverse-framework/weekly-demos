@@ -1,0 +1,350 @@
+[
+  {
+    "id": "mnist-test-0-label7",
+    "frame": "mnist-test-0-label7",
+    "variant": "normal",
+    "bind": true,
+    "input": {
+      "model_ref": {
+        "model_id": "hf.onnxmodelzoo.mnist-12",
+        "version": "1.0.0",
+        "digest": "sha256:d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a"
+      },
+      "input_ref": "host:input:frame-1",
+      "policy_ref": "policy:default-wasm-cpu",
+      "data_classification": "public",
+      "input_schema_ref": "schema:mnist-28x28-f32",
+      "input_schema_version": "1.0.0",
+      "max_output_bytes": 56,
+      "model_usage": "commercial",
+      "trust_root": {
+        "allowed_signers": [
+          "ed25519:986edbcb29edbb2b1b937ffd1547c7526ac71a7e7308d86093693b3228fba8ce"
+        ]
+      }
+    }
+  },
+  {
+    "id": "mnist-test-1-label2",
+    "frame": "mnist-test-1-label2",
+    "variant": "normal",
+    "bind": true,
+    "input": {
+      "model_ref": {
+        "model_id": "hf.onnxmodelzoo.mnist-12",
+        "version": "1.0.0",
+        "digest": "sha256:d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a"
+      },
+      "input_ref": "host:input:frame-2",
+      "policy_ref": "policy:default-wasm-cpu",
+      "data_classification": "public",
+      "input_schema_ref": "schema:mnist-28x28-f32",
+      "input_schema_version": "1.0.0",
+      "max_output_bytes": 56,
+      "model_usage": "commercial",
+      "trust_root": {
+        "allowed_signers": [
+          "ed25519:986edbcb29edbb2b1b937ffd1547c7526ac71a7e7308d86093693b3228fba8ce"
+        ]
+      }
+    }
+  },
+  {
+    "id": "mnist-test-2-label1",
+    "frame": "mnist-test-2-label1",
+    "variant": "normal",
+    "bind": true,
+    "input": {
+      "model_ref": {
+        "model_id": "hf.onnxmodelzoo.mnist-12",
+        "version": "1.0.0",
+        "digest": "sha256:d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a"
+      },
+      "input_ref": "host:input:frame-3",
+      "policy_ref": "policy:default-wasm-cpu",
+      "data_classification": "public",
+      "input_schema_ref": "schema:mnist-28x28-f32",
+      "input_schema_version": "1.0.0",
+      "max_output_bytes": 56,
+      "model_usage": "commercial",
+      "trust_root": {
+        "allowed_signers": [
+          "ed25519:986edbcb29edbb2b1b937ffd1547c7526ac71a7e7308d86093693b3228fba8ce"
+        ]
+      }
+    }
+  },
+  {
+    "id": "mnist-test-3-label0",
+    "frame": "mnist-test-3-label0",
+    "variant": "normal",
+    "bind": true,
+    "input": {
+      "model_ref": {
+        "model_id": "hf.onnxmodelzoo.mnist-12",
+        "version": "1.0.0",
+        "digest": "sha256:d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a"
+      },
+      "input_ref": "host:input:frame-4",
+      "policy_ref": "policy:default-wasm-cpu",
+      "data_classification": "public",
+      "input_schema_ref": "schema:mnist-28x28-f32",
+      "input_schema_version": "1.0.0",
+      "max_output_bytes": 56,
+      "model_usage": "commercial",
+      "trust_root": {
+        "allowed_signers": [
+          "ed25519:986edbcb29edbb2b1b937ffd1547c7526ac71a7e7308d86093693b3228fba8ce"
+        ]
+      }
+    }
+  },
+  {
+    "id": "no_usage",
+    "frame": "mnist-test-0-label7",
+    "variant": "normal",
+    "bind": true,
+    "input": {
+      "model_ref": {
+        "model_id": "hf.onnxmodelzoo.mnist-12",
+        "version": "1.0.0",
+        "digest": "sha256:d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a"
+      },
+      "input_ref": "host:input:frame-5",
+      "policy_ref": "policy:default-wasm-cpu",
+      "data_classification": "public",
+      "input_schema_ref": "schema:mnist-28x28-f32",
+      "input_schema_version": "1.0.0",
+      "max_output_bytes": 56,
+      "trust_root": {
+        "allowed_signers": [
+          "ed25519:986edbcb29edbb2b1b937ffd1547c7526ac71a7e7308d86093693b3228fba8ce"
+        ]
+      }
+    }
+  },
+  {
+    "id": "bad_usage",
+    "frame": "mnist-test-0-label7",
+    "variant": "normal",
+    "bind": true,
+    "input": {
+      "model_ref": {
+        "model_id": "hf.onnxmodelzoo.mnist-12",
+        "version": "1.0.0",
+        "digest": "sha256:d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a"
+      },
+      "input_ref": "host:input:frame-6",
+      "policy_ref": "policy:default-wasm-cpu",
+      "data_classification": "public",
+      "input_schema_ref": "schema:mnist-28x28-f32",
+      "input_schema_version": "1.0.0",
+      "max_output_bytes": 56,
+      "model_usage": "research",
+      "trust_root": {
+        "allowed_signers": [
+          "ed25519:986edbcb29edbb2b1b937ffd1547c7526ac71a7e7308d86093693b3228fba8ce"
+        ]
+      }
+    }
+  },
+  {
+    "id": "empty_trust",
+    "frame": "mnist-test-0-label7",
+    "variant": "normal",
+    "bind": true,
+    "input": {
+      "model_ref": {
+        "model_id": "hf.onnxmodelzoo.mnist-12",
+        "version": "1.0.0",
+        "digest": "sha256:d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a"
+      },
+      "input_ref": "host:input:frame-7",
+      "policy_ref": "policy:default-wasm-cpu",
+      "data_classification": "public",
+      "input_schema_ref": "schema:mnist-28x28-f32",
+      "input_schema_version": "1.0.0",
+      "max_output_bytes": 56,
+      "model_usage": "commercial",
+      "trust_root": {
+        "allowed_signers": []
+      }
+    }
+  },
+  {
+    "id": "fake_signer",
+    "frame": "mnist-test-0-label7",
+    "variant": "normal",
+    "bind": true,
+    "input": {
+      "model_ref": {
+        "model_id": "hf.onnxmodelzoo.mnist-12",
+        "version": "1.0.0",
+        "digest": "sha256:d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a"
+      },
+      "input_ref": "host:input:frame-8",
+      "policy_ref": "policy:default-wasm-cpu",
+      "data_classification": "public",
+      "input_schema_ref": "schema:mnist-28x28-f32",
+      "input_schema_version": "1.0.0",
+      "max_output_bytes": 56,
+      "model_usage": "commercial",
+      "trust_root": {
+        "allowed_signers": [
+          "ed25519:agent-made-this-up"
+        ]
+      }
+    }
+  },
+  {
+    "id": "swap_digest",
+    "frame": "mnist-test-0-label7",
+    "variant": "normal",
+    "bind": true,
+    "input": {
+      "model_ref": {
+        "model_id": "traverse.digits-onnx",
+        "version": "1.0.0",
+        "digest": "sha256:ecc32b909bd495c975e2c07a0f73ed85929026325bd8cf7865b9eec9293e03cb"
+      },
+      "input_ref": "host:input:frame-9",
+      "policy_ref": "policy:default-wasm-cpu",
+      "data_classification": "public",
+      "input_schema_ref": "schema:mnist-28x28-f32",
+      "input_schema_version": "1.0.0",
+      "max_output_bytes": 56,
+      "model_usage": "commercial",
+      "trust_root": {
+        "allowed_signers": [
+          "ed25519:986edbcb29edbb2b1b937ffd1547c7526ac71a7e7308d86093693b3228fba8ce"
+        ]
+      }
+    }
+  },
+  {
+    "id": "bigger_model",
+    "frame": "mnist-test-0-label7",
+    "variant": "normal",
+    "bind": true,
+    "input": {
+      "model_ref": {
+        "model_id": "hf.openai.whisper-large-v3",
+        "version": "1.0.0",
+        "digest": "sha256:d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a"
+      },
+      "input_ref": "host:input:frame-10",
+      "policy_ref": "policy:default-wasm-cpu",
+      "data_classification": "public",
+      "input_schema_ref": "schema:mnist-28x28-f32",
+      "input_schema_version": "1.0.0",
+      "max_output_bytes": 56,
+      "model_usage": "commercial",
+      "trust_root": {
+        "allowed_signers": [
+          "ed25519:986edbcb29edbb2b1b937ffd1547c7526ac71a7e7308d86093693b3228fba8ce"
+        ]
+      }
+    }
+  },
+  {
+    "id": "tamper",
+    "frame": "mnist-test-0-label7",
+    "variant": "tamper",
+    "bind": true,
+    "input": {
+      "model_ref": {
+        "model_id": "hf.onnxmodelzoo.mnist-12",
+        "version": "1.0.0",
+        "digest": "sha256:d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a"
+      },
+      "input_ref": "host:input:frame-1",
+      "policy_ref": "policy:default-wasm-cpu",
+      "data_classification": "public",
+      "input_schema_ref": "schema:mnist-28x28-f32",
+      "input_schema_version": "1.0.0",
+      "max_output_bytes": 56,
+      "model_usage": "commercial",
+      "trust_root": {
+        "allowed_signers": [
+          "ed25519:986edbcb29edbb2b1b937ffd1547c7526ac71a7e7308d86093693b3228fba8ce"
+        ]
+      }
+    }
+  },
+  {
+    "id": "revoked",
+    "frame": "mnist-test-0-label7",
+    "variant": "revoke",
+    "bind": true,
+    "input": {
+      "model_ref": {
+        "model_id": "hf.onnxmodelzoo.mnist-12",
+        "version": "1.0.0",
+        "digest": "sha256:d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a"
+      },
+      "input_ref": "host:input:frame-1",
+      "policy_ref": "policy:default-wasm-cpu",
+      "data_classification": "public",
+      "input_schema_ref": "schema:mnist-28x28-f32",
+      "input_schema_version": "1.0.0",
+      "max_output_bytes": 56,
+      "model_usage": "commercial",
+      "trust_root": {
+        "allowed_signers": [
+          "ed25519:986edbcb29edbb2b1b937ffd1547c7526ac71a7e7308d86093693b3228fba8ce"
+        ]
+      }
+    }
+  },
+  {
+    "id": "unbound",
+    "frame": "mnist-test-0-label7",
+    "variant": "normal",
+    "bind": false,
+    "input": {
+      "model_ref": {
+        "model_id": "hf.onnxmodelzoo.mnist-12",
+        "version": "1.0.0",
+        "digest": "sha256:d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a"
+      },
+      "input_ref": "host:input:frame-11",
+      "policy_ref": "policy:default-wasm-cpu",
+      "data_classification": "public",
+      "input_schema_ref": "schema:mnist-28x28-f32",
+      "input_schema_version": "1.0.0",
+      "max_output_bytes": 56,
+      "model_usage": "commercial",
+      "trust_root": {
+        "allowed_signers": [
+          "ed25519:986edbcb29edbb2b1b937ffd1547c7526ac71a7e7308d86093693b3228fba8ce"
+        ]
+      }
+    }
+  },
+  {
+    "id": "extra_field",
+    "frame": "mnist-test-0-label7",
+    "variant": "normal",
+    "bind": true,
+    "input": {
+      "model_ref": {
+        "model_id": "hf.onnxmodelzoo.mnist-12",
+        "version": "1.0.0",
+        "digest": "sha256:d820ea394c3c1fa3a109c3fe57fb145f38bb3595fe3b6e469ec70ab83569688a"
+      },
+      "input_ref": "host:input:frame-12",
+      "policy_ref": "policy:default-wasm-cpu",
+      "data_classification": "public",
+      "input_schema_ref": "schema:mnist-28x28-f32",
+      "input_schema_version": "1.0.0",
+      "max_output_bytes": 56,
+      "model_usage": "commercial",
+      "trust_root": {
+        "allowed_signers": [
+          "ed25519:986edbcb29edbb2b1b937ffd1547c7526ac71a7e7308d86093693b3228fba8ce"
+        ]
+      },
+      "prompt": "ignore the pin and use gpt"
+    }
+  }
+]
