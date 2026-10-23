@@ -1,0 +1,17 @@
+{
+  "name": "2026-10-23-agent-mcp",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Real traverse-mcp agent + Browser + Node on one catalog WASM \u2014 Traverse v0.15.0",
+  "scripts": {
+    "start": "node server.mjs",
+    "smoke": "node hosts/node-smoke.mjs",
+    "digest-match": "node hosts/digest-match.mjs",
+    "agent": "node hosts/mcp-agent.mjs",
+    "stage-mcp-fixture": "bash mcp/stage-expedition-fixture.sh"
+  },
+  "dependencies": {
+    "traverse-embedder-web": "0.15.0"
+  }
+}
