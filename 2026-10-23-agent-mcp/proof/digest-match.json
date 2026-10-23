@@ -1,0 +1,57 @@
+{
+  "checked_at": "2026-10-23T22:26:45.352Z",
+  "wasm": {
+    "browser_and_node_bundle": "sha256:0c318fff56a74eddfbc1ab850c25c1ba191744309984a07bd503b8cd9cb92e40",
+    "agent_verified_cache": "sha256:0c318fff56a74eddfbc1ab850c25c1ba191744309984a07bd503b8cd9cb92e40",
+    "catalog": "sha256:0c318fff56a74eddfbc1ab850c25c1ba191744309984a07bd503b8cd9cb92e40",
+    "all_identical": true
+  },
+  "runtime_wasm": {
+    "file": "sha256:a254c161d5699b19ffe6eb47d2e11e45a39363ae8b2a9ac435d54a09fb31d782",
+    "expected": "sha256:a254c161d5699b19ffe6eb47d2e11e45a39363ae8b2a9ac435d54a09fb31d782",
+    "match": true
+  },
+  "agent_binary": {
+    "path": "mcp/bin/traverse-mcp",
+    "sha256": "sha256:0b6e5b8589575e0132ae0b25920e34b300473bb852cc75aef52505d68875fe9f",
+    "source": "cargo install traverse-mcp --version 0.15.0 --locked (crates.io)"
+  },
+  "agent_mode": "verified_public",
+  "node_vs_agent": {
+    "deny": {
+      "full_output_identical": false,
+      "identical_except_policy_hash": true,
+      "policy_hash": [
+        "fnv1a64:2a126b867e19f379",
+        "fnv1a64:51a64653e94300c3"
+      ]
+    },
+    "allow": {
+      "full_output_identical": false,
+      "identical_except_policy_hash": true,
+      "policy_hash": [
+        "fnv1a64:2a126b867e19f379",
+        "fnv1a64:51a64653e94300c3"
+      ]
+    }
+  },
+  "node_canonical_keys_vs_agent": {
+    "deny": {
+      "full_output_identical": true,
+      "identical_except_policy_hash": true,
+      "policy_hash": [
+        "fnv1a64:51a64653e94300c3",
+        "fnv1a64:51a64653e94300c3"
+      ]
+    },
+    "allow": {
+      "full_output_identical": true,
+      "identical_except_policy_hash": true,
+      "policy_hash": [
+        "fnv1a64:51a64653e94300c3",
+        "fnv1a64:51a64653e94300c3"
+      ]
+    }
+  },
+  "finding": "core.authorize@1.2.0 hashes the raw policy bytes it receives. traverse-mcp re-serializes the request input with sorted keys (serde_json), while BundleEmbedder passes the caller's bytes verbatim, so policy_hash differs across hosts for the same logical input. With sorted-key input on Node, outputs are byte-identical."
+}

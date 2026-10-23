@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The agent gets the real MCP server — Traverse 0.15</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <style>
+    .hosts-grid{grid-template-columns:repeat(3,1fr)}
+    table{width:100%;border-collapse:collapse;font-size:13px}
+    td,th{border-bottom:1px solid #2a3140;padding:6px 8px;text-align:left;vertical-align:top}
+    .pill{display:inline-block;padding:1px 8px;border-radius:10px;font-size:12px;font-weight:600}
+    .p-deny{background:#4a1d22;color:#ff8f8f}.p-allow{background:#16382a;color:#7fe0a8}.p-warn{background:#41361a;color:#f0cf6a}
+    .finding{border-left:4px solid #f0cf6a}
+    code.h{font-size:12px}
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Friday demo · 2026-10-23 · Traverse v0.15.0 · traverse-mcp 0.15.0 (crates.io) · embedder-web 0.15.0</p>
+      <h1>The agent gets the real MCP server, and still can't freestyle</h1>
+      <p class="lede">
+        Atlas, an ops agent, tries to push a $2.4M offshore wire for a junior analyst.
+        The catalog's <code>core.authorize@1.2.0</code> (same <code>0c318fff…</code> bytes everywhere) decides it on three hosts:
+        the browser embedder, the Node embedder, and, new this week, the <strong>published <code>traverse-mcp</code> binary</strong>
+        in Mode A, serving only what is in a digest-verified registry cache. Click once; all three run live.
+      </p>
+    </header>
+
+    <section class="actions">
+      <button id="btn-run" disabled>Run all three hosts live</button>
+      <span id="status" class="muted"></span>
+    </section>
+
+    <section class="hosts-grid">
+      <article class="card host-col"><h2>1 · Browser</h2><p class="muted">traverse-embedder-web 0.15.0 · BundleEmbedder → runtime.wasm (nested wasmi) · in this tab</p><pre id="col-browser" class="mini">waiting…</pre></article>
+      <article class="card host-col"><h2>2 · Node</h2><p class="muted">same npm package · NodeFsBundleLoader · server process</p><pre id="col-node" class="mini">waiting…</pre></article>
+      <article class="card host-col"><h2>3 · Agent via traverse-mcp</h2><p class="muted">real 0.15.0 binary · stdio · Mode A <code>verified_public</code> · native wasmtime</p><pre id="col-agent" class="mini">waiting…</pre></article>
+    </section>
+
+    <section class="card"><h2>Cross-host truth</h2><div id="truth">waiting…</div></section>
+    <section class="card finding"><h2>What running it three ways found</h2><div id="finding">waiting…</div></section>
+    <section class="card"><h2>Agent freestyle attempts through the MCP server</h2><div id="freestyle">waiting…</div></section>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
