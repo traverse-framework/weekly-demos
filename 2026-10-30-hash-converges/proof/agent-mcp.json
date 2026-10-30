@@ -1,0 +1,1561 @@
+{
+  "host": "agent-mcp",
+  "binary": {
+    "path": "mcp/bin/traverse-mcp",
+    "sha256": "sha256:e2cda8dd0b9e65d2589312e7a5d6a8e5345359038e292aa32d745a1a4a399bef",
+    "source": "cargo +1.95.0 build --release -p traverse-mcp at traverse main 70f3ee7 (unreleased)"
+  },
+  "startup": {
+    "auth_boundary": {
+      "default_mode": "local_trust",
+      "required_commands": [
+        "execute_entrypoint",
+        "render_execution_report"
+      ],
+      "required_token_env": "TRAVERSE_MCP_STDIO_BEARER_TOKEN"
+    },
+    "content_group_count": 0,
+    "discovery_source": {
+      "capability_count": 232,
+      "index_digest": "sha256:1fa55dc3b19fcd1af400d867d3d8f86f4bebdb0a395ef50f318fc0f67f22a525",
+      "kind": "host_verified_public_registry",
+      "source_release": "index-v412",
+      "stale": false
+    },
+    "governing_spec": "119-verified-registry-mcp-mode-a",
+    "host_mode": "stdio",
+    "kind": "mcp_stdio_server_startup",
+    "mode": "verified_public",
+    "public_surface_id": "traverse.mcp.stdio-server",
+    "server_name": "traverse-mcp",
+    "status": "ready",
+    "supported_commands": [
+      "describe_server",
+      "list_content_groups",
+      "describe_content_group",
+      "list_entrypoints",
+      "search_capabilities",
+      "describe_entrypoint",
+      "validate_entrypoint",
+      "execute_entrypoint",
+      "render_execution_report",
+      "shutdown"
+    ]
+  },
+  "mode": "verified_public",
+  "search_hits": null,
+  "search": {
+    "kind": "mcp_capability_search",
+    "records": [
+      {
+        "artifact_digest": "sha256:f8879dc121e07eecc474e8833dd8a1bcd753787ba34b0307d6b64478e50fcef6",
+        "description": "Pure and domain-neutral shareability policy. It consumes artifact metadata and policy configuration only. It does not inspect or sanitize bytes, infer privacy facts, collect consent, export artifacts, contact a reviewer, or know an application, media domain, or destination service.",
+        "id": "artifact.shareability-classify",
+        "index_digest": "sha256:1fa55dc3b19fcd1af400d867d3d8f86f4bebdb0a395ef50f318fc0f67f22a525",
+        "lifecycle": "active",
+        "namespace": "artifact",
+        "permitted_targets": [
+          "local",
+          "browser",
+          "edge",
+          "device"
+        ],
+        "provenance": {
+          "adr_refs": [],
+          "author": "Codex",
+          "created_at": "2026-09-14T00:00:00Z",
+          "exception_refs": [],
+          "source": "greenfield",
+          "spec_ref": "100-capability-package-authoring@1.0.0"
+        },
+        "scenarios": [
+          "As an artifact-policy consumer, I want an artifact to be shareable when its audience and sensitivity are allowed and required consent/sanitization are satisfied so that a host can enforce export policy consistently.",
+          "As an artifact-policy consumer, I want disallowed audiences, sensitivity classes, missing sanitization, or missing consent blocked or referred for review so that incomplete protection never silently authorizes sharing."
+        ],
+        "service_type": "stateless",
+        "source_release": "index-v412",
+        "summary": "Classify artifact shareability from supplied audience, sensitivity, consent, and sanitization facts.",
+        "version": "1.1.1"
+      },
+      {
+        "artifact_digest": "sha256:f8879dc121e07eecc474e8833dd8a1bcd753787ba34b0307d6b64478e50fcef6",
+        "description": "Pure and domain-neutral shareability policy. It consumes artifact metadata and policy configuration only. It does not inspect or sanitize bytes, infer privacy facts, collect consent, export artifacts, contact a reviewer, or know an application, media domain, or destination service.",
+        "id": "artifact.shareability-classify",
+        "index_digest": "sha256:1fa55dc3b19fcd1af400d867d3d8f86f4bebdb0a395ef50f318fc0f67f22a525",
+        "lifecycle": "draft",
+        "namespace": "artifact",
+        "permitted_targets": [
+          "local",
+          "browser",
+          "edge",
+          "device"
+        ],
+        "provenance": {
+          "adr_refs": [],
+          "author": "Codex",
+          "created_at": "2026-09-14T00:00:00Z",
+          "exception_refs": [],
+          "source": "greenfield",
+          "spec_ref": "100-capability-package-authoring@1.0.0"
+        },
+        "scenarios": [
+          "As an artifact-policy consumer, I want an artifact to be shareable when its audience and sensitivity are allowed and required consent/sanitization are satisfied so that a host can enforce export policy consistently.",
+          "As an artifact-policy consumer, I want disallowed audiences, sensitivity classes, missing sanitization, or missing consent blocked or referred for review so that incomplete protection never silently authorizes sharing."
+        ],
+        "service_type": "stateless",
+        "source_release": "index-v412",
+        "summary": "Classify artifact shareability from supplied audience, sensitivity, consent, and sanitization facts.",
+        "version": "1.1.0"
+      },
+      {
+        "artifact_digest": "sha256:f8879dc121e07eecc474e8833dd8a1bcd753787ba34b0307d6b64478e50fcef6",
+        "description": "Pure and domain-neutral shareability policy. It consumes artifact metadata and policy configuration only. It does not inspect or sanitize bytes, infer privacy facts, collect consent, export artifacts, contact a reviewer, or know an application, media domain, or destination service.",
+        "id": "artifact.shareability-classify",
+        "index_digest": "sha256:1fa55dc3b19fcd1af400d867d3d8f86f4bebdb0a395ef50f318fc0f67f22a525",
+        "lifecycle": "draft",
+        "namespace": "artifact",
+        "permitted_targets": [
+          "local",
+          "browser",
+          "edge",
+          "device"
+        ],
+        "provenance": {
+          "adr_refs": [],
+          "author": "Codex",
+          "created_at": "2026-09-14T00:00:00Z",
+          "exception_refs": [],
+          "source": "greenfield",
+          "spec_ref": "100-capability-package-authoring@1.0.0"
+        },
+        "scenarios": [
+          "As an artifact-policy consumer, I want an artifact to be shareable when its audience and sensitivity are allowed and required consent/sanitization are satisfied so that a host can enforce export policy consistently.",
+          "As an artifact-policy consumer, I want disallowed audiences, sensitivity classes, missing sanitization, or missing consent blocked or referred for review so that incomplete protection never silently authorizes sharing."
+        ],
+        "service_type": "stateless",
+        "source_release": "index-v412",
+        "summary": "Classify artifact shareability from supplied audience, sensitivity, consent, and sanitization facts.",
+        "version": "1.0.0"
+      },
+      {
+        "artifact_digest": "sha256:e7d80160448d23accac8bb0a60771deed37a418f7bf701f269b64d61be16feb5",
+        "description": "core.authorize is a pure, side-effect-free authorization capability designed for maximum reusability across web, mobile, desktop, edge, and AI-agent runtimes.\n\nIt deliberately separates policy definition from policy evaluation. The caller supplies a complete, versioned policy configuration at invocation time (or a compact reference in future extensions). The same WASM binary can therefore enforce RBAC, ABAC, ReBAC-lite, hybrid, or explicit allow/deny rules without recompilation.\n\nKey design principles (Persona-Council reviewed):\n- Fail-closed by default (default_effect = deny).\n- Fully deterministic: identical inputs always produce identical outputs.\n- No host, network, or filesystem access.\n- Structured, machine-readable output suitable for audit logs, UI enforcement, and downstream agents.\n- Explicit support for multi-tenant isolation, hierarchical roles, time/context conditions, ownership, relationships, high-priority denies, and break-glass overrides.\n- Obligations are first-class structured objects (not free-form strings) so callers know exactly what additional steps are required.\n\nThe capability never mutates state and never contacts external systems. All decision logic lives inside the supplied policy + the deterministic evaluator.\n\nKnown intentional limitations (disclosed):\n- The evaluator implements a practical subset of common authorization patterns; it is not a full XACML or Cedar engine.\n- Complex boolean expressions inside conditions are limited to a small, safe DSL to keep the WASM footprint and attack surface small.\n- Policy size should be kept modest when inlined; very large policy sets should be versioned and referenced externally in future iterations.",
+        "id": "core.authorize",
+        "index_digest": "sha256:1fa55dc3b19fcd1af400d867d3d8f86f4bebdb0a395ef50f318fc0f67f22a525",
+        "lifecycle": "active",
+        "namespace": "core",
+        "permitted_targets": [
+          "local",
+          "edge",
+          "browser",
+          "cloud"
+        ],
+        "provenance": {
+          "adr_refs": [
+            "0001-rust-wasm-foundation",
+            "persona-council-review-2026-08-08"
+          ],
+          "author": "traverse-capability-author + persona-council",
+          "created_at": "2026-08-08T05:36:00Z",
+          "exception_refs": [],
+          "source": "ai-assisted",
+          "spec_ref": "core.authorize@1.0.0"
+        },
+        "scenarios": [
+          "As a platform security engineer, I want an admin user with the correct role to be allowed to delete a document so that privileged operations succeed when policy permits them.",
+          "As a multi-tenant SaaS developer, I want a user to be denied access to a resource that belongs to a different tenant even if they hold a powerful role, so that tenant isolation is enforced.",
+          "As a collaboration product owner, I want the owner of a resource to always be able to update it, so that ownership rights are respected regardless of role.",
+          "As a security engineer, I want a high-priority explicit deny to override an allow rule so that a compromised or suspended account cannot exercise privileges.",
+          "As a compliance officer, I want an allow decision to carry structured obligations (require MFA + audit) so that the calling system can enforce additional controls.",
+          "As a developer, I want any request that matches no rule to be denied when default_effect is deny, so that the system fails closed.",
+          "As a runtime, I want an empty or malformed policy to always produce a deny with a clear reason_code so that invalid configurations cannot open the system.",
+          "As an incident responder, I want a break-glass flag to allow a temporary override while still recording that the override was used, so that emergency access is possible but fully auditable.",
+          "As a client developer, I want a clear structured denial when the principal object is missing required fields so that I can surface a precise error instead of a generic failure."
+        ],
+        "service_type": "stateless",
+        "source_release": "index-v412",
+        "summary": "Pure authorization evaluator: allow/deny for principal+action+resource under a caller-supplied versioned policy.",
+        "version": "1.0.0"
+      },
+      {
+        "artifact_digest": "sha256:b18b637900e0e1100c3e99e27ab8475b0fe7800e37e5970ee1f04516bc67e59b",
+        "description": "Pure, deterministic decision procedure for consent and purpose binding evaluation (issue #500). Evaluates whether caller-supplied consent records allow a requested processing purpose for a subject under a caller-supplied policy version and evaluation timestamp (now). Never accesses external storage, clocks, connectors, or network.\n\nMatching and evaluation semantics:\n- Consents are evaluated in declaration order. The first record whose purpose exactly matches requested_purpose determines the decision and matched_consent_index.\n- If status is 'withdrawn', decision is 'deny' with reason_code 'consent_withdrawn'.\n- If status is 'denied', decision is 'deny' with reason_code 'consent_denied'.\n- If status is 'granted', validity timestamps are evaluated: if granted_at > now or unparseable, fails closed with 'deny' / 'invalid_input'; if expires_at <= now, decision is 'deny' with 'consent_expired'; otherwise 'allow' with 'consent_granted'.\n- If no record matches requested_purpose, decision is 'deny' with 'purpose_not_granted'.\n- Malformed input fields or timestamps fail closed with 'deny' and 'invalid_input'.\n- Scope intersection: v1.0.0 performs exact purpose matching; scope is preserved as metadata without filtering.",
+        "id": "core.consent-purpose-check",
+        "index_digest": "sha256:1fa55dc3b19fcd1af400d867d3d8f86f4bebdb0a395ef50f318fc0f67f22a525",
+        "lifecycle": "active",
+        "namespace": "core",
+        "permitted_targets": [
+          "local",
+          "edge",
+          "browser",
+          "cloud"
+        ],
+        "provenance": {
+          "adr_refs": [
+            "0001-rust-wasm-foundation"
+          ],
+          "author": "traverse-capability-author",
+          "created_at": "2026-09-18T12:00:00Z",
+          "exception_refs": [],
+          "source": "ai-assisted",
+          "spec_ref": "core.consent-purpose-check@1.0.0"
+        },
+        "scenarios": [
+          "As a compliance officer, I want a granted consent for the requested purpose to be allowed, so that lawful processing can proceed.",
+          "As a compliance officer, I want a withdrawn consent for the requested purpose to be denied, so that processing immediately ceases when consent is rescinded.",
+          "As a compliance officer, I want an explicitly denied consent for the requested purpose to be denied, so that opt-outs are strictly enforced.",
+          "As a compliance officer, I want an expired consent for the requested purpose to be denied, so that processing stops once the validity window closes.",
+          "As a compliance officer, I want a request with no matching consent purpose to be denied, so that unauthorized purposes fail closed by default.",
+          "As a runtime engineer, I want malformed timestamps to be rejected, so that corrupted inputs fail safely without guessing intent."
+        ],
+        "service_type": "stateless",
+        "source_release": "index-v412",
+        "summary": "Pure, deterministic consent and purpose binding check answering whether supplied consent data allows a requested purpose.",
+        "version": "1.0.0"
+      },
+      {
+        "artifact_digest": "sha256:ef152849ee39dbb37dd8f8549d973fb718331a04388023951390602efe037bfd",
+        "description": "Policy-driven comment processor for create/edit/reply/delete/react with mentions, quarantine, soft-delete, and tenant isolation.\n\nImplemented and smoke-tested matrix (use_cases):\n- create with @mention and https link + notify obligations\n- edit denied when own_only and actor is not creator\n- reply denied when parent_depth+1 >= max_thread_depth\n- create allowed with quarantine when body matches moderation.blocklist\n- react add normalized to a reaction set\n- soft-delete retains body and records deleted_by\n- create denied on tenant mismatch\n- create/edit/reply denied for empty/whitespace body\n- body_too_long when body exceeds max_body_length\n- invalid_reaction when react lacks emoji\n- insufficient_role when actor role not permitted\n\nKnown limitations (intentional in 1.2.0):\n- resolve / unresolve / pin / unpin are not part of the schema surface\n- mention_resolution narrowed to strict; permissive/disabled removed\n- visibility_model narrowed to resource-acl|channel\n- reaction.op narrowed to add (remove not published)\n- invalid_action / invalid_parent / policy_error / not_authorized removed from published reason_code vocabulary\n- hard_delete_unsupported and invalid_input/invalid_actor fail-closed paths exist but are not published reason_codes\n- allowed_markups is accepted but body markup is not sanitized\n- The capability never persists data or sends notifications; callers must honor obligations\n\nOn decision=allow, the WASM guest calls traverse_host::emit_event for core.comment.processed@1.0.0 with payload {action, actor_id, resource_type, resource_id, reason_code, comment_id}.",
+        "id": "core.process-comment",
+        "index_digest": "sha256:1fa55dc3b19fcd1af400d867d3d8f86f4bebdb0a395ef50f318fc0f67f22a525",
+        "lifecycle": "active",
+        "namespace": "core",
+        "permitted_targets": [
+          "local",
+          "edge",
+          "browser",
+          "cloud"
+        ],
+        "provenance": {
+          "adr_refs": [
+            "0001-rust-wasm-foundation"
+          ],
+          "author": "traverse-capability-author + persona-council",
+          "created_at": "2026-09-08T00:00:00Z",
+          "exception_refs": [],
+          "source": "ai-assisted",
+          "spec_ref": "516-agent-artifact-execution@1.0.0"
+        },
+        "scenarios": [
+          "As a collaboration platform engineer, I want a user to create a top-level comment with mentions so that the system receives a fully validated, sanitized comment object ready for persistence and notification.",
+          "As a security architect, I want an edit attempt by a non-owner to be denied when the policy requires own_only, so that users cannot modify other people's comments.",
+          "As a collaboration platform engineer, I want a reply that would exceed the configured max_thread_depth to be rejected so that threads cannot grow unbounded.",
+          "As a content moderation specialist, I want a comment containing a blocklisted term to be allowed only with a quarantine obligation so that moderators can review it before it becomes widely visible.",
+          "As a client developer, I want adding a reaction to be an idempotent, atomic action that returns the updated reaction set so that the UI can optimistically update without race conditions.",
+          "As a compliance officer, I want a soft-delete to preserve the original body and record who deleted it so that eDiscovery remains possible.",
+          "As a multi-tenant platform engineer, I want a cross-tenant comment attempt to be denied even if the user has the correct role, so that tenant isolation is absolute.",
+          "As a client developer, I want an empty or whitespace-only body to be rejected with a clear reason code so that the UI can show an inline validation error.",
+          "As a client developer, I want a body exceeding max_body_length rejected with body_too_long, so that oversized comments fail with a precise code.",
+          "As a client developer, I want a react without emoji rejected with invalid_reaction, so that malformed reactions never update the set.",
+          "As a security architect, I want create denied with insufficient_role when the actor role is not permitted, so that role gates stay enforceable."
+        ],
+        "service_type": "subscribable",
+        "source_release": "index-v412",
+        "summary": "Policy-driven comment processor for create/edit/reply/delete/react with mentions, quarantine, soft-delete, and tenant isolation.",
+        "version": "1.2.0"
+      },
+      {
+        "artifact_digest": "sha256:66cd639b24d595282394fbe29eb7c6d816136fdb0dba170883083fe106b0b153",
+        "description": "Policy-driven comment processor for create/edit/reply/delete/react with mentions, quarantine, soft-delete, and tenant isolation.\n\nImplemented and smoke-tested matrix (use_cases):\n- create with @mention and https link + notify obligations\n- edit denied when own_only and actor is not creator\n- reply denied when parent_depth+1 >= max_thread_depth\n- create allowed with quarantine when body matches moderation.blocklist\n- react add normalized to a reaction set\n- soft-delete retains body and records deleted_by\n- create denied on tenant mismatch\n- create/edit/reply denied for empty/whitespace body\n- body_too_long when body exceeds max_body_length\n- invalid_reaction when react lacks emoji\n- insufficient_role when actor role not permitted\n\nKnown limitations (intentional in 1.1.0):\n- resolve / unresolve / pin / unpin are not part of the schema surface\n- mention_resolution narrowed to strict; permissive/disabled removed\n- visibility_model narrowed to resource-acl|channel\n- reaction.op narrowed to add (remove not published)\n- invalid_action / invalid_parent / policy_error / not_authorized removed from published reason_code vocabulary\n- hard_delete_unsupported and invalid_input/invalid_actor fail-closed paths exist but are not published reason_codes\n- allowed_markups is accepted but body markup is not sanitized\n- The capability never persists data or sends notifications; callers must honor obligations",
+        "id": "core.process-comment",
+        "index_digest": "sha256:1fa55dc3b19fcd1af400d867d3d8f86f4bebdb0a395ef50f318fc0f67f22a525",
+        "lifecycle": "active",
+        "namespace": "core",
+        "permitted_targets": [
+          "local",
+          "edge",
+          "browser",
+          "cloud"
+        ],
+        "provenance": {
+          "adr_refs": [
+            "0001-rust-wasm-foundation"
+          ],
+          "author": "traverse-capability-author + persona-council",
+          "created_at": "2026-08-08T06:40:00Z",
+          "exception_refs": [],
+          "source": "ai-assisted",
+          "spec_ref": "516-agent-artifact-execution@1.0.0"
+        },
+        "scenarios": [
+          "As a collaboration platform engineer, I want a user to create a top-level comment with mentions so that the system receives a fully validated, sanitized comment object ready for persistence and notification.",
+          "As a security architect, I want an edit attempt by a non-owner to be denied when the policy requires own_only, so that users cannot modify other people's comments.",
+          "As a collaboration platform engineer, I want a reply that would exceed the configured max_thread_depth to be rejected so that threads cannot grow unbounded.",
+          "As a content moderation specialist, I want a comment containing a blocklisted term to be allowed only with a quarantine obligation so that moderators can review it before it becomes widely visible.",
+          "As a client developer, I want adding a reaction to be an idempotent, atomic action that returns the updated reaction set so that the UI can optimistically update without race conditions.",
+          "As a compliance officer, I want a soft-delete to preserve the original body and record who deleted it so that eDiscovery remains possible.",
+          "As a multi-tenant platform engineer, I want a cross-tenant comment attempt to be denied even if the user has the correct role, so that tenant isolation is absolute.",
+          "As a client developer, I want an empty or whitespace-only body to be rejected with a clear reason code so that the UI can show an inline validation error.",
+          "As a client developer, I want a body exceeding max_body_length rejected with body_too_long, so that oversized comments fail with a precise code.",
+          "As a client developer, I want a react without emoji rejected with invalid_reaction, so that malformed reactions never update the set.",
+          "As a security architect, I want create denied with insufficient_role when the actor role is not permitted, so that role gates stay enforceable."
+        ],
+        "service_type": "stateless",
+        "source_release": "index-v412",
+        "summary": "Policy-driven comment processor for create/edit/reply/delete/react with mentions, quarantine, soft-delete, and tenant isolation.",
+        "version": "1.1.0"
+      },
+      {
+        "artifact_digest": "sha256:63f54ac5c527335251f554a6940d9a0aa4d01b672d2312b2be0f39b2b3e204a3",
+        "description": "Pure model-neutral policy planning. Consumes trusted evidence labels from an authorized verifier and explicit target/runtime compatibility and memory facts. It neither verifies signatures or digests nor fetches, selects, downloads, caches, executes, or activates an artifact. Runtime remains responsible for independently enforcing activation authority.",
+        "id": "model.activation-plan-create",
+        "index_digest": "sha256:1fa55dc3b19fcd1af400d867d3d8f86f4bebdb0a395ef50f318fc0f67f22a525",
+        "lifecycle": "active",
+        "namespace": "model",
+        "permitted_targets": [
+          "local",
+          "browser",
+          "edge",
+          "device"
+        ],
+        "provenance": {
+          "adr_refs": [],
+          "author": "Codex",
+          "created_at": "2026-09-14T00:00:00Z",
+          "exception_refs": [],
+          "source": "greenfield",
+          "spec_ref": "100-capability-package-authoring@1.0.0"
+        },
+        "scenarios": [
+          "As a model-runtime policy consumer, I want a compatible artifact with verified provenance, accepted licence evidence, and sufficient memory to receive an activation plan so that runtime-specific activation can remain separate from portable policy.",
+          "As a model-runtime policy consumer, I want target, memory, failed evidence, and unknown-evidence cases rejected or escalated according to explicit policy so that unsupported or unverifiable artifacts are not silently approved.",
+          "As a model-runtime policy consumer, I want failed digest, signature, licence, or compatibility evidence to reject an activation plan so that every negative evidence state is explicit and testable.",
+          "As a model-runtime policy consumer, I want unknown signature, licence, and compatibility evidence to follow the configured reject action so that incomplete verification cannot be mistaken for approval."
+        ],
+        "service_type": "stateless",
+        "source_release": "index-v412",
+        "summary": "Create a model activation eligibility plan from verified evidence and configurable runtime policy.",
+        "version": "1.1.1"
+      },
+      {
+        "artifact_digest": "sha256:63f54ac5c527335251f554a6940d9a0aa4d01b672d2312b2be0f39b2b3e204a3",
+        "description": "Pure model-neutral policy planning. Consumes trusted evidence labels from an authorized verifier and explicit target/runtime compatibility and memory facts. It neither verifies signatures or digests nor fetches, selects, downloads, caches, executes, or activates an artifact. Runtime remains responsible for independently enforcing activation authority.",
+        "id": "model.activation-plan-create",
+        "index_digest": "sha256:1fa55dc3b19fcd1af400d867d3d8f86f4bebdb0a395ef50f318fc0f67f22a525",
+        "lifecycle": "draft",
+        "namespace": "model",
+        "permitted_targets": [
+          "local",
+          "browser",
+          "edge",
+          "device"
+        ],
+        "provenance": {
+          "adr_refs": [],
+          "author": "Codex",
+          "created_at": "2026-09-14T00:00:00Z",
+          "exception_refs": [],
+          "source": "greenfield",
+          "spec_ref": "100-capability-package-authoring@1.0.0"
+        },
+        "scenarios": [
+          "As a model-runtime policy consumer, I want a compatible artifact with verified provenance, accepted licence evidence, and sufficient memory to receive an activation plan so that runtime-specific activation can remain separate from portable policy.",
+          "As a model-runtime policy consumer, I want target, memory, failed evidence, and unknown-evidence cases rejected or escalated according to explicit policy so that unsupported or unverifiable artifacts are not silently approved.",
+          "As a model-runtime policy consumer, I want failed digest, signature, licence, or compatibility evidence to reject an activation plan so that every negative evidence state is explicit and testable.",
+          "As a model-runtime policy consumer, I want unknown signature, licence, and compatibility evidence to follow the configured reject action so that incomplete verification cannot be mistaken for approval."
+        ],
+        "service_type": "stateless",
+        "source_release": "index-v412",
+        "summary": "Create a model activation eligibility plan from verified evidence and configurable runtime policy.",
+        "version": "1.1.0"
+      },
+      {
+        "artifact_digest": "sha256:63f54ac5c527335251f554a6940d9a0aa4d01b672d2312b2be0f39b2b3e204a3",
+        "description": "Pure model-neutral policy planning. Consumes trusted evidence labels from an authorized verifier and explicit target/runtime compatibility and memory facts. It neither verifies signatures or digests nor fetches, selects, downloads, caches, executes, or activates an artifact. Runtime remains responsible for independently enforcing activation authority.",
+        "id": "model.activation-plan-create",
+        "index_digest": "sha256:1fa55dc3b19fcd1af400d867d3d8f86f4bebdb0a395ef50f318fc0f67f22a525",
+        "lifecycle": "draft",
+        "namespace": "model",
+        "permitted_targets": [
+          "local",
+          "browser",
+          "edge",
+          "device"
+        ],
+        "provenance": {
+          "adr_refs": [],
+          "author": "Codex",
+          "created_at": "2026-09-14T00:00:00Z",
+          "exception_refs": [],
+          "source": "greenfield",
+          "spec_ref": "100-capability-package-authoring@1.0.0"
+        },
+        "scenarios": [
+          "As a model-runtime policy consumer, I want a compatible artifact with verified provenance, accepted licence evidence, and sufficient memory to receive an activation plan so that runtime-specific activation can remain separate from portable policy.",
+          "As a model-runtime policy consumer, I want target, memory, failed evidence, and unknown-evidence cases rejected or escalated according to explicit policy so that unsupported or unverifiable artifacts are not silently approved.",
+          "As a model-runtime policy consumer, I want failed digest, signature, licence, or compatibility evidence to reject an activation plan so that every negative evidence state is explicit and testable.",
+          "As a model-runtime policy consumer, I want unknown signature, licence, and compatibility evidence to follow the configured reject action so that incomplete verification cannot be mistaken for approval."
+        ],
+        "service_type": "stateless",
+        "source_release": "index-v412",
+        "summary": "Create a model activation eligibility plan from verified evidence and configurable runtime policy.",
+        "version": "1.0.0"
+      },
+      {
+        "artifact_digest": "sha256:5ccfa3721db61b42a598d703c2a110c57beaf57cde26e1c5cb7f9c5fbc8b4275",
+        "description": "Catalog-facing shim over the traverse.model-runtime connector operation model.execute. Consumers supply an exact-ref model pin (model_id, version, digest), a host-staged input_ref, app-declared model_usage (commercial|non_commercial), and a trust_root of allowed signer key ids. The capability validates those inputs, dispatches via mediated connector_invoke, and surfaces the host's verified model_evidence on success. Fail-closed Spec 138 reasons (digest_mismatch, key_untrusted, signature_invalid, rights_mismatch, rights_policy_denied, usage_undeclared, package_revoked, model_unavailable) pass through unchanged. It does not fetch Hugging Face, hold signing keys, or select a model — the pin is consumer-supplied. The reference package for catalog demos is traverse.digits-onnx@1.0.0 from Traverse fixtures. Normative model_evidence (registry#641) is a flat guest-visible subset of the host ModelRightsRecord: license_id, commercial_use, status, effective_usage, and optional derivation without source_url or other Spec 104 host-private strings. Forwarding the full nested ModelRightsRecord (with rights.source_url or https:// URLs) is non-conformant and will fail Spec 104 unauthorized_output on compliant hosts; bindings must emit this shape (traverse#1719). Input additionalProperties:false is enforced by runtimes that include traverse#1671; older runtimes may still accept undeclared fields such as prompt.",
+        "id": "model.execute",
+        "index_digest": "sha256:1fa55dc3b19fcd1af400d867d3d8f86f4bebdb0a395ef50f318fc0f67f22a525",
+        "lifecycle": "active",
+        "namespace": "model",
+        "permitted_targets": [
+          "local",
+          "browser",
+          "edge",
+          "device"
+        ],
+        "provenance": {
+          "adr_refs": [],
+          "author": "traverse-core",
+          "created_at": "2026-10-29T00:00:00Z",
+          "exception_refs": [
+            "mediated-connector-invoke"
+          ],
+          "source": "greenfield",
+          "spec_ref": "138-governed-exact-model-execution"
+        },
+        "scenarios": [
+          "As an inference operator, I want a signed exact-ref digits-onnx package executed with declared non_commercial usage so that the host returns verified model_evidence without embedding a model in this capability.",
+          "As an inference operator, I want an omitted model_usage rejected with usage_undeclared so that undeclared commercial intent cannot silently proceed.",
+          "As an inference operator, I want an empty trust_root rejected with key_untrusted so that unsigned or untrusted packages cannot execute.",
+          "As an inference operator, I want a tampered package digest reported as digest_mismatch so that integrity failures stay fail-closed across hosts.",
+          "As an inference operator, I want a rights pin mismatch reported as rights_mismatch so that package rights cannot drift from the declared pin."
+        ],
+        "service_type": "stateless",
+        "source_release": "index-v412",
+        "summary": "Execute a signed exact-ref model package through traverse.model-runtime (Spec 138).",
+        "version": "1.1.0"
+      },
+      {
+        "artifact_digest": "sha256:2b7bb94b4206bc7b58435d405bdf1245358507f04aeb969867f9a2fb72818241",
+        "description": "Pure generic policy planner. Converts an eligibility classification into no action or a configured archive/delete plan with explicit grace period and approval state. It never deletes, archives, reads, or writes assets. The host must re-check holds and references at execution time, require approval when specified, and invoke the separately authorized storage connector.",
+        "id": "retention.action-plan-create",
+        "index_digest": "sha256:1fa55dc3b19fcd1af400d867d3d8f86f4bebdb0a395ef50f318fc0f67f22a525",
+        "lifecycle": "active",
+        "namespace": "retention",
+        "permitted_targets": [
+          "local",
+          "browser",
+          "edge",
+          "device"
+        ],
+        "provenance": {
+          "adr_refs": [],
+          "author": "Codex",
+          "created_at": "2026-09-14T00:00:00Z",
+          "exception_refs": [],
+          "source": "greenfield",
+          "spec_ref": "100-capability-package-authoring@1.0.0"
+        },
+        "scenarios": [
+          "As a retention steward, I want an eligible asset to receive a delayed archive or deletion plan according to policy so that retention actions are auditable and not immediate side effects.",
+          "As a retention steward, I want held or retained assets to produce no action, and eligible plans to fail on time overflow, so that protected data is not scheduled for removal.",
+          "As a retention steward, I want an asset already retained under policy to produce no archive or delete plan so that retained data is not actioned a second time."
+        ],
+        "service_type": "stateless",
+        "source_release": "index-v412",
+        "summary": "Create a delayed, approval-aware retention action plan without executing it.",
+        "version": "1.1.1"
+      },
+      {
+        "artifact_digest": "sha256:2b7bb94b4206bc7b58435d405bdf1245358507f04aeb969867f9a2fb72818241",
+        "description": "Pure generic policy planner. Converts an eligibility classification into no action or a configured archive/delete plan with explicit grace period and approval state. It never deletes, archives, reads, or writes assets. The host must re-check holds and references at execution time, require approval when specified, and invoke the separately authorized storage connector.",
+        "id": "retention.action-plan-create",
+        "index_digest": "sha256:1fa55dc3b19fcd1af400d867d3d8f86f4bebdb0a395ef50f318fc0f67f22a525",
+        "lifecycle": "draft",
+        "namespace": "retention",
+        "permitted_targets": [
+          "local",
+          "browser",
+          "edge",
+          "device"
+        ],
+        "provenance": {
+          "adr_refs": [],
+          "author": "Codex",
+          "created_at": "2026-09-14T00:00:00Z",
+          "exception_refs": [],
+          "source": "greenfield",
+          "spec_ref": "100-capability-package-authoring@1.0.0"
+        },
+        "scenarios": [
+          "As a retention steward, I want an eligible asset to receive a delayed archive or deletion plan according to policy so that retention actions are auditable and not immediate side effects.",
+          "As a retention steward, I want held or retained assets to produce no action, and eligible plans to fail on time overflow, so that protected data is not scheduled for removal.",
+          "As a retention steward, I want an asset already retained under policy to produce no archive or delete plan so that retained data is not actioned a second time."
+        ],
+        "service_type": "stateless",
+        "source_release": "index-v412",
+        "summary": "Create a delayed, approval-aware retention action plan without executing it.",
+        "version": "1.1.0"
+      },
+      {
+        "artifact_digest": "sha256:2b7bb94b4206bc7b58435d405bdf1245358507f04aeb969867f9a2fb72818241",
+        "description": "Pure generic policy planner. Converts an eligibility classification into no action or a configured archive/delete plan with explicit grace period and approval state. It never deletes, archives, reads, or writes assets. The host must re-check holds and references at execution time, require approval when specified, and invoke the separately authorized storage connector.",
+        "id": "retention.action-plan-create",
+        "index_digest": "sha256:1fa55dc3b19fcd1af400d867d3d8f86f4bebdb0a395ef50f318fc0f67f22a525",
+        "lifecycle": "draft",
+        "namespace": "retention",
+        "permitted_targets": [
+          "local",
+          "browser",
+          "edge",
+          "device"
+        ],
+        "provenance": {
+          "adr_refs": [],
+          "author": "Codex",
+          "created_at": "2026-09-14T00:00:00Z",
+          "exception_refs": [],
+          "source": "greenfield",
+          "spec_ref": "100-capability-package-authoring@1.0.0"
+        },
+        "scenarios": [
+          "As a retention steward, I want an eligible asset to receive a delayed archive or deletion plan according to policy so that retention actions are auditable and not immediate side effects.",
+          "As a retention steward, I want held or retained assets to produce no action, and eligible plans to fail on time overflow, so that protected data is not scheduled for removal.",
+          "As a retention steward, I want an asset already retained under policy to produce no archive or delete plan so that retained data is not actioned a second time."
+        ],
+        "service_type": "stateless",
+        "source_release": "index-v412",
+        "summary": "Create a delayed, approval-aware retention action plan without executing it.",
+        "version": "1.0.0"
+      },
+      {
+        "artifact_digest": "sha256:b20b13054a5938a90b964855f9c8de94feb146045f85c04df7998cda81819133",
+        "description": "Applies the standard Luhn (mod 10) checksum algorithm to a digit string: doubling every second digit from the rightmost, subtracting 9 from any result over 9, summing all digits, and checking the total is a multiple of 10. This is a checksum-format check only -- it does NOT verify the number belongs to a real, active account, is not stolen, or is authorized for any transaction (none of that is possible without a live call to a card network or issuer, which is not available to any capability under the current ABI whitelist). Luhn validity is necessary but nowhere near sufficient for treating a card number as safe to charge. Formatting characters (spaces, dashes) are stripped before checking when strip_formatting is true (the default); the input is never logged, persisted, or included in the output.",
+        "id": "validation.validate-luhn",
+        "index_digest": "sha256:1fa55dc3b19fcd1af400d867d3d8f86f4bebdb0a395ef50f318fc0f67f22a525",
+        "lifecycle": "active",
+        "namespace": "validation",
+        "permitted_targets": [
+          "local"
+        ],
+        "provenance": {
+          "adr_refs": [],
+          "author": "enricopiovesan",
+          "created_at": "2026-07-28T00:00:00Z",
+          "exception_refs": [],
+          "source": "greenfield",
+          "spec_ref": null
+        },
+        "scenarios": [
+          "As a checkout flow developer, I want a well-formed card number with spaces or dashes to still pass the Luhn checksum, so that a customer who types their card number with natural formatting isn't wrongly rejected.",
+          "As a checkout flow developer, I want a single mistyped digit to fail the Luhn checksum, so that I can catch an obvious card-number typo before submitting a doomed charge attempt.",
+          "As a checkout flow developer, I want an empty string to be rejected before any checksum math runs, so that a blank card-number field fails fast with a clear reason instead of an ambiguous result."
+        ],
+        "service_type": "stateless",
+        "source_release": "index-v412",
+        "summary": "Check whether a numeric string passes the Luhn checksum, as used by credit card numbers and other identifiers.",
+        "version": "1.2.0"
+      },
+      {
+        "artifact_digest": "sha256:b20b13054a5938a90b964855f9c8de94feb146045f85c04df7998cda81819133",
+        "description": "Applies the standard Luhn (mod 10) checksum algorithm to a digit string: doubling every second digit from the rightmost, subtracting 9 from any result over 9, summing all digits, and checking the total is a multiple of 10. This is a checksum-format check only -- it does NOT verify the number belongs to a real, active account, is not stolen, or is authorized for any transaction (none of that is possible without a live call to a card network or issuer, which is not available to any capability under the current ABI whitelist). Luhn validity is necessary but nowhere near sufficient for treating a card number as safe to charge. Formatting characters (spaces, dashes) are stripped before checking when strip_formatting is true (the default); the input is never logged, persisted, or included in the output.",
+        "id": "validation.validate-luhn",
+        "index_digest": "sha256:1fa55dc3b19fcd1af400d867d3d8f86f4bebdb0a395ef50f318fc0f67f22a525",
+        "lifecycle": "active",
+        "namespace": "validation",
+        "permitted_targets": [
+          "local"
+        ],
+        "provenance": {
+          "adr_refs": [],
+          "author": "enricopiovesan",
+          "created_at": "2026-07-28T00:00:00Z",
+          "exception_refs": [],
+          "source": "greenfield",
+          "spec_ref": null
+        },
+        "scenarios": [
+          "As a checkout flow developer, I want a well-formed card number with spaces or dashes to still pass the Luhn checksum, so that a customer who types their card number with natural formatting isn't wrongly rejected.",
+          "As a checkout flow developer, I want a single mistyped digit to fail the Luhn checksum, so that I can catch an obvious card-number typo before submitting a doomed charge attempt.",
+          "As a checkout flow developer, I want an empty string to be rejected before any checksum math runs, so that a blank card-number field fails fast with a clear reason instead of an ambiguous result."
+        ],
+        "service_type": "stateless",
+        "source_release": "index-v412",
+        "summary": "Check whether a numeric string passes the Luhn checksum, as used by credit card numbers and other identifiers.",
+        "version": "1.1.2"
+      },
+      {
+        "artifact_digest": "sha256:b20b13054a5938a90b964855f9c8de94feb146045f85c04df7998cda81819133",
+        "description": "Applies the standard Luhn (mod 10) checksum algorithm to a digit string: doubling every second digit from the rightmost, subtracting 9 from any result over 9, summing all digits, and checking the total is a multiple of 10. This is a checksum-format check only -- it does NOT verify the number belongs to a real, active account, is not stolen, or is authorized for any transaction (none of that is possible without a live call to a card network or issuer, which is not available to any capability under the current ABI whitelist). Luhn validity is necessary but nowhere near sufficient for treating a card number as safe to charge. Formatting characters (spaces, dashes) are stripped before checking when strip_formatting is true (the default); the input is never logged, persisted, or included in the output.",
+        "id": "validation.validate-luhn",
+        "index_digest": "sha256:1fa55dc3b19fcd1af400d867d3d8f86f4bebdb0a395ef50f318fc0f67f22a525",
+        "lifecycle": "active",
+        "namespace": "validation",
+        "permitted_targets": [
+          "local"
+        ],
+        "provenance": {
+          "adr_refs": [],
+          "author": "enricopiovesan",
+          "created_at": "2026-07-28T00:00:00Z",
+          "exception_refs": [],
+          "source": "greenfield",
+          "spec_ref": null
+        },
+        "scenarios": [
+          "As a payment form developer, I want a well-formed card number with spaces or dashes to still pass the Luhn checksum, so that a customer who types their card number with natural formatting isn't wrongly rejected.",
+          "As a payment form developer, I want a single mistyped digit to fail the Luhn checksum, so that I can catch an obvious card-number typo before submitting a doomed charge attempt.",
+          "As a payment form developer, I want an empty string to be rejected before any checksum math runs, so that a blank card-number field fails fast with a clear reason instead of an ambiguous result."
+        ],
+        "service_type": "stateless",
+        "source_release": "index-v412",
+        "summary": "Check whether a numeric string passes the Luhn checksum, as used by credit card numbers and other identifiers.",
+        "version": "1.1.1"
+      },
+      {
+        "artifact_digest": "sha256:b20b13054a5938a90b964855f9c8de94feb146045f85c04df7998cda81819133",
+        "description": "Applies the standard Luhn (mod 10) checksum algorithm to a digit string: doubling every second digit from the rightmost, subtracting 9 from any result over 9, summing all digits, and checking the total is a multiple of 10. This is a checksum-format check only -- it does NOT verify the number belongs to a real, active account, is not stolen, or is authorized for any transaction (none of that is possible without a live call to a card network or issuer, which is not available to any capability under the current ABI whitelist). Luhn validity is necessary but nowhere near sufficient for treating a card number as safe to charge. Formatting characters (spaces, dashes) are stripped before checking when strip_formatting is true (the default); the input is never logged, persisted, or included in the output.",
+        "id": "validation.validate-luhn",
+        "index_digest": "sha256:1fa55dc3b19fcd1af400d867d3d8f86f4bebdb0a395ef50f318fc0f67f22a525",
+        "lifecycle": "active",
+        "namespace": "validation",
+        "permitted_targets": [
+          "local"
+        ],
+        "provenance": {
+          "adr_refs": [],
+          "author": "enricopiovesan",
+          "created_at": "2026-07-28T00:00:00Z",
+          "exception_refs": [],
+          "source": "greenfield",
+          "spec_ref": null
+        },
+        "scenarios": [
+          "A well-formed card number with formatting stripped passes the checksum.",
+          "A single mistyped digit fails the Luhn checksum.",
+          "An empty string is rejected before any checksum math runs."
+        ],
+        "service_type": "stateless",
+        "source_release": "index-v412",
+        "summary": "Check whether a numeric string passes the Luhn checksum, as used by credit card numbers and other identifiers.",
+        "version": "1.1.0"
+      },
+      {
+        "artifact_digest": "sha256:b20b13054a5938a90b964855f9c8de94feb146045f85c04df7998cda81819133",
+        "description": "Applies the standard Luhn (mod 10) checksum algorithm to a digit string: doubling every second digit from the rightmost, subtracting 9 from any result over 9, summing all digits, and checking the total is a multiple of 10. This is a checksum-format check only -- it does NOT verify the number belongs to a real, active account, is not stolen, or is authorized for any transaction (none of that is possible without a live call to a card network or issuer, which is not available to any capability under the current ABI whitelist). Luhn validity is necessary but nowhere near sufficient for treating a card number as safe to charge. Formatting characters (spaces, dashes) are stripped before checking when strip_formatting is true (the default); the input is never logged, persisted, or included in the output.",
+        "id": "validation.validate-luhn",
+        "index_digest": "sha256:1fa55dc3b19fcd1af400d867d3d8f86f4bebdb0a395ef50f318fc0f67f22a525",
+        "lifecycle": "active",
+        "namespace": "validation",
+        "permitted_targets": [
+          "local"
+        ],
+        "provenance": {
+          "adr_refs": [],
+          "author": "enricopiovesan",
+          "created_at": "2026-07-28T00:00:00Z",
+          "exception_refs": [],
+          "source": "greenfield",
+          "spec_ref": null
+        },
+        "scenarios": [],
+        "service_type": "stateless",
+        "source_release": "index-v412",
+        "summary": "Check whether a numeric string passes the Luhn checksum, as used by credit card numbers and other identifiers.",
+        "version": "1.0.0"
+      }
+    ],
+    "stale": false
+  },
+  "entrypoint": {
+    "entrypoint": {
+      "artifact_digest": "sha256:0c318fff56a74eddfbc1ab850c25c1ba191744309984a07bd503b8cd9cb92e40",
+      "artifact_kind": "capability",
+      "description": "Pure authorization evaluator: allow/deny for principal+action+resource under a caller-supplied versioned policy (RBAC/hybrid rule matching, tenant/status conditions, break-glass, obligations).\n\nImplemented and smoke-tested matrix (use_cases):\n- admin role allow (matched_allow_rule)\n- tenant isolation deny (matched_deny_rule)\n- owner update allow (matched_allow_rule)\n- suspended principal deny (matched_deny_rule)\n- allow with obligations (matched_allow_rule)\n- no matching rule → deny (no_matching_rule)\n- empty policy rules → empty_or_invalid_policy\n- break-glass override (break_glass_override)\n- missing principal.id → invalid_principal\n- missing action → invalid_action\n- missing resource.type → invalid_resource\n\nKnown limitations (intentional in 1.2.0):\n- policy.mode values abac/explicit removed from schema (not distinct evaluator modes in this binary)\n- default_effect narrowed to deny (fail-closed); allow-default not published\n- obligation severity narrowed to required\n- condition_failed / policy_evaluation_error are not emitted as distinct reason_codes\n- Condition DSL is a practical subset (eq/neq on selected attribute paths), not full XACML/Cedar",
+      "id": "core.authorize",
+      "index_digest": "sha256:1fa55dc3b19fcd1af400d867d3d8f86f4bebdb0a395ef50f318fc0f67f22a525",
+      "lifecycle": "active",
+      "namespace": "core",
+      "permitted_targets": [
+        "local",
+        "edge",
+        "browser",
+        "cloud"
+      ],
+      "provenance": {
+        "adr_refs": [
+          "0001-rust-wasm-foundation",
+          "persona-council-review-2026-08-08"
+        ],
+        "author": "loop-founders + traverse-capability-author",
+        "created_at": "2026-08-08T05:36:00Z",
+        "exception_refs": [],
+        "source": "ai-assisted",
+        "spec_ref": "core.authorize@1.2.0"
+      },
+      "scenarios": [
+        "As a platform security engineer, I want an admin user with the correct role to be allowed to delete a document so that privileged operations succeed when policy permits them.",
+        "As a multi-tenant SaaS developer, I want a user to be denied access to a resource that belongs to a different tenant even if they hold a powerful role, so that tenant isolation is enforced.",
+        "As a collaboration product owner, I want the owner of a resource to always be able to update it, so that ownership rights are respected regardless of role.",
+        "As a security engineer, I want a high-priority explicit deny to override an allow rule so that a compromised or suspended account cannot exercise privileges.",
+        "As a compliance officer, I want an allow decision to carry structured obligations (require MFA + audit) so that the calling system can enforce additional controls.",
+        "As a developer, I want any request that matches no rule to be denied when default_effect is deny, so that the system fails closed.",
+        "As a runtime, I want an empty or malformed policy to always produce a deny with a clear reason_code so that invalid configurations cannot open the system.",
+        "As an incident responder, I want a break-glass flag to allow a temporary override while still recording that the override was used, so that emergency access is possible but fully auditable.",
+        "As a client developer, I want a clear structured denial when the principal object is missing required fields so that I can surface a precise error instead of a generic failure.",
+        "As a client developer, I want missing action rejected with invalid_action, so that callers can fix request shape without guessing.",
+        "As a client developer, I want missing resource.type rejected with invalid_resource, so that incomplete resource descriptors fail closed."
+      ],
+      "service_type": "stateless",
+      "source_release": "index-v412",
+      "summary": "Pure authorization evaluator: allow/deny for principal+action+resource under a caller-supplied versioned policy.",
+      "version": "1.2.0"
+    },
+    "governing_spec": "119-verified-registry-mcp-mode-a",
+    "host_mode": "stdio",
+    "kind": "mcp_stdio_server_entrypoint_description",
+    "mode": "verified_public",
+    "server_name": "traverse-mcp"
+  },
+  "cached_wasm": [
+    {
+      "path": "mcp/cache/sha256/0c318fff56a74eddfbc1ab850c25c1ba191744309984a07bd503b8cd9cb92e40",
+      "digest": "sha256:0c318fff56a74eddfbc1ab850c25c1ba191744309984a07bd503b8cd9cb92e40"
+    },
+    {
+      "path": "mcp/cache/sha256/8c55aca07de78e0a9fdf61c02448a1339122186133f0a8b2a3eb5d1f05a23428",
+      "digest": "sha256:8c55aca07de78e0a9fdf61c02448a1339122186133f0a8b2a3eb5d1f05a23428"
+    }
+  ],
+  "deny": {
+    "envelope": {
+      "artifact": {
+        "digest": "sha256:0c318fff56a74eddfbc1ab850c25c1ba191744309984a07bd503b8cd9cb92e40",
+        "digest_matches_public_state": true,
+        "index_digest": "sha256:1fa55dc3b19fcd1af400d867d3d8f86f4bebdb0a395ef50f318fc0f67f22a525",
+        "source_release": "index-v412",
+        "stale": false,
+        "verification": "digest",
+        "verified": true
+      },
+      "entrypoint": {
+        "artifact_digest": "sha256:0c318fff56a74eddfbc1ab850c25c1ba191744309984a07bd503b8cd9cb92e40",
+        "artifact_kind": "capability",
+        "description": "Pure authorization evaluator: allow/deny for principal+action+resource under a caller-supplied versioned policy (RBAC/hybrid rule matching, tenant/status conditions, break-glass, obligations).\n\nImplemented and smoke-tested matrix (use_cases):\n- admin role allow (matched_allow_rule)\n- tenant isolation deny (matched_deny_rule)\n- owner update allow (matched_allow_rule)\n- suspended principal deny (matched_deny_rule)\n- allow with obligations (matched_allow_rule)\n- no matching rule → deny (no_matching_rule)\n- empty policy rules → empty_or_invalid_policy\n- break-glass override (break_glass_override)\n- missing principal.id → invalid_principal\n- missing action → invalid_action\n- missing resource.type → invalid_resource\n\nKnown limitations (intentional in 1.2.0):\n- policy.mode values abac/explicit removed from schema (not distinct evaluator modes in this binary)\n- default_effect narrowed to deny (fail-closed); allow-default not published\n- obligation severity narrowed to required\n- condition_failed / policy_evaluation_error are not emitted as distinct reason_codes\n- Condition DSL is a practical subset (eq/neq on selected attribute paths), not full XACML/Cedar",
+        "id": "core.authorize",
+        "index_digest": "sha256:1fa55dc3b19fcd1af400d867d3d8f86f4bebdb0a395ef50f318fc0f67f22a525",
+        "lifecycle": "active",
+        "namespace": "core",
+        "permitted_targets": [
+          "local",
+          "edge",
+          "browser",
+          "cloud"
+        ],
+        "provenance": {
+          "adr_refs": [
+            "0001-rust-wasm-foundation",
+            "persona-council-review-2026-08-08"
+          ],
+          "author": "loop-founders + traverse-capability-author",
+          "created_at": "2026-08-08T05:36:00Z",
+          "exception_refs": [],
+          "source": "ai-assisted",
+          "spec_ref": "core.authorize@1.2.0"
+        },
+        "scenarios": [
+          "As a platform security engineer, I want an admin user with the correct role to be allowed to delete a document so that privileged operations succeed when policy permits them.",
+          "As a multi-tenant SaaS developer, I want a user to be denied access to a resource that belongs to a different tenant even if they hold a powerful role, so that tenant isolation is enforced.",
+          "As a collaboration product owner, I want the owner of a resource to always be able to update it, so that ownership rights are respected regardless of role.",
+          "As a security engineer, I want a high-priority explicit deny to override an allow rule so that a compromised or suspended account cannot exercise privileges.",
+          "As a compliance officer, I want an allow decision to carry structured obligations (require MFA + audit) so that the calling system can enforce additional controls.",
+          "As a developer, I want any request that matches no rule to be denied when default_effect is deny, so that the system fails closed.",
+          "As a runtime, I want an empty or malformed policy to always produce a deny with a clear reason_code so that invalid configurations cannot open the system.",
+          "As an incident responder, I want a break-glass flag to allow a temporary override while still recording that the override was used, so that emergency access is possible but fully auditable.",
+          "As a client developer, I want a clear structured denial when the principal object is missing required fields so that I can surface a precise error instead of a generic failure.",
+          "As a client developer, I want missing action rejected with invalid_action, so that callers can fix request shape without guessing.",
+          "As a client developer, I want missing resource.type rejected with invalid_resource, so that incomplete resource descriptors fail closed."
+        ],
+        "service_type": "stateless",
+        "source_release": "index-v412",
+        "summary": "Pure authorization evaluator: allow/deny for principal+action+resource under a caller-supplied versioned policy.",
+        "version": "1.2.0"
+      },
+      "execution_id": "exec_agent-1",
+      "governing_spec": "119-verified-registry-mcp-mode-a",
+      "host_mode": "stdio",
+      "kind": "mcp_stdio_server_entrypoint_execution",
+      "mode": "verified_public",
+      "observation_messages": [
+        {
+          "execution_id": "exec_agent-1",
+          "kind": "lifecycle",
+          "request_id": "agent-1",
+          "sequence": 0,
+          "status": "stream_started"
+        },
+        {
+          "kind": "state",
+          "sequence": 1,
+          "state_event": {
+            "details": {
+              "identity": null,
+              "registry_status": "available",
+              "transition_reason": "runtime_initialization_started"
+            },
+            "entered_at": "1970-01-01T00:00:00Z",
+            "event_id": "rse_exec_agent-1_0000",
+            "execution_id": "exec_agent-1",
+            "kind": "runtime_state_event",
+            "request_id": "agent-1",
+            "schema_version": "1.0.0",
+            "state": "loading_registry"
+          }
+        },
+        {
+          "kind": "state",
+          "sequence": 2,
+          "state_event": {
+            "details": {
+              "governing_spec": "006-runtime-request-execution",
+              "transition_reason": "registry_loaded"
+            },
+            "entered_at": "1970-01-01T00:00:01Z",
+            "event_id": "rse_exec_agent-1_0001",
+            "execution_id": "exec_agent-1",
+            "kind": "runtime_state_event",
+            "request_id": "agent-1",
+            "schema_version": "1.0.0",
+            "state": "ready"
+          }
+        },
+        {
+          "kind": "state",
+          "sequence": 3,
+          "state_event": {
+            "details": {
+              "identity": null,
+              "lookup_scope": "public_only",
+              "transition_reason": "request_started"
+            },
+            "entered_at": "1970-01-01T00:00:02Z",
+            "event_id": "rse_exec_agent-1_0002",
+            "execution_id": "exec_agent-1",
+            "kind": "runtime_state_event",
+            "request_id": "agent-1",
+            "schema_version": "1.0.0",
+            "state": "discovering"
+          }
+        },
+        {
+          "kind": "state",
+          "sequence": 4,
+          "state_event": {
+            "details": {
+              "candidate_count": 1,
+              "transition_reason": "candidates_collected"
+            },
+            "entered_at": "1970-01-01T00:00:03Z",
+            "event_id": "rse_exec_agent-1_0003",
+            "execution_id": "exec_agent-1",
+            "kind": "runtime_state_event",
+            "request_id": "agent-1",
+            "schema_version": "1.0.0",
+            "state": "evaluating_constraints"
+          }
+        },
+        {
+          "kind": "state",
+          "sequence": 5,
+          "state_event": {
+            "details": {
+              "eligible_candidates": 1,
+              "rejected_candidates": 0,
+              "transition_reason": "constraints_evaluated"
+            },
+            "entered_at": "1970-01-01T00:00:04Z",
+            "event_id": "rse_exec_agent-1_0004",
+            "execution_id": "exec_agent-1",
+            "kind": "runtime_state_event",
+            "request_id": "agent-1",
+            "schema_version": "1.0.0",
+            "state": "selecting"
+          }
+        },
+        {
+          "kind": "state",
+          "sequence": 6,
+          "state_event": {
+            "details": {
+              "artifact_ref": "verified-registry:core.authorize:1.2.0",
+              "capability_id": "core.authorize",
+              "capability_version": "1.2.0",
+              "identity": null,
+              "placement_reason": "requested_target_selected",
+              "placement_status": "selected",
+              "requested_target": "local",
+              "selected_target": "local",
+              "transition_reason": "candidate_selected"
+            },
+            "entered_at": "1970-01-01T00:00:06Z",
+            "event_id": "rse_exec_agent-1_0005",
+            "execution_id": "exec_agent-1",
+            "kind": "runtime_state_event",
+            "request_id": "agent-1",
+            "schema_version": "1.0.0",
+            "state": "executing"
+          }
+        },
+        {
+          "kind": "state",
+          "sequence": 7,
+          "state_event": {
+            "details": {
+              "capability_id": "core.authorize",
+              "capability_version": "1.2.0",
+              "transition_reason": "execution_succeeded"
+            },
+            "entered_at": "1970-01-01T00:00:08Z",
+            "event_id": "rse_exec_agent-1_0006",
+            "execution_id": "exec_agent-1",
+            "kind": "runtime_state_event",
+            "request_id": "agent-1",
+            "schema_version": "1.0.0",
+            "state": "completed"
+          }
+        },
+        {
+          "kind": "state",
+          "sequence": 8,
+          "state_event": {
+            "details": {
+              "terminal_state": "completed",
+              "transition_reason": "execution_closed"
+            },
+            "entered_at": "1970-01-01T00:00:09Z",
+            "event_id": "rse_exec_agent-1_0007",
+            "execution_id": "exec_agent-1",
+            "kind": "runtime_state_event",
+            "request_id": "agent-1",
+            "schema_version": "1.0.0",
+            "state": "ready"
+          }
+        },
+        {
+          "kind": "trace",
+          "model_resolution_count": 0,
+          "sequence": 9,
+          "trace": {
+            "emitted_event_count": 0,
+            "execution_id": "exec_agent-1",
+            "governing_spec": "006-runtime-request-execution",
+            "kind": "runtime_trace",
+            "model_resolution_count": 0,
+            "private_fields_omitted": [
+              "request",
+              "decision_evidence",
+              "state_progression",
+              "candidate_collection",
+              "selection",
+              "execution",
+              "result",
+              "otel_trace"
+            ],
+            "request_id": "agent-1",
+            "runtime_status": "completed",
+            "schema_version": "1.0.0",
+            "selected_capability_id": "core.authorize",
+            "state_transition_count": 8,
+            "trace_id": "trace_exec_agent-1"
+          },
+          "trace_redacted": true
+        },
+        {
+          "kind": "terminal",
+          "result": {
+            "error": null,
+            "execution_id": "exec_agent-1",
+            "kind": "runtime_result",
+            "output": {
+              "break_glass_used": false,
+              "confidence": "high",
+              "decision": "deny",
+              "evaluation_trace": [
+                "evaluated rules, none matched",
+                "falling back to default_effect=deny"
+              ],
+              "matched_rules": [],
+              "obligations": [],
+              "policy_hash": "fnv1a64:51a64653e94300c3",
+              "reason": "No matching rule; default_effect=deny",
+              "reason_code": "no_matching_rule"
+            },
+            "request_id": "agent-1",
+            "schema_version": "1.0.0",
+            "status": "completed",
+            "trace_ref": "trace_exec_agent-1",
+            "warnings": [
+              {
+                "code": "unsigned_local_dev_artifact",
+                "message": "unsigned local/dev artifact allowed by development security mode"
+              }
+            ]
+          },
+          "sequence": 10
+        },
+        {
+          "execution_id": "exec_agent-1",
+          "kind": "lifecycle",
+          "request_id": "agent-1",
+          "sequence": 11,
+          "status": "stream_completed"
+        }
+      ],
+      "request_id": "agent-1",
+      "request_path": null,
+      "request_source": "inline",
+      "result": {
+        "error": null,
+        "execution_id": "exec_agent-1",
+        "kind": "runtime_result",
+        "output": {
+          "break_glass_used": false,
+          "confidence": "high",
+          "decision": "deny",
+          "evaluation_trace": [
+            "evaluated rules, none matched",
+            "falling back to default_effect=deny"
+          ],
+          "matched_rules": [],
+          "obligations": [],
+          "policy_hash": "fnv1a64:51a64653e94300c3",
+          "reason": "No matching rule; default_effect=deny",
+          "reason_code": "no_matching_rule"
+        },
+        "request_id": "agent-1",
+        "schema_version": "1.0.0",
+        "status": "completed",
+        "trace_ref": "trace_exec_agent-1",
+        "warnings": [
+          {
+            "code": "unsigned_local_dev_artifact",
+            "message": "unsigned local/dev artifact allowed by development security mode"
+          }
+        ]
+      },
+      "server_name": "traverse-mcp",
+      "status": "completed",
+      "trace": {
+        "emitted_event_count": 0,
+        "execution_id": "exec_agent-1",
+        "governing_spec": "006-runtime-request-execution",
+        "kind": "runtime_trace",
+        "model_resolution_count": 0,
+        "private_fields_omitted": [
+          "request",
+          "decision_evidence",
+          "state_progression",
+          "candidate_collection",
+          "selection",
+          "execution",
+          "result",
+          "otel_trace"
+        ],
+        "request_id": "agent-1",
+        "runtime_status": "completed",
+        "schema_version": "1.0.0",
+        "selected_capability_id": "core.authorize",
+        "state_transition_count": 8,
+        "trace_id": "trace_exec_agent-1"
+      },
+      "trace_redaction": {
+        "auth_mode": "local_trust",
+        "enabled": true,
+        "reason": "MCP stdio responses omit full runtime traces by default.",
+        "tier": "public_summary"
+      }
+    },
+    "output": {
+      "break_glass_used": false,
+      "confidence": "high",
+      "decision": "deny",
+      "evaluation_trace": [
+        "evaluated rules, none matched",
+        "falling back to default_effect=deny"
+      ],
+      "matched_rules": [],
+      "obligations": [],
+      "policy_hash": "fnv1a64:51a64653e94300c3",
+      "reason": "No matching rule; default_effect=deny",
+      "reason_code": "no_matching_rule"
+    }
+  },
+  "allow": {
+    "envelope": {
+      "artifact": {
+        "digest": "sha256:0c318fff56a74eddfbc1ab850c25c1ba191744309984a07bd503b8cd9cb92e40",
+        "digest_matches_public_state": true,
+        "index_digest": "sha256:1fa55dc3b19fcd1af400d867d3d8f86f4bebdb0a395ef50f318fc0f67f22a525",
+        "source_release": "index-v412",
+        "stale": false,
+        "verification": "digest",
+        "verified": true
+      },
+      "entrypoint": {
+        "artifact_digest": "sha256:0c318fff56a74eddfbc1ab850c25c1ba191744309984a07bd503b8cd9cb92e40",
+        "artifact_kind": "capability",
+        "description": "Pure authorization evaluator: allow/deny for principal+action+resource under a caller-supplied versioned policy (RBAC/hybrid rule matching, tenant/status conditions, break-glass, obligations).\n\nImplemented and smoke-tested matrix (use_cases):\n- admin role allow (matched_allow_rule)\n- tenant isolation deny (matched_deny_rule)\n- owner update allow (matched_allow_rule)\n- suspended principal deny (matched_deny_rule)\n- allow with obligations (matched_allow_rule)\n- no matching rule → deny (no_matching_rule)\n- empty policy rules → empty_or_invalid_policy\n- break-glass override (break_glass_override)\n- missing principal.id → invalid_principal\n- missing action → invalid_action\n- missing resource.type → invalid_resource\n\nKnown limitations (intentional in 1.2.0):\n- policy.mode values abac/explicit removed from schema (not distinct evaluator modes in this binary)\n- default_effect narrowed to deny (fail-closed); allow-default not published\n- obligation severity narrowed to required\n- condition_failed / policy_evaluation_error are not emitted as distinct reason_codes\n- Condition DSL is a practical subset (eq/neq on selected attribute paths), not full XACML/Cedar",
+        "id": "core.authorize",
+        "index_digest": "sha256:1fa55dc3b19fcd1af400d867d3d8f86f4bebdb0a395ef50f318fc0f67f22a525",
+        "lifecycle": "active",
+        "namespace": "core",
+        "permitted_targets": [
+          "local",
+          "edge",
+          "browser",
+          "cloud"
+        ],
+        "provenance": {
+          "adr_refs": [
+            "0001-rust-wasm-foundation",
+            "persona-council-review-2026-08-08"
+          ],
+          "author": "loop-founders + traverse-capability-author",
+          "created_at": "2026-08-08T05:36:00Z",
+          "exception_refs": [],
+          "source": "ai-assisted",
+          "spec_ref": "core.authorize@1.2.0"
+        },
+        "scenarios": [
+          "As a platform security engineer, I want an admin user with the correct role to be allowed to delete a document so that privileged operations succeed when policy permits them.",
+          "As a multi-tenant SaaS developer, I want a user to be denied access to a resource that belongs to a different tenant even if they hold a powerful role, so that tenant isolation is enforced.",
+          "As a collaboration product owner, I want the owner of a resource to always be able to update it, so that ownership rights are respected regardless of role.",
+          "As a security engineer, I want a high-priority explicit deny to override an allow rule so that a compromised or suspended account cannot exercise privileges.",
+          "As a compliance officer, I want an allow decision to carry structured obligations (require MFA + audit) so that the calling system can enforce additional controls.",
+          "As a developer, I want any request that matches no rule to be denied when default_effect is deny, so that the system fails closed.",
+          "As a runtime, I want an empty or malformed policy to always produce a deny with a clear reason_code so that invalid configurations cannot open the system.",
+          "As an incident responder, I want a break-glass flag to allow a temporary override while still recording that the override was used, so that emergency access is possible but fully auditable.",
+          "As a client developer, I want a clear structured denial when the principal object is missing required fields so that I can surface a precise error instead of a generic failure.",
+          "As a client developer, I want missing action rejected with invalid_action, so that callers can fix request shape without guessing.",
+          "As a client developer, I want missing resource.type rejected with invalid_resource, so that incomplete resource descriptors fail closed."
+        ],
+        "service_type": "stateless",
+        "source_release": "index-v412",
+        "summary": "Pure authorization evaluator: allow/deny for principal+action+resource under a caller-supplied versioned policy.",
+        "version": "1.2.0"
+      },
+      "execution_id": "exec_agent-2",
+      "governing_spec": "119-verified-registry-mcp-mode-a",
+      "host_mode": "stdio",
+      "kind": "mcp_stdio_server_entrypoint_execution",
+      "mode": "verified_public",
+      "observation_messages": [
+        {
+          "execution_id": "exec_agent-2",
+          "kind": "lifecycle",
+          "request_id": "agent-2",
+          "sequence": 0,
+          "status": "stream_started"
+        },
+        {
+          "kind": "state",
+          "sequence": 1,
+          "state_event": {
+            "details": {
+              "identity": null,
+              "registry_status": "available",
+              "transition_reason": "runtime_initialization_started"
+            },
+            "entered_at": "1970-01-01T00:00:00Z",
+            "event_id": "rse_exec_agent-2_0000",
+            "execution_id": "exec_agent-2",
+            "kind": "runtime_state_event",
+            "request_id": "agent-2",
+            "schema_version": "1.0.0",
+            "state": "loading_registry"
+          }
+        },
+        {
+          "kind": "state",
+          "sequence": 2,
+          "state_event": {
+            "details": {
+              "governing_spec": "006-runtime-request-execution",
+              "transition_reason": "registry_loaded"
+            },
+            "entered_at": "1970-01-01T00:00:01Z",
+            "event_id": "rse_exec_agent-2_0001",
+            "execution_id": "exec_agent-2",
+            "kind": "runtime_state_event",
+            "request_id": "agent-2",
+            "schema_version": "1.0.0",
+            "state": "ready"
+          }
+        },
+        {
+          "kind": "state",
+          "sequence": 3,
+          "state_event": {
+            "details": {
+              "identity": null,
+              "lookup_scope": "public_only",
+              "transition_reason": "request_started"
+            },
+            "entered_at": "1970-01-01T00:00:02Z",
+            "event_id": "rse_exec_agent-2_0002",
+            "execution_id": "exec_agent-2",
+            "kind": "runtime_state_event",
+            "request_id": "agent-2",
+            "schema_version": "1.0.0",
+            "state": "discovering"
+          }
+        },
+        {
+          "kind": "state",
+          "sequence": 4,
+          "state_event": {
+            "details": {
+              "candidate_count": 1,
+              "transition_reason": "candidates_collected"
+            },
+            "entered_at": "1970-01-01T00:00:03Z",
+            "event_id": "rse_exec_agent-2_0003",
+            "execution_id": "exec_agent-2",
+            "kind": "runtime_state_event",
+            "request_id": "agent-2",
+            "schema_version": "1.0.0",
+            "state": "evaluating_constraints"
+          }
+        },
+        {
+          "kind": "state",
+          "sequence": 5,
+          "state_event": {
+            "details": {
+              "eligible_candidates": 1,
+              "rejected_candidates": 0,
+              "transition_reason": "constraints_evaluated"
+            },
+            "entered_at": "1970-01-01T00:00:04Z",
+            "event_id": "rse_exec_agent-2_0004",
+            "execution_id": "exec_agent-2",
+            "kind": "runtime_state_event",
+            "request_id": "agent-2",
+            "schema_version": "1.0.0",
+            "state": "selecting"
+          }
+        },
+        {
+          "kind": "state",
+          "sequence": 6,
+          "state_event": {
+            "details": {
+              "artifact_ref": "verified-registry:core.authorize:1.2.0",
+              "capability_id": "core.authorize",
+              "capability_version": "1.2.0",
+              "identity": null,
+              "placement_reason": "requested_target_selected",
+              "placement_status": "selected",
+              "requested_target": "local",
+              "selected_target": "local",
+              "transition_reason": "candidate_selected"
+            },
+            "entered_at": "1970-01-01T00:00:06Z",
+            "event_id": "rse_exec_agent-2_0005",
+            "execution_id": "exec_agent-2",
+            "kind": "runtime_state_event",
+            "request_id": "agent-2",
+            "schema_version": "1.0.0",
+            "state": "executing"
+          }
+        },
+        {
+          "kind": "state",
+          "sequence": 7,
+          "state_event": {
+            "details": {
+              "capability_id": "core.authorize",
+              "capability_version": "1.2.0",
+              "transition_reason": "execution_succeeded"
+            },
+            "entered_at": "1970-01-01T00:00:08Z",
+            "event_id": "rse_exec_agent-2_0006",
+            "execution_id": "exec_agent-2",
+            "kind": "runtime_state_event",
+            "request_id": "agent-2",
+            "schema_version": "1.0.0",
+            "state": "completed"
+          }
+        },
+        {
+          "kind": "state",
+          "sequence": 8,
+          "state_event": {
+            "details": {
+              "terminal_state": "completed",
+              "transition_reason": "execution_closed"
+            },
+            "entered_at": "1970-01-01T00:00:09Z",
+            "event_id": "rse_exec_agent-2_0007",
+            "execution_id": "exec_agent-2",
+            "kind": "runtime_state_event",
+            "request_id": "agent-2",
+            "schema_version": "1.0.0",
+            "state": "ready"
+          }
+        },
+        {
+          "kind": "trace",
+          "model_resolution_count": 0,
+          "sequence": 9,
+          "trace": {
+            "emitted_event_count": 0,
+            "execution_id": "exec_agent-2",
+            "governing_spec": "006-runtime-request-execution",
+            "kind": "runtime_trace",
+            "model_resolution_count": 0,
+            "private_fields_omitted": [
+              "request",
+              "decision_evidence",
+              "state_progression",
+              "candidate_collection",
+              "selection",
+              "execution",
+              "result",
+              "otel_trace"
+            ],
+            "request_id": "agent-2",
+            "runtime_status": "completed",
+            "schema_version": "1.0.0",
+            "selected_capability_id": "core.authorize",
+            "state_transition_count": 8,
+            "trace_id": "trace_exec_agent-2"
+          },
+          "trace_redacted": true
+        },
+        {
+          "kind": "terminal",
+          "result": {
+            "error": null,
+            "execution_id": "exec_agent-2",
+            "kind": "runtime_result",
+            "output": {
+              "break_glass_used": false,
+              "confidence": "high",
+              "decision": "allow",
+              "evaluation_trace": [
+                "rule matched -> allow"
+              ],
+              "matched_rules": [
+                {
+                  "effect": "allow",
+                  "priority": 100,
+                  "rule_id": "treasury-transfer"
+                }
+              ],
+              "obligations": [
+                {
+                  "severity": "required",
+                  "type": "require_mfa"
+                },
+                {
+                  "metadata": {
+                    "threshold_usd": 100000
+                  },
+                  "severity": "required",
+                  "type": "dual_control"
+                }
+              ],
+              "policy_hash": "fnv1a64:51a64653e94300c3",
+              "reason": "Matched allow rule",
+              "reason_code": "matched_allow_rule"
+            },
+            "request_id": "agent-2",
+            "schema_version": "1.0.0",
+            "status": "completed",
+            "trace_ref": "trace_exec_agent-2",
+            "warnings": [
+              {
+                "code": "unsigned_local_dev_artifact",
+                "message": "unsigned local/dev artifact allowed by development security mode"
+              }
+            ]
+          },
+          "sequence": 10
+        },
+        {
+          "execution_id": "exec_agent-2",
+          "kind": "lifecycle",
+          "request_id": "agent-2",
+          "sequence": 11,
+          "status": "stream_completed"
+        }
+      ],
+      "request_id": "agent-2",
+      "request_path": null,
+      "request_source": "inline",
+      "result": {
+        "error": null,
+        "execution_id": "exec_agent-2",
+        "kind": "runtime_result",
+        "output": {
+          "break_glass_used": false,
+          "confidence": "high",
+          "decision": "allow",
+          "evaluation_trace": [
+            "rule matched -> allow"
+          ],
+          "matched_rules": [
+            {
+              "effect": "allow",
+              "priority": 100,
+              "rule_id": "treasury-transfer"
+            }
+          ],
+          "obligations": [
+            {
+              "severity": "required",
+              "type": "require_mfa"
+            },
+            {
+              "metadata": {
+                "threshold_usd": 100000
+              },
+              "severity": "required",
+              "type": "dual_control"
+            }
+          ],
+          "policy_hash": "fnv1a64:51a64653e94300c3",
+          "reason": "Matched allow rule",
+          "reason_code": "matched_allow_rule"
+        },
+        "request_id": "agent-2",
+        "schema_version": "1.0.0",
+        "status": "completed",
+        "trace_ref": "trace_exec_agent-2",
+        "warnings": [
+          {
+            "code": "unsigned_local_dev_artifact",
+            "message": "unsigned local/dev artifact allowed by development security mode"
+          }
+        ]
+      },
+      "server_name": "traverse-mcp",
+      "status": "completed",
+      "trace": {
+        "emitted_event_count": 0,
+        "execution_id": "exec_agent-2",
+        "governing_spec": "006-runtime-request-execution",
+        "kind": "runtime_trace",
+        "model_resolution_count": 0,
+        "private_fields_omitted": [
+          "request",
+          "decision_evidence",
+          "state_progression",
+          "candidate_collection",
+          "selection",
+          "execution",
+          "result",
+          "otel_trace"
+        ],
+        "request_id": "agent-2",
+        "runtime_status": "completed",
+        "schema_version": "1.0.0",
+        "selected_capability_id": "core.authorize",
+        "state_transition_count": 8,
+        "trace_id": "trace_exec_agent-2"
+      },
+      "trace_redaction": {
+        "auth_mode": "local_trust",
+        "enabled": true,
+        "reason": "MCP stdio responses omit full runtime traces by default.",
+        "tier": "public_summary"
+      }
+    },
+    "output": {
+      "break_glass_used": false,
+      "confidence": "high",
+      "decision": "allow",
+      "evaluation_trace": [
+        "rule matched -> allow"
+      ],
+      "matched_rules": [
+        {
+          "effect": "allow",
+          "priority": 100,
+          "rule_id": "treasury-transfer"
+        }
+      ],
+      "obligations": [
+        {
+          "severity": "required",
+          "type": "require_mfa"
+        },
+        {
+          "metadata": {
+            "threshold_usd": 100000
+          },
+          "severity": "required",
+          "type": "dual_control"
+        }
+      ],
+      "policy_hash": "fnv1a64:51a64653e94300c3",
+      "reason": "Matched allow rule",
+      "reason_code": "matched_allow_rule"
+    }
+  },
+  "freestyle": [
+    {
+      "label": "agent invents core.authorize@1.3.0 (not in verified generation)",
+      "exit_code": 1,
+      "outcome": {
+        "code": "not_found",
+        "governing_spec": "022-mcp-wasm-server",
+        "host_mode": "stdio",
+        "kind": "mcp_stdio_server_error",
+        "message": "capability entrypoint core.authorize@1.3.0 was not found",
+        "server_name": "traverse-mcp"
+      }
+    },
+    {
+      "label": "agent downgrades to core.authorize@1.0.0 (in index, never pinned into cache)",
+      "exit_code": 1,
+      "outcome": {
+        "code": "registry_cache_entry_missing",
+        "governing_spec": "022-mcp-wasm-server",
+        "host_mode": "stdio",
+        "kind": "mcp_stdio_server_error",
+        "message": "verified registry cache entry is missing for registry_ref",
+        "server_name": "traverse-mcp"
+      }
+    },
+    {
+      "label": "agent's request targets 1.0.0 under the 1.2.0 entrypoint",
+      "exit_code": 1,
+      "outcome": {
+        "code": "invalid_request",
+        "governing_spec": "022-mcp-wasm-server",
+        "host_mode": "stdio",
+        "kind": "mcp_stdio_server_error",
+        "message": "runtime request target core.authorize@1.0.0 does not match capability entrypoint core.authorize@1.2.0",
+        "server_name": "traverse-mcp"
+      }
+    },
+    {
+      "label": "agent calls a made-up core.approve-wire@1.0.0",
+      "exit_code": 1,
+      "outcome": {
+        "code": "not_found",
+        "governing_spec": "022-mcp-wasm-server",
+        "host_mode": "stdio",
+        "kind": "mcp_stdio_server_error",
+        "message": "capability entrypoint core.approve-wire@1.0.0 was not found",
+        "server_name": "traverse-mcp"
+      }
+    },
+    {
+      "label": "1 bit flipped in the cached authorize.wasm",
+      "exit_code": 1,
+      "outcome": {
+        "code": "registry_artifact_digest_mismatch",
+        "governing_spec": "022-mcp-wasm-server",
+        "host_mode": "stdio",
+        "kind": "mcp_stdio_server_error",
+        "message": "registry artifact bytes do not match the published digest",
+        "server_name": "traverse-mcp"
+      }
+    }
+  ],
+  "stderr_main": []
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Last week's three bugs, closed on main — Traverse</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <style>
+    .hosts-grid{grid-template-columns:repeat(4,1fr)}
+    table{width:100%;border-collapse:collapse;font-size:13px}
+    td,th{border-bottom:1px solid #2a3140;padding:6px 8px;text-align:left;vertical-align:top}
+    .pill{display:inline-block;padding:1px 8px;border-radius:10px;font-size:12px;font-weight:600}
+    .p-deny{background:#4a1d22;color:#ff8f8f}.p-allow{background:#16382a;color:#7fe0a8}.p-warn{background:#41361a;color:#f0cf6a}
+    .finding{border-left:4px solid #f0cf6a}
+    code.h{font-size:12px}
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Friday demo · 2026-10-30 · traverse main 70f3ee7 (unreleased, after v0.15.0) · embedder-web 0.15.0 + main runtime.wasm · registry index-v412</p>
+      <h1>One audit fingerprint, every host</h1>
+      <p class="lede">
+        Last Friday, running <code>core.authorize@1.2.0</code> three ways exposed a split: same WASM, same wire, same decision, but a different
+        <code>policy_hash</code> from the agent's MCP server than from the embedders. This week traverse <code>main</code> closed it, plus the two
+        papercuts around it: the agent binary now runs from a clean directory with no staged fixtures (<a href="https://github.com/traverse-framework/traverse/pull/1725">#1725</a>)
+        and syncs straight from the live registry (<code>traverse-mcp sync</code>, <a href="https://github.com/traverse-framework/traverse/pull/1758">#1758</a>), no hand-written state.
+        Atlas still tries to push a $2.4M offshore wire for a junior analyst. Click once; four columns run live.
+      </p>
+    </header>
+
+    <section class="actions">
+      <button id="btn-run" disabled>Run before + after live</button>
+      <span id="status" class="muted"></span>
+    </section>
+
+    <section class="hosts-grid">
+      <article class="card host-col"><h2>0 · Before: Browser, v0.15.0 runtime</h2><p class="muted">embedder-web 0.15.0 · runtime.wasm a254c161 · caller bytes passed through</p><pre id="col-before" class="mini">waiting…</pre></article>
+      <article class="card host-col"><h2>1 · Browser (main)</h2><p class="muted">embedder-web 0.15.0 · main runtime.wasm ec49cb76 · nested wasmi in this tab</p><pre id="col-browser" class="mini">waiting…</pre></article>
+      <article class="card host-col"><h2>2 · Node (main)</h2><p class="muted">same npm package · NodeFsBundleLoader · same main runtime.wasm</p><pre id="col-node" class="mini">waiting…</pre></article>
+      <article class="card host-col"><h2>3 · Agent via traverse-mcp (main)</h2><p class="muted">built from main 70f3ee7 · stdio · Mode A <code>verified_public</code> · native wasmtime</p><pre id="col-agent" class="mini">waiting…</pre></article>
+    </section>
+
+    <section class="card"><h2>Cross-host truth</h2><div id="truth">waiting…</div></section>
+    <section class="card finding"><h2>Before vs after</h2><div id="finding">waiting…</div></section>
+    <section class="card"><h2>Agent freestyle attempts through the MCP server</h2><div id="freestyle">waiting…</div></section>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

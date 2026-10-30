@@ -1,0 +1,112 @@
+{
+  "host": "node-canonical-keys",
+  "npm_installed": "traverse-embedder-web@0.15.0",
+  "release_evidence_package_version_skew": "0.15.0",
+  "npm": "traverse-embedder-web@0.15.0",
+  "authorize_wasm_digest": "sha256:0c318fff56a74eddfbc1ab850c25c1ba191744309984a07bd503b8cd9cb92e40",
+  "runtime_wasm_digest": "sha256:ec49cb7674b362004b3c395a817f1d764893e1c98d973255b3953ed3c8532226",
+  "deny": {
+    "decision": "deny",
+    "reason_code": "no_matching_rule",
+    "reason": "No matching rule; default_effect=deny",
+    "output": {
+      "break_glass_used": false,
+      "confidence": "high",
+      "decision": "deny",
+      "evaluation_trace": [
+        "evaluated rules, none matched",
+        "falling back to default_effect=deny"
+      ],
+      "matched_rules": [],
+      "obligations": [],
+      "policy_hash": "fnv1a64:51a64653e94300c3",
+      "reason": "No matching rule; default_effect=deny",
+      "reason_code": "no_matching_rule"
+    }
+  },
+  "allow": {
+    "decision": "allow",
+    "reason_code": "matched_allow_rule",
+    "obligations": [
+      {
+        "severity": "required",
+        "type": "require_mfa"
+      },
+      {
+        "metadata": {
+          "threshold_usd": 100000
+        },
+        "severity": "required",
+        "type": "dual_control"
+      }
+    ],
+    "output": {
+      "break_glass_used": false,
+      "confidence": "high",
+      "decision": "allow",
+      "evaluation_trace": [
+        "rule matched -> allow"
+      ],
+      "matched_rules": [
+        {
+          "effect": "allow",
+          "priority": 100,
+          "rule_id": "treasury-transfer"
+        }
+      ],
+      "obligations": [
+        {
+          "severity": "required",
+          "type": "require_mfa"
+        },
+        {
+          "metadata": {
+            "threshold_usd": 100000
+          },
+          "severity": "required",
+          "type": "dual_control"
+        }
+      ],
+      "policy_hash": "fnv1a64:51a64653e94300c3",
+      "reason": "Matched allow rule",
+      "reason_code": "matched_allow_rule"
+    }
+  },
+  "event_types_seen": [
+    "capability_invoked",
+    "capability_result"
+  ],
+  "release_evidence": {
+    "kind": "embedder_release_evidence",
+    "schema_version": "1.0.0",
+    "package": {
+      "name": "traverse-embedder-web",
+      "version": "0.15.0"
+    },
+    "embedder_api_version": "1.1.0",
+    "companion_apis": {
+      "embedded-trace-api": "1.0.0"
+    },
+    "conformance_version": "1.0.0",
+    "runtime": {
+      "implementation": "browser-webassembly",
+      "runtime_wasm_digest": "sha256:ec49cb7674b362004b3c395a817f1d764893e1c98d973255b3953ed3c8532226"
+    },
+    "supported_bundle_schema_versions": [
+      "1.0.0"
+    ],
+    "bundle": {
+      "app_id": "agent-mcp",
+      "app_version": "1.0.0",
+      "wasm_components": [
+        {
+          "component_id": "agent-blocked.authorize",
+          "capability_id": "core.authorize",
+          "wasm_digest": "sha256:0c318fff56a74eddfbc1ab850c25c1ba191744309984a07bd503b8cd9cb92e40"
+        }
+      ]
+    },
+    "workspace_id": "local-default",
+    "platform": "web"
+  }
+}
