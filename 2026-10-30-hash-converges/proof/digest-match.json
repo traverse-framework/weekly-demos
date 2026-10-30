@@ -1,0 +1,77 @@
+{
+  "checked_at": "2026-10-30T22:23:13.749Z",
+  "wasm": {
+    "browser_and_node_bundle": "sha256:0c318fff56a74eddfbc1ab850c25c1ba191744309984a07bd503b8cd9cb92e40",
+    "agent_verified_cache": "sha256:0c318fff56a74eddfbc1ab850c25c1ba191744309984a07bd503b8cd9cb92e40",
+    "catalog": "sha256:0c318fff56a74eddfbc1ab850c25c1ba191744309984a07bd503b8cd9cb92e40",
+    "all_identical": true
+  },
+  "runtime_wasm": {
+    "file": "sha256:ec49cb7674b362004b3c395a817f1d764893e1c98d973255b3953ed3c8532226",
+    "expected": "sha256:ec49cb7674b362004b3c395a817f1d764893e1c98d973255b3953ed3c8532226",
+    "match": true
+  },
+  "agent_binary": {
+    "path": "mcp/bin/traverse-mcp",
+    "sha256": "sha256:e2cda8dd0b9e65d2589312e7a5d6a8e5345359038e292aa32d745a1a4a399bef",
+    "source": "cargo +1.95.0 build --release -p traverse-mcp at traverse main 70f3ee7 (unreleased)"
+  },
+  "agent_mode": "verified_public",
+  "before_v0_15_runtime": {
+    "runtime_wasm": "sha256:a254c161d5699b19ffe6eb47d2e11e45a39363ae8b2a9ac435d54a09fb31d782",
+    "agent": "traverse-mcp 0.15.0 (crates.io), archived run 2026-10-23",
+    "deny": {
+      "full_output_identical": false,
+      "identical_except_policy_hash": true,
+      "policy_hash": [
+        "fnv1a64:2a126b867e19f379",
+        "fnv1a64:51a64653e94300c3"
+      ]
+    },
+    "allow": {
+      "full_output_identical": false,
+      "identical_except_policy_hash": true,
+      "policy_hash": [
+        "fnv1a64:2a126b867e19f379",
+        "fnv1a64:51a64653e94300c3"
+      ]
+    }
+  },
+  "node_vs_agent": {
+    "deny": {
+      "full_output_identical": true,
+      "identical_except_policy_hash": true,
+      "policy_hash": [
+        "fnv1a64:51a64653e94300c3",
+        "fnv1a64:51a64653e94300c3"
+      ]
+    },
+    "allow": {
+      "full_output_identical": true,
+      "identical_except_policy_hash": true,
+      "policy_hash": [
+        "fnv1a64:51a64653e94300c3",
+        "fnv1a64:51a64653e94300c3"
+      ]
+    }
+  },
+  "node_canonical_keys_vs_agent": {
+    "deny": {
+      "full_output_identical": true,
+      "identical_except_policy_hash": true,
+      "policy_hash": [
+        "fnv1a64:51a64653e94300c3",
+        "fnv1a64:51a64653e94300c3"
+      ]
+    },
+    "allow": {
+      "full_output_identical": true,
+      "identical_except_policy_hash": true,
+      "policy_hash": [
+        "fnv1a64:51a64653e94300c3",
+        "fnv1a64:51a64653e94300c3"
+      ]
+    }
+  },
+  "finding": "On traverse main 70f3ee7 (#1739, Spec 1722) every host hands the guest RFC 8785 canonical JSON. Node/Browser with the main runtime.wasm and the main traverse-mcp binary produce byte-identical core.authorize output, policy_hash included, from the caller unsorted bytes. With the v0.15.0-era runtime.wasm the same input still splits (2a126b86 vs 51a64653)."
+}

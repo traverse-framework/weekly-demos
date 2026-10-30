@@ -19,6 +19,7 @@ Links point into dated folders under this repo.
 
 ### Agent guardrails / deny authority
 
+- [2026-10-30-hash-converges](2026-10-30-hash-converges/) — Agent on `traverse-mcp` built from traverse `main` 70f3ee7 (Mode A, cache from `traverse-mcp sync` against live `index-v412`, 232 records); five freestyle moves still → `not_found` / `registry_cache_entry_missing` / `invalid_request` / `not_found` / `registry_artifact_digest_mismatch`. Blog: [hash-converges](https://traverse-framework.com/blog/hash-converges.html).
 - [2026-10-23-agent-mcp](2026-10-23-agent-mcp/) — Agent talks to the **real published `traverse-mcp` 0.15.0** (built with `cargo install` from crates.io), Mode A stdio over a digest-verified registry cache (`index-v407`). $2.4M wire cheat → `deny` / `no_matching_rule`; five freestyle moves → `not_found` / `registry_cache_entry_missing` / `invalid_request` / `not_found` / `registry_artifact_digest_mismatch`. Blog: [agent-mcp-real-server](https://traverse-framework.com/blog/agent-mcp-real-server.html).
 - [2026-10-09-agent-mcp-exact-ref](2026-10-09-agent-mcp-exact-ref/) — MCP-shaped agent freestyle against a signed exact-ref model → fail-closed stable reasons. Façade over `ExactModelBrowserHost` under Node — not the Mode A `traverse-mcp` binary.
 - [2026-09-25-same-wasm-hosts](2026-09-25-same-wasm-hosts/) — Same `core.authorize` WASM on Browser + Node; junior_analyst $2.4M treasury cheat → **deny**; agent proposes, runtime decides (v0.13.0 multi-host).
@@ -26,12 +27,14 @@ Links point into dated folders under this repo.
 
 ### Authorization (`core.authorize`)
 
+- [2026-10-30-hash-converges](2026-10-30-hash-converges/) — Same `core.authorize@1.2.0` WASM (`0c318fff…`) now gives one `policy_hash` (`51a64653…`) on Browser, Node and `traverse-mcp`; before: `2a126b86…` with v0.15.0-era `runtime.wasm`. Fix: RFC 8785 canonical input (traverse#1739, closes #1722). Unreleased main.
 - [2026-10-23-agent-mcp](2026-10-23-agent-mcp/) — Same `core.authorize@1.2.0` WASM (`0c318fff…`) on Browser, Node and `traverse-mcp`; deny/allow, reason, obligations and trace match. Finding: `policy_hash` differs (`2a126b86…` vs `51a64653…`) because `traverse-mcp` re-serializes input with sorted keys (traverse#1722).
 - [2026-09-25-same-wasm-hosts](2026-09-25-same-wasm-hosts/) — Identical `authorize.wasm` bytes + matching deny/allow decisions across Browser and Node; digest fingerprint column for Swift/.NET/Kotlin.
 - [2026-09-18-agent-blocked](2026-09-18-agent-blocked/) — Pinned `core.authorize@1.2.0` evaluates role × action × amount; cheat path denied, legit path allowed with obligations.
 
 ### Browser embedder + `runtime.wasm`
 
+- [2026-10-30-hash-converges](2026-10-30-hash-converges/) — `traverse-embedder-web@0.15.0` (npm) with main's `runtime.wasm` (`ec49cb76…`) swapped into the bundle, vs the v0.15.0-era `a254c161…` as the before column.
 - [2026-10-23-agent-mcp](2026-10-23-agent-mcp/) — `traverse-embedder-web@0.15.0` BundleEmbedder over `runtime.wasm` (`a254c161…`) on Browser; same npm package under Node.
 - [2026-10-09-agent-mcp-exact-ref](2026-10-09-agent-mcp-exact-ref/) — `traverse-embedder-web@0.14.0` `ExactModelBrowserHost` on Browser; same npm host under Node backs the Node proof and the agent MCP façade.
 - [2026-10-02-signed-exact-ref](2026-10-02-signed-exact-ref/) — `traverse-embedder-web@0.14.0` `ExactModelBrowserHost` + `registerPackage` on Browser; same npm host under Node (not a separate native CLI).
@@ -50,6 +53,7 @@ Links point into dated folders under this repo.
 
 ### Multi-host / same-bytes
 
+- [2026-10-30-hash-converges](2026-10-30-hash-converges/) — Before/after on four columns: Browser (v0.15.0-era) `2a126b86…` → Browser, Node and agent on main all `51a64653…`, full output byte-identical from unsorted caller input (RFC 8785, traverse#1739).
 - [2026-10-23-agent-mcp](2026-10-23-agent-mcp/) — One `core.authorize` WASM on three hosts caught a determinism bug: decisions match, `policy_hash` splits on key order; sorted-key input is byte-identical everywhere (traverse#1722).
 - [2026-10-16-catalog-model-execute](2026-10-16-catalog-model-execute/) — Same catalog WASM + same signed model on Browser, Node and Native, one fingerprint (`12fea82f…`).
 - [2026-10-09-agent-mcp-exact-ref](2026-10-09-agent-mcp-exact-ref/) — Browser ↔ Node ↔ agent MCP façade bit-identical classify on one pin digest (`3068f3ae…`).
@@ -71,6 +75,7 @@ Links point into dated folders under this repo.
 
 ### `core.authorize@1.2.0`
 
+- [2026-10-30-hash-converges](2026-10-30-hash-converges/) — One audit fingerprint on every host (traverse#1722 closed on main); `traverse-mcp sync`; five typed MCP refusals. Blog: [hash-converges](https://traverse-framework.com/blog/hash-converges.html).
 - [2026-10-23-agent-mcp](2026-10-23-agent-mcp/) — Real `traverse-mcp` 0.15.0 as the agent host; five typed MCP refusals; cross-host `policy_hash` finding. Blog: [agent-mcp-real-server](https://traverse-framework.com/blog/agent-mcp-real-server.html).
 - [2026-09-25-same-wasm-hosts](2026-09-25-same-wasm-hosts/) — Same WASM across hosts; agent treasury cheat blocked. Blog: [same-wasm-multi-host](https://traverse-framework.com/blog/same-wasm-multi-host.html).
 - [2026-09-18-agent-blocked](2026-09-18-agent-blocked/) — Agent freestyle → blocked; cheat / malformed / legit paths. Blog: [agent-freestyle-blocked](https://traverse-framework.com/blog/agent-freestyle-blocked.html).
@@ -78,6 +83,8 @@ Links point into dated folders under this repo.
 ---
 
 ## By date
+
+- **2026-10-30** — [`2026-10-30-hash-converges`](./2026-10-30-hash-converges/) — Same `core.authorize@1.2.0` WASM, one `policy_hash` on Browser + Node + `traverse-mcp` (RFC 8785 canonical input, #1739); `traverse-mcp sync` against live `index-v412`; freestyle still fails closed (traverse main 70f3ee7, unreleased).
 
 - **2026-10-23** — [`2026-10-23-agent-mcp`](./2026-10-23-agent-mcp/) — Agent gets the real `traverse-mcp` 0.15.0 MCP server (Mode A, digest-verified cache) and still can't freestyle; `core.authorize@1.2.0` on Browser + Node + Agent; `policy_hash` finding (v0.15.0).
 
@@ -97,5 +104,6 @@ Links point into dated folders under this repo.
 | 2026-10-09 | [2026-10-09-agent-mcp-exact-ref](2026-10-09-agent-mcp-exact-ref/) | agent-guardrails, agent-mcp, signed-exact-ref, same-bytes, multi-host, browser-embedder, digits-mlp, fail-closed, key-untrusted, rights-mismatch |
 | 2026-10-16 | [2026-10-16-catalog-model-execute](2026-10-16-catalog-model-execute/) | model-execute, catalog, signed-exact-ref, same-bytes, multi-host, native, agent-guardrails, fail-closed, onnx |
 | 2026-10-23 | [2026-10-23-agent-mcp](2026-10-23-agent-mcp/) | agent-guardrails, agent-mcp, traverse-mcp, mode-a, deny-authority, core.authorize, multi-host, browser-embedder, runtime.wasm, MFA, dual-control, fail-closed, determinism |
+| 2026-10-30 | [2026-10-30-hash-converges](2026-10-30-hash-converges/) | determinism, canonical-json, rfc8785, multi-host, agent-mcp, traverse-mcp, mode-a, registry-sync, core.authorize, browser-embedder, runtime.wasm, fail-closed |
 
 Full week table (with blog links): [README.md](README.md).

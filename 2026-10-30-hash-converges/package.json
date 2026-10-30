@@ -1,0 +1,16 @@
+{
+  "name": "2026-10-30-hash-converges",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Same core.authorize WASM, one policy_hash on Browser + Node + traverse-mcp (traverse main 70f3ee7)",
+  "scripts": {
+    "start": "node server.mjs",
+    "smoke": "node hosts/node-smoke.mjs",
+    "digest-match": "node hosts/digest-match.mjs",
+    "agent": "node hosts/mcp-agent.mjs"
+  },
+  "dependencies": {
+    "traverse-embedder-web": "0.15.0"
+  }
+}
