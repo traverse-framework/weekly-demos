@@ -90,9 +90,11 @@ Links point into dated folders under this repo.
 
 ## By date
 
-- **2026-10-30** — [`2026-10-30-hash-converges`](./2026-10-30-hash-converges/) — Same `core.authorize@1.2.0` WASM, one `policy_hash` on Browser + Node + `traverse-mcp` (RFC 8785 canonical input, #1739); `traverse-mcp sync` against live `index-v412`; freestyle still fails closed (traverse main 70f3ee7, unreleased).
+- **2026-11-13** — [`2026-11-13-kill-switch`](./2026-11-13-kill-switch/) — Catalog `model.execute` runaway guest stopped mid-run by deadline and abort on Deno + Node; host ceilings refuse oversize packages (v0.17.0).
 
 - **2026-11-06** — [`2026-11-06-product-path-model-execute`](./2026-11-06-product-path-model-execute/) — Catalog `model.execute` on published BundleEmbedder Browser+Node; Oct 16 `connector_invoke` red badge closed (v0.16.2).
+
+- **2026-10-30** — [`2026-10-30-hash-converges`](./2026-10-30-hash-converges/) — Same `core.authorize@1.2.0` WASM, one `policy_hash` on Browser + Node + `traverse-mcp` (RFC 8785 canonical input, #1739); `traverse-mcp sync` against live `index-v412`; freestyle still fails closed (traverse main 70f3ee7, unreleased).
 
 - **2026-10-23** — [`2026-10-23-agent-mcp`](./2026-10-23-agent-mcp/) — Agent gets the real `traverse-mcp` 0.15.0 MCP server (Mode A, digest-verified cache) and still can't freestyle; `core.authorize@1.2.0` on Browser + Node + Agent; `policy_hash` finding (v0.15.0).
 
