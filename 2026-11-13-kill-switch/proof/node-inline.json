@@ -1,0 +1,291 @@
+{
+  "max_main_thread_gap_ms": 4265,
+  "host": "node v22.22.0",
+  "mode": "inline",
+  "npm": "traverse-embedder-web@0.17.0",
+  "runtime_wasm": "v0.17.0 runtime/runtime.wasm sha256:3f763665…",
+  "wall_ms": 9053,
+  "results": [
+    {
+      "name": "ceiling_package_bytes",
+      "phase": "register",
+      "host_option": {
+        "maxPackageBytes": 65536
+      },
+      "registration_reason": "host_limit_exceeded",
+      "reason": "host_limit_exceeded"
+    },
+    {
+      "name": "ceiling_memory",
+      "phase": "register",
+      "host_option": {
+        "maxMemoryBytes": 1048576
+      },
+      "registration_reason": "host_limit_exceeded",
+      "reason": "host_limit_exceeded"
+    },
+    {
+      "name": "ceiling_fuel",
+      "phase": "register",
+      "host_option": {
+        "maxFuel": 1000000
+      },
+      "registration_reason": "host_limit_exceeded",
+      "reason": "host_limit_exceeded"
+    },
+    {
+      "name": "digits_ok",
+      "phase": "execute",
+      "registration_reason": null,
+      "ms": 50,
+      "submit_status": "accepted",
+      "reason": "ok",
+      "output": {
+        "model_evidence": {
+          "digest": "a7a8aa35c79ed38e7e2646d1b4f531e5d3167949ac8bd3e4efc8bfd678b901d2",
+          "effective_usage": "non_commercial",
+          "model_id": "traverse.digits-onnx",
+          "rights": {
+            "attribution": "ONNX export of Traverse's digits MLP, trained on \"Optical Recognition of Handwritten Digits\" by E. Alpaydin and C. Kaynak, UCI Machine Learning Repository, https://doi.org/10.24432/C50P49 (CC BY 4.0); packaged on the Traverse ONNX runner guest",
+            "commercial_use": "allowed",
+            "derivation": {
+              "kind": "converted",
+              "source_commercial_use": "allowed",
+              "source_digest": "c16f5e4d2b901067512812fa821f540fc8b5770845c133d608e30f8d61fd5efc",
+              "source_license_id": "CC-BY-4.0",
+              "source_url": "https://github.com/traverse-framework/traverse/blob/main/fixtures/onnx/digits-mlp-1.0.0.onnx"
+            },
+            "license_id": "CC-BY-4.0",
+            "redistribution": "Redistribution permitted under CC BY 4.0 with the attribution above; signed with the test-only key (no production trust)",
+            "source_url": "https://archive.ics.uci.edu/dataset/80/optical+recognition+of+handwritten+digits"
+          },
+          "status": "active",
+          "version": "1.0.0"
+        },
+        "model_ref": {
+          "digest": "sha256:a7a8aa35c79ed38e7e2646d1b4f531e5d3167949ac8bd3e4efc8bfd678b901d2",
+          "model_id": "traverse.digits-onnx",
+          "version": "1.0.0"
+        },
+        "output_ref": "output-1",
+        "output_schema_ref": "schema:traverse-digits-onnx-out",
+        "placement": "wasm-cpu",
+        "result_class": "success",
+        "status": "ok"
+      },
+      "frame_hex": "01000302010000000a000000280000003f4b6a411d82b1c0d7b909c06f6af0c0a660043fda06513f2ce60dbf6448c4c020baaf3f45b8f73f",
+      "model_evidence": {
+        "digest": "a7a8aa35c79ed38e7e2646d1b4f531e5d3167949ac8bd3e4efc8bfd678b901d2",
+        "effective_usage": "non_commercial",
+        "model_id": "traverse.digits-onnx",
+        "rights": {
+          "attribution": "ONNX export of Traverse's digits MLP, trained on \"Optical Recognition of Handwritten Digits\" by E. Alpaydin and C. Kaynak, UCI Machine Learning Repository, https://doi.org/10.24432/C50P49 (CC BY 4.0); packaged on the Traverse ONNX runner guest",
+          "commercial_use": "allowed",
+          "derivation": {
+            "kind": "converted",
+            "source_commercial_use": "allowed",
+            "source_digest": "c16f5e4d2b901067512812fa821f540fc8b5770845c133d608e30f8d61fd5efc",
+            "source_license_id": "CC-BY-4.0",
+            "source_url": "https://github.com/traverse-framework/traverse/blob/main/fixtures/onnx/digits-mlp-1.0.0.onnx"
+          },
+          "license_id": "CC-BY-4.0",
+          "redistribution": "Redistribution permitted under CC BY 4.0 with the attribution above; signed with the test-only key (no production trust)",
+          "source_url": "https://archive.ics.uci.edu/dataset/80/optical+recognition+of+handwritten+digits"
+        },
+        "status": "active",
+        "version": "1.0.0"
+      },
+      "expected_frame_hex": "01000302010000000a000000280000003f4b6a411d82b1c0d7b909c06f6af0c0a660043fda06513f2ce60dbf6448c4c020baaf3f45b8f73f",
+      "frame_matches_signed_vector": true
+    },
+    {
+      "name": "spin_registered",
+      "phase": "register",
+      "registration_reason": null,
+      "reason": "admitted",
+      "manifest_max_execution_ms": 1500
+    },
+    {
+      "name": "spin_small_ok",
+      "phase": "execute",
+      "work_units": 50,
+      "ms": 63,
+      "submit_status": "accepted",
+      "reason": "ok",
+      "output": {
+        "model_evidence": {
+          "digest": "737598abe1a97fd0680a668609cf18e41ab6a6b002a6807c941e89b2b922155d",
+          "effective_usage": "non_commercial",
+          "model_id": "demo.runaway-spin",
+          "rights": {
+            "attribution": "Prototype Builder demo guest (deterministic LCG spin loop), not a real model",
+            "commercial_use": "allowed",
+            "license_id": "Apache-2.0",
+            "redistribution": "Redistribution permitted; signed with a demo-only key (no production trust)",
+            "source_url": "https://github.com/traverse-framework/weekly-demos"
+          },
+          "status": "active",
+          "version": "1.0.0"
+        },
+        "model_ref": {
+          "digest": "sha256:737598abe1a97fd0680a668609cf18e41ab6a6b002a6807c941e89b2b922155d",
+          "model_id": "demo.runaway-spin",
+          "version": "1.0.0"
+        },
+        "output_ref": "output-1",
+        "output_schema_ref": "schema:demo-spin-out",
+        "placement": "wasm-cpu",
+        "result_class": "success",
+        "status": "ok"
+      },
+      "frame_hex": "320000006ddbf25b",
+      "model_evidence": {
+        "digest": "737598abe1a97fd0680a668609cf18e41ab6a6b002a6807c941e89b2b922155d",
+        "effective_usage": "non_commercial",
+        "model_id": "demo.runaway-spin",
+        "rights": {
+          "attribution": "Prototype Builder demo guest (deterministic LCG spin loop), not a real model",
+          "commercial_use": "allowed",
+          "license_id": "Apache-2.0",
+          "redistribution": "Redistribution permitted; signed with a demo-only key (no production trust)",
+          "source_url": "https://github.com/traverse-framework/weekly-demos"
+        },
+        "status": "active",
+        "version": "1.0.0"
+      }
+    },
+    {
+      "name": "runaway_deadline",
+      "phase": "execute",
+      "work_units": 4000,
+      "deadline_ms": 1500,
+      "ms": 4266,
+      "submit_status": "accepted",
+      "reason": "timeout",
+      "output": {
+        "error": {
+          "code": "timeout",
+          "message": "model.execute exceeded timeout"
+        },
+        "status": "error"
+      },
+      "frame_hex": null,
+      "model_evidence": null
+    },
+    {
+      "name": "runaway_abort",
+      "phase": "execute",
+      "work_units": 4000,
+      "abort_after_ms": 300,
+      "ms": 4238,
+      "submit_status": "accepted",
+      "reason": "timeout",
+      "output": {
+        "error": {
+          "code": "timeout",
+          "message": "model.execute exceeded timeout"
+        },
+        "status": "error"
+      },
+      "frame_hex": null,
+      "model_evidence": null
+    },
+    {
+      "name": "after_kill_ok",
+      "phase": "execute",
+      "work_units": 50,
+      "ms": 80,
+      "submit_status": "accepted",
+      "reason": "ok",
+      "output": {
+        "model_evidence": {
+          "digest": "737598abe1a97fd0680a668609cf18e41ab6a6b002a6807c941e89b2b922155d",
+          "effective_usage": "non_commercial",
+          "model_id": "demo.runaway-spin",
+          "rights": {
+            "attribution": "Prototype Builder demo guest (deterministic LCG spin loop), not a real model",
+            "commercial_use": "allowed",
+            "license_id": "Apache-2.0",
+            "redistribution": "Redistribution permitted; signed with a demo-only key (no production trust)",
+            "source_url": "https://github.com/traverse-framework/weekly-demos"
+          },
+          "status": "active",
+          "version": "1.0.0"
+        },
+        "model_ref": {
+          "digest": "sha256:737598abe1a97fd0680a668609cf18e41ab6a6b002a6807c941e89b2b922155d",
+          "model_id": "demo.runaway-spin",
+          "version": "1.0.0"
+        },
+        "output_ref": "output-2",
+        "output_schema_ref": "schema:demo-spin-out",
+        "placement": "wasm-cpu",
+        "result_class": "success",
+        "status": "ok"
+      },
+      "frame_hex": "320000006ddbf25b",
+      "model_evidence": {
+        "digest": "737598abe1a97fd0680a668609cf18e41ab6a6b002a6807c941e89b2b922155d",
+        "effective_usage": "non_commercial",
+        "model_id": "demo.runaway-spin",
+        "rights": {
+          "attribution": "Prototype Builder demo guest (deterministic LCG spin loop), not a real model",
+          "commercial_use": "allowed",
+          "license_id": "Apache-2.0",
+          "redistribution": "Redistribution permitted; signed with a demo-only key (no production trust)",
+          "source_url": "https://github.com/traverse-framework/weekly-demos"
+        },
+        "status": "active",
+        "version": "1.0.0"
+      }
+    },
+    {
+      "name": "resolver_skips_ollama",
+      "phase": "resolve",
+      "reason": "signed-digits",
+      "resolution": {
+        "resolution": {
+          "phase": "execution",
+          "interface_id": "model.execute",
+          "requested_interface_id": "model.execute",
+          "requested_placement": "browser",
+          "selected": {
+            "candidate_id": "signed-digits",
+            "provider_capability_id": "model.execute",
+            "provider_implementation_id": "exact-ref.wasm-cpu",
+            "model_identifier": "traverse.digits-onnx@1.0.0",
+            "placement_target": "browser",
+            "priority": 1,
+            "selection_reason": "selected highest-priority passing candidate"
+          },
+          "candidates": [
+            {
+              "candidate_id": "local-ollama",
+              "provider_capability_id": "model.execute",
+              "provider_implementation_id": "ollama.local.generate",
+              "model_identifier": "llama3.2",
+              "placement_target": "browser",
+              "priority": 0,
+              "readiness": "rejected",
+              "rejection_code": "model_provider_unavailable",
+              "reason": "ollama.local.generate is unavailable in the browser",
+              "manifest_order": 0
+            },
+            {
+              "candidate_id": "signed-digits",
+              "provider_capability_id": "model.execute",
+              "provider_implementation_id": "exact-ref.wasm-cpu",
+              "model_identifier": "traverse.digits-onnx@1.0.0",
+              "placement_target": "browser",
+              "priority": 1,
+              "readiness": "ready",
+              "reason": "candidate passed availability, interface, placement, and context checks",
+              "manifest_order": 1
+            }
+          ]
+        },
+        "trust_class": "verified_signed_package"
+      }
+    }
+  ]
+}

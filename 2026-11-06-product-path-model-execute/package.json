@@ -1,0 +1,18 @@
+{
+  "name": "2026-11-06-product-path-model-execute",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Catalog model.execute via published BundleEmbedder.activateMediatedConnector on Browser + Node — Traverse v0.16.2",
+  "scripts": {
+    "start": "PORT=8779 node server.mjs",
+    "fetch": "bash fetch.sh",
+    "bundle": "node hosts/make-bundle.mjs",
+    "node": "node hosts/node-run.mjs",
+    "match": "node hosts/digest-match.mjs",
+    "smoke": "node hosts/node-run.mjs && node hosts/digest-match.mjs"
+  },
+  "dependencies": {
+    "traverse-embedder-web": "0.16.2"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "2026-11-13-kill-switch",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Kill switch: governed model calls stop mid-run (Worker) on Deno + Node \u2014 traverse-embedder-web 0.17.0",
+  "scripts": {
+    "start": "PORT=8780 node server.mjs",
+    "fetch": "bash fetch.sh",
+    "catalog": "node tools/minimal-catalog.mjs --allowlist catalog.allowlist --out published/catalog.json",
+    "bundle": "node hosts/make-bundle.mjs",
+    "node:worker": "node hosts/node-kill.mjs worker",
+    "node:inline": "node hosts/node-kill.mjs inline",
+    "compare": "node hosts/compare.mjs",
+    "report": "node hosts/report.mjs"
+  },
+  "dependencies": {
+    "traverse-embedder-web": "0.17.0"
+  },
+  "devDependencies": {
+    "wabt": "1.0.39"
+  }
+}

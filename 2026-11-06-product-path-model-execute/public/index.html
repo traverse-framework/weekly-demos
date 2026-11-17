@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Product path: model.execute on published BundleEmbedder — Traverse</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <script type="importmap">
+  {"imports":{"traverse-embedder-web":"/pkg/index.js"}}
+  </script>
+  <style>
+    .hosts-grid { grid-template-columns: repeat(2, 1fr); }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    td, th { border-bottom: 1px solid #2a3140; padding: 6px 8px; text-align: left; vertical-align: top; }
+    .pill { display: inline-block; padding: 1px 8px; border-radius: 10px; font-size: 12px; font-weight: 600; }
+    .p-ok { background: #16382a; color: #7fe0a8; }
+    .p-deny { background: #4a1d22; color: #ff8f8f; }
+    .p-warn { background: #41361a; color: #f0cf6a; }
+    .badge-closed { border-left: 4px solid #3dd68c; }
+    .badge-gap { border-left: 4px solid #f0cf6a; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Friday demo · 2026-11-06 · Traverse v0.16.2 published · traverse-embedder-web@0.16.2 · runtime-wasm-v0.16.2</p>
+      <h1>The Oct 16 red badge is gone</h1>
+      <p class="lede">
+        Three weeks ago, catalog <code>model/model.execute@1.0.0</code> ran a signed Hugging Face ONNX digit model on Native,
+        but published Browser and Node died with
+        <code>constraint_violated: … (traverse_host, connector_invoke)</code>.
+        That was the honest red badge. Today the same 8&nbsp;243-byte catalog WASM runs on the
+        <strong>published product path</strong>:
+        <code>BundleEmbedder.activateMediatedConnector(exactModelMediatedConnector)</code> +
+        <code>submitAsync</code>, nested wasmi inside <code>runtime.wasm</code> <span class="mono">b313b5c5…</span>.
+        Same pin. Same freestyle refusals. No hand Spec&nbsp;104 glue.
+      </p>
+    </header>
+
+    <section class="actions">
+      <button id="btn-browser">Run live in this tab (Browser)</button>
+      <button id="btn-node">Re-run Node proof</button>
+      <button id="btn-both">Run both</button>
+      <span id="status" class="muted"></span>
+    </section>
+
+    <section class="hosts-grid">
+      <article class="card host-col" id="card-browser">
+        <h2>1 · Browser (this tab)</h2>
+        <p class="muted">npm <code>traverse-embedder-web@0.16.2</code> · <code>FetchBundleLoader</code> · nested wasmi in <code>runtime.wasm</code> b313b5c5…</p>
+        <pre id="col-browser" class="mini">waiting…</pre>
+      </article>
+      <article class="card host-col" id="card-node">
+        <h2>2 · Node</h2>
+        <p class="muted">same npm package · <code>NodeFsBundleLoader</code> · same published <code>runtime.wasm</code></p>
+        <pre id="col-node" class="mini">waiting…</pre>
+      </article>
+    </section>
+
+    <section class="card badge-closed">
+      <h2>Cross-host truth</h2>
+      <div id="truth">waiting…</div>
+    </section>
+
+    <section class="card">
+      <h2>Freestyle refusals (Spec 138 + connector ABI)</h2>
+      <div id="freestyle">waiting…</div>
+    </section>
+
+    <section class="card badge-closed">
+      <h2>What closed since 2026-10-16</h2>
+      <ul class="muted">
+        <li><a href="https://github.com/traverse-framework/traverse/issues/1719">traverse#1719</a> — nested <code>runtime.wasm</code> links Spec 104 <code>connector_invoke</code>; embedders ship <code>activateMediatedConnector</code>.</li>
+        <li>Published proof (v0.16.1 evidence, CI weekly) already green; this demo re-pins to <strong>v0.16.2</strong> + standalone <code>runtime-wasm-v0.16.2</code> release.</li>
+        <li>Oct 16 needed 55 lines of labelled Spec 104 JS glue and a double-invoke sync/async shim. That glue is gone.</li>
+      </ul>
+    </section>
+
+    <section class="card badge-gap">
+      <h2>Honest gaps</h2>
+      <ul class="muted" id="gaps">
+        <li><strong>Native not re-run on this box</strong> — host rustc is 1.85; crates.io <code>traverse-runtime 0.16.2</code> wants Rust ≥ 1.95. Published evidence at <code>docs/evidence/model-execute-published-2026-11-03</code> already proves Native on 0.16.1; crates.io is at 0.16.2.</li>
+        <li><strong>Swift / Android / .NET</strong> — activation binding still not shipped on those hosts.</li>
+        <li><strong>Agent / traverse-mcp</strong> — Mode A over <code>model.execute</code> mediated connector is not part of this demo (authorize/MCP was weeks 10-23 / 10-30).</li>
+        <li><strong>Signing</strong> — <code>digits-onnx-1.0.0</code> uses the test-only key; public half only. Not production trust.</li>
+        <li><strong>Unreleased on main</strong> (+18 over v0.16.2 tip <code>6b02152f</code>): #1806 web input-as-sent, #1809 native post-execute frame via activated binding, #1810 native input passthrough — next-week candidates.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Pins</h2>
+      <pre class="mini mono" id="pins">loading…</pre>
+    </section>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

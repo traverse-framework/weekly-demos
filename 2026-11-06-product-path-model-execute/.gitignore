@@ -1,0 +1,10 @@
+node_modules/
+.npm-cache/
+.cargo-home/
+.cargo-target/
+native-host/target/
+*.pem
+*.key
+id_ed25519*
+spin/demo-signing-key.json
+*signing-key*

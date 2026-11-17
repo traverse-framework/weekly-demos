@@ -1,0 +1,67 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Kill switch · Traverse v0.17 · 2026-11-13</title><style>:root {
+  color-scheme: dark;
+  --bg: #0b1020;
+  --card: #141a2e;
+  --ink: #e8ecf7;
+  --muted: #9aa3bd;
+  --accent: #6ea8ff;
+  --deny: #ff6b7a;
+  --allow: #3dd68c;
+  --warn: #ffd166;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: radial-gradient(1400px 700px at 15% -15%, #1a2450, var(--bg)); color: var(--ink); }
+main { max-width: 1100px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+.eyebrow { text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); font-size: 0.75rem; }
+h1 { margin: 0.2rem 0 0.6rem; font-size: 1.85rem; }
+.lede { color: var(--muted); line-height: 1.55; max-width: 70ch; }
+.card { background: var(--card); border: 1px solid #243056; border-radius: 12px; padding: 1rem 1.1rem; margin: 1rem 0; }
+.card h2 { margin: 0 0 0.45rem; font-size: 1rem; }
+.muted { color: var(--muted); font-size: 0.85rem; margin: 0 0 0.6rem; }
+.hosts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.25rem 0; }
+@media (max-width: 900px) { .hosts-grid { grid-template-columns: 1fr; } }
+.host-col { margin: 0; min-height: 9rem; }
+.host-col.active { border-color: var(--accent); box-shadow: 0 0 0 1px rgba(110,168,255,0.25); }
+.host-col ul { margin: 0; padding-left: 1.1rem; color: var(--muted); font-size: 0.82rem; }
+.host-col code, .scene code, .lede code, .mini code { color: var(--accent); }
+.mini { white-space: pre-wrap; word-break: break-word; margin: 0; font-size: 0.75rem; line-height: 1.4; color: var(--muted); max-height: 12rem; overflow: auto; }
+.actions { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 1rem 0; }
+button { background: #243056; color: var(--ink); border: 1px solid #355; border-radius: 8px; padding: 0.65rem 0.9rem; cursor: pointer; }
+button:disabled { opacity: 0.45; cursor: not-allowed; }
+button:not(:disabled):hover { border-color: var(--accent); }
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+@media (max-width: 800px) { .split { grid-template-columns: 1fr; } }
+pre { white-space: pre-wrap; word-break: break-word; margin: 0; font-size: 0.85rem; line-height: 1.45; }
+.deny { color: var(--deny); }
+.allow { color: var(--allow); }
+.warn { color: var(--warn); }
+
+table{width:100%;border-collapse:collapse;font-size:13px}td,th{border-bottom:1px solid #2a3140;padding:6px 8px;text-align:left;vertical-align:top}th small{color:var(--muted);font-weight:400}
+.pill{display:inline-block;padding:1px 8px;border-radius:10px;font-size:12px;font-weight:600}.p-ok{background:#16382a;color:#7fe0a8}.p-deny{background:#4a1d22;color:#ff8f8f}.p-kill{background:#3a1f4d;color:#e2a8ff}
+.mono{font-family:ui-monospace,Menlo,monospace;font-size:12px}.dim{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem}.stat{text-align:center}.big{font-size:2rem;font-weight:700}.lbl{color:var(--muted);font-size:.8rem}
+.good{color:#7fe0a8}.bad{color:#ff8f8f}</style></head><body><main>
+<p class="eyebrow">Friday demo · 2026-11-13 · Traverse v0.17.0 · npm traverse-embedder-web@0.17.0 · runtime.wasm 3f763665… · catalog model/model.execute@1.0.0 (5ccfa372…)</p>
+<h1>Kill switch: a governed model call you can actually stop</h1>
+<p class="lede">A signed model guest goes rogue and spins. Before v0.17 the web host only <em>noticed</em> afterwards — and on a blocked thread your cancel button can't even fire.
+v0.17.0 runs each model package in its own Worker: the manifest deadline and <code>AbortSignal</code> <strong>terminate it mid-run</strong>, the host thread never stalls, the next call gets a fresh guest.
+Host ceilings refuse oversize packages before a single guest instruction runs.</p>
+<section class="grid">
+<div class="card stat"><div class="lbl">runaway vs 1500 ms deadline · Worker</div><div class="big good">1508 ms</div><span class="pill p-kill">timeout</span> <span class="mono dim">Deno · Node 1504 ms</span></div>
+<div class="card stat"><div class="lbl">same runaway · inline (old behaviour)</div><div class="big bad">4087 ms</div><span class="pill p-kill">timeout</span> <span class="mono dim">ran to the end, then failed</span></div>
+<div class="card stat"><div class="lbl">AbortSignal at 300 ms · Worker</div><div class="big good">277 ms</div><span class="pill p-kill">cancelled</span></div>
+<div class="card stat"><div class="lbl">AbortSignal at 300 ms · inline</div><div class="big bad">4106 ms</div><span class="pill p-kill">timeout</span> <span class="mono dim">abort timer never got the thread</span></div>
+</section>
+<section class="card"><h2>Longest host-thread stall during the run</h2><p class="mono">deno-worker: <b class="good">134 ms</b> · node-worker: <b class="good">180 ms</b> · deno-inline: <b class="bad">4110 ms</b> · node-inline: <b class="bad">4265 ms</b></p></section>
+<section class="card"><h2>Same scenarios, same catalog WASM, every host</h2><p class="muted">worker hosts identical: <b class="good">true</b> · output frames identical on all hosts: <b class="good">true</b></p>
+<table><thead><tr><th>scenario</th><th>Deno · web Worker<br><small>package default modelWorker.js</small></th><th>Node 22 · worker_threads<br><small>adapter</small></th><th>Deno · inline<br><small>createWorker:null</small></th><th>Node 22 · inline<br><small>createWorker:null</small></th></tr></thead><tbody><tr><td><code>ceiling_package_bytes</code></td><td><span class="pill p-deny">host_limit_exceeded</span> </td><td><span class="pill p-deny">host_limit_exceeded</span> </td><td><span class="pill p-deny">host_limit_exceeded</span> </td><td><span class="pill p-deny">host_limit_exceeded</span> </td></tr><tr><td><code>ceiling_memory</code></td><td><span class="pill p-deny">host_limit_exceeded</span> </td><td><span class="pill p-deny">host_limit_exceeded</span> </td><td><span class="pill p-deny">host_limit_exceeded</span> </td><td><span class="pill p-deny">host_limit_exceeded</span> </td></tr><tr><td><code>ceiling_fuel</code></td><td><span class="pill p-deny">host_limit_exceeded</span> </td><td><span class="pill p-deny">host_limit_exceeded</span> </td><td><span class="pill p-deny">host_limit_exceeded</span> </td><td><span class="pill p-deny">host_limit_exceeded</span> </td></tr><tr><td><code>digits_ok</code></td><td><span class="pill p-ok">ok</span> <span class="mono">80 ms</span><div class="mono dim">0100030201000000…</div></td><td><span class="pill p-ok">ok</span> <span class="mono">51 ms</span><div class="mono dim">0100030201000000…</div></td><td><span class="pill p-ok">ok</span> <span class="mono">83 ms</span><div class="mono dim">0100030201000000…</div></td><td><span class="pill p-ok">ok</span> <span class="mono">50 ms</span><div class="mono dim">0100030201000000…</div></td></tr><tr><td><code>spin_registered</code></td><td><span class="pill p-ok">admitted</span> </td><td><span class="pill p-ok">admitted</span> </td><td><span class="pill p-ok">admitted</span> </td><td><span class="pill p-ok">admitted</span> </td></tr><tr><td><code>spin_small_ok</code></td><td><span class="pill p-ok">ok</span> <span class="mono">68 ms</span><div class="mono dim">320000006ddbf25b…</div></td><td><span class="pill p-ok">ok</span> <span class="mono">118 ms</span><div class="mono dim">320000006ddbf25b…</div></td><td><span class="pill p-ok">ok</span> <span class="mono">60 ms</span><div class="mono dim">320000006ddbf25b…</div></td><td><span class="pill p-ok">ok</span> <span class="mono">63 ms</span><div class="mono dim">320000006ddbf25b…</div></td></tr><tr><td><code>runaway_deadline</code></td><td><span class="pill p-kill">timeout</span> <span class="mono">1508 ms</span></td><td><span class="pill p-kill">timeout</span> <span class="mono">1504 ms</span></td><td><span class="pill p-kill">timeout</span> <span class="mono">4087 ms</span></td><td><span class="pill p-kill">timeout</span> <span class="mono">4266 ms</span></td></tr><tr><td><code>runaway_abort</code></td><td><span class="pill p-kill">cancelled</span> <span class="mono">277 ms</span></td><td><span class="pill p-kill">cancelled</span> <span class="mono">289 ms</span></td><td><span class="pill p-kill">timeout</span> <span class="mono">4106 ms</span></td><td><span class="pill p-kill">timeout</span> <span class="mono">4238 ms</span></td></tr><tr><td><code>after_kill_ok</code></td><td><span class="pill p-ok">ok</span> <span class="mono">92 ms</span><div class="mono dim">320000006ddbf25b…</div></td><td><span class="pill p-ok">ok</span> <span class="mono">110 ms</span><div class="mono dim">320000006ddbf25b…</div></td><td><span class="pill p-ok">ok</span> <span class="mono">62 ms</span><div class="mono dim">320000006ddbf25b…</div></td><td><span class="pill p-ok">ok</span> <span class="mono">80 ms</span><div class="mono dim">320000006ddbf25b…</div></td></tr><tr><td><code>resolver_skips_ollama</code></td><td><span class="pill p-ok">signed-digits</span> </td><td><span class="pill p-ok">signed-digits</span> </td><td><span class="pill p-ok">signed-digits</span> </td><td><span class="pill p-ok">signed-digits</span> </td></tr></tbody></table></section>
+<section class="card"><h2>Spec 045 browser resolver (new in 0.17)</h2><pre class="mini">local-ollama   rejected  model_provider_unavailable  ollama.local.generate is unavailable in the browser
+signed-digits  ready       candidate passed availability, interface, placement, and context checks
+→ selected: signed-digits · trust_class: verified_signed_package</pre></section>
+<section class="card"><h2>Honesty</h2><ul class="muted">
+<li><b>Runaway guest</b> = 185-byte demo guest (deterministic LCG spin), signed with a demo-only Ed25519 key generated on the box and trusted by this host only. <b>Digits</b> = the real signed HF-derived ONNX fixture; frame equals the signed vector everywhere.</li>
+<li><b>Deno</b> runs the package's unmodified default Worker path (the browser path). <b>Node</b> needs the small worker_threads adapter the typings call for.</li>
+<li><b>Chromium leg not run</b>: the box browser now firewalls loopback, so the live page at :8780 can't be opened in the box browser this week.</li>
+<li><b>Native wasmtime</b> epoch interruption (also 0.17) not run: crates.io still 0.16.2 (v0.17.0 crate publish failed; v0.17.1 tagged today).</li></ul></section>
+<p class="muted mono">generated 2026-11-13T23:32:07.295Z from proof/*.json</p>
+</main></body></html>

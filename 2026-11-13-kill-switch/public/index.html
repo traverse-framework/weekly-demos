@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kill switch — governed model calls stop mid-run · Traverse v0.17</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <script type="importmap">{"imports":{"traverse-embedder-web":"/pkg/index.js"}}</script>
+  <style>
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    td, th { border-bottom: 1px solid #2a3140; padding: 6px 8px; text-align: left; vertical-align: top; }
+    .pill { display: inline-block; padding: 1px 8px; border-radius: 10px; font-size: 12px; font-weight: 600; }
+    .p-ok { background: #16382a; color: #7fe0a8; } .p-deny { background: #4a1d22; color: #ff8f8f; } .p-warn { background: #41361a; color: #f0cf6a; } .p-kill { background:#3a1f4d; color:#e2a8ff; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; }
+    .heart { display:flex; align-items:center; gap:.8rem; }
+    .dot { width:18px; height:18px; border-radius:50%; background: var(--allow); }
+    .big { font-size: 2.2rem; font-weight: 700; } .split { display:grid; grid-template-columns: 1fr 1fr; gap:.75rem; }
+    .stat { text-align:center; } .stat .lbl { color: var(--muted); font-size:.8rem; }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <p class="eyebrow">Friday demo · 2026-11-13 · Traverse v0.17.0 (npm traverse-embedder-web@0.17.0 · runtime.wasm 3f763665…)</p>
+    <h1>Kill switch: a governed model call you can actually stop</h1>
+    <p class="lede">
+      A signed model guest goes rogue and spins. Before v0.17, a Traverse web host could only <em>notice</em> afterwards — the
+      deadline and the cancel button were checked before and after the guest ran, and the page froze in between.
+      v0.17.0 runs every model package in its own Worker: the deadline and <code>AbortSignal</code> <strong>terminate it mid-run</strong>,
+      the UI never stalls, and the next call gets a fresh guest. Host ceilings refuse oversize packages before a single instruction runs.
+      Same catalog <code>model/model.execute@1.0.0</code> WASM (<span class="mono">5ccfa372…</span>), same outcomes in Chromium and Node.
+    </p>
+  </header>
+
+  <section class="card heart">
+    <div class="dot" id="dot"></div>
+    <div><strong>Main-thread heartbeat</strong> <span class="mono" id="beat">0</span> ·
+      longest stall this run: <span class="mono" id="gap">0 ms</span>
+      <div class="muted" style="margin:0">If the guest ran on the page thread, this dot would freeze.</div></div>
+  </section>
+
+  <div class="actions">
+    <button id="run-worker">▶ Run with Worker (v0.17 default)</button>
+    <button id="run-inline">▶ Run inline (createWorker: null — the old behaviour)</button>
+    <button id="abort">⏻ Pull the plug on a live runaway</button>
+  </div>
+  <p id="status" class="muted">idle</p>
+
+  <section class="split">
+    <div class="card stat"><div class="lbl">runaway, Worker — deadline 1500 ms</div><div class="big" id="s-dead-w">—</div></div>
+    <div class="card stat"><div class="lbl">runaway, inline — same deadline</div><div class="big" id="s-dead-i">—</div></div>
+  </section>
+
+  <section class="card"><h2>Browser (this tab) vs Node — same scenarios</h2><div id="table"><p class="muted">waiting…</p></div></section>
+  <section class="card"><h2>Spec 045 browser resolver</h2><div id="resolver" class="mini">waiting…</div></section>
+  <section class="card"><h2>Honesty</h2><ul class="muted">
+    <li>The runaway model is a 185-byte demo guest (deterministic LCG spin) signed with a <strong>demo-only key generated on this box</strong> and trusted by this host only. The digits model is the real signed HF-derived ONNX fixture.</li>
+    <li>Node has no Web <code>Worker</code>; it uses <code>worker_threads</code> through the 6-line adapter the package's own typings call for.</li>
+    <li>Native wasmtime epoch interruption (also in 0.17) not re-run here: crates.io still at 0.16.2 (v0.17.0 crate publish failed; v0.17.1 tagged, not yet published).</li>
+  </ul></section>
+</main>
+<script type="module" src="./app.js"></script>
+</body>
+</html>

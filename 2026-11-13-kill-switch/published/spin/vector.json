@@ -1,0 +1,16 @@
+{
+  "pin": {
+    "model_id": "demo.runaway-spin",
+    "version": "1.0.0",
+    "digest": "737598abe1a97fd0680a668609cf18e41ab6a6b002a6807c941e89b2b922155d",
+    "offline_allowed": true,
+    "target": "wasm-cpu",
+    "rights": {
+      "license_id": "Apache-2.0",
+      "commercial_use": "allowed"
+    },
+    "key_id": "ed25519:8e61ecfd1778bc00e5f031d4f622314fdce67cf74396fefdd2576bff207351f7"
+  },
+  "trusted_public_key_hex": "801035c4910d13fbd8f5cf35776591f3b2e7ac55c277c0f7753424e790a565d9",
+  "wasm_sha256": "351b44b89cebf79f2e1dda23807fa8740d002ca248ac67f3bd0752ec620f7191"
+}

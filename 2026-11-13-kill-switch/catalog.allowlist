@@ -1,0 +1,4 @@
+# Capabilities this demo actually executes (namespace/id@version), one per line.
+# fetch.sh writes published/catalog.json with ONLY these entries (tools/minimal-catalog.mjs).
+# The runaway guest (demo.runaway-spin) and digits model are signed model packages, not catalog capabilities.
+model/model.execute@1.0.0

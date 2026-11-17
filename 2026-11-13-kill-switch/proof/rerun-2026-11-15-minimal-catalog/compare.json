@@ -1,0 +1,269 @@
+{
+  "generated_at": "2026-11-15T08:42:50.851Z",
+  "hosts": [
+    "deno-worker",
+    "node-worker",
+    "deno-inline",
+    "node-inline"
+  ],
+  "worker_hosts_identical": true,
+  "frames_identical_all_hosts": true,
+  "rows": [
+    {
+      "name": "ceiling_package_bytes",
+      "cells": {
+        "deno-worker": {
+          "reason": "host_limit_exceeded",
+          "frame_hex": null
+        },
+        "node-worker": {
+          "reason": "host_limit_exceeded",
+          "frame_hex": null
+        },
+        "deno-inline": {
+          "reason": "host_limit_exceeded",
+          "frame_hex": null
+        },
+        "node-inline": {
+          "reason": "host_limit_exceeded",
+          "frame_hex": null
+        }
+      },
+      "frames_identical": true,
+      "worker_hosts_agree": true
+    },
+    {
+      "name": "ceiling_memory",
+      "cells": {
+        "deno-worker": {
+          "reason": "host_limit_exceeded",
+          "frame_hex": null
+        },
+        "node-worker": {
+          "reason": "host_limit_exceeded",
+          "frame_hex": null
+        },
+        "deno-inline": {
+          "reason": "host_limit_exceeded",
+          "frame_hex": null
+        },
+        "node-inline": {
+          "reason": "host_limit_exceeded",
+          "frame_hex": null
+        }
+      },
+      "frames_identical": true,
+      "worker_hosts_agree": true
+    },
+    {
+      "name": "ceiling_fuel",
+      "cells": {
+        "deno-worker": {
+          "reason": "host_limit_exceeded",
+          "frame_hex": null
+        },
+        "node-worker": {
+          "reason": "host_limit_exceeded",
+          "frame_hex": null
+        },
+        "deno-inline": {
+          "reason": "host_limit_exceeded",
+          "frame_hex": null
+        },
+        "node-inline": {
+          "reason": "host_limit_exceeded",
+          "frame_hex": null
+        }
+      },
+      "frames_identical": true,
+      "worker_hosts_agree": true
+    },
+    {
+      "name": "digits_ok",
+      "cells": {
+        "deno-worker": {
+          "reason": "ok",
+          "ms": 69,
+          "frame_hex": "01000302010000000a000000280000003f4b6a411d82b1c0d7b909c06f6af0c0a660043fda06513f2ce60dbf6448c4c020baaf3f45b8f73f"
+        },
+        "node-worker": {
+          "reason": "ok",
+          "ms": 48,
+          "frame_hex": "01000302010000000a000000280000003f4b6a411d82b1c0d7b909c06f6af0c0a660043fda06513f2ce60dbf6448c4c020baaf3f45b8f73f"
+        },
+        "deno-inline": {
+          "reason": "ok",
+          "ms": 66,
+          "frame_hex": "01000302010000000a000000280000003f4b6a411d82b1c0d7b909c06f6af0c0a660043fda06513f2ce60dbf6448c4c020baaf3f45b8f73f"
+        },
+        "node-inline": {
+          "reason": "ok",
+          "ms": 49,
+          "frame_hex": "01000302010000000a000000280000003f4b6a411d82b1c0d7b909c06f6af0c0a660043fda06513f2ce60dbf6448c4c020baaf3f45b8f73f"
+        }
+      },
+      "frames_identical": true,
+      "worker_hosts_agree": true
+    },
+    {
+      "name": "spin_registered",
+      "cells": {
+        "deno-worker": {
+          "reason": "admitted",
+          "frame_hex": null
+        },
+        "node-worker": {
+          "reason": "admitted",
+          "frame_hex": null
+        },
+        "deno-inline": {
+          "reason": "admitted",
+          "frame_hex": null
+        },
+        "node-inline": {
+          "reason": "admitted",
+          "frame_hex": null
+        }
+      },
+      "frames_identical": true,
+      "worker_hosts_agree": true
+    },
+    {
+      "name": "spin_small_ok",
+      "cells": {
+        "deno-worker": {
+          "reason": "ok",
+          "ms": 70,
+          "frame_hex": "320000006ddbf25b"
+        },
+        "node-worker": {
+          "reason": "ok",
+          "ms": 96,
+          "frame_hex": "320000006ddbf25b"
+        },
+        "deno-inline": {
+          "reason": "ok",
+          "ms": 64,
+          "frame_hex": "320000006ddbf25b"
+        },
+        "node-inline": {
+          "reason": "ok",
+          "ms": 58,
+          "frame_hex": "320000006ddbf25b"
+        }
+      },
+      "frames_identical": true,
+      "worker_hosts_agree": true
+    },
+    {
+      "name": "runaway_deadline",
+      "cells": {
+        "deno-worker": {
+          "reason": "timeout",
+          "ms": 1507,
+          "frame_hex": null
+        },
+        "node-worker": {
+          "reason": "timeout",
+          "ms": 1505,
+          "frame_hex": null
+        },
+        "deno-inline": {
+          "reason": "timeout",
+          "ms": 4215,
+          "frame_hex": null
+        },
+        "node-inline": {
+          "reason": "timeout",
+          "ms": 4192,
+          "frame_hex": null
+        }
+      },
+      "frames_identical": true,
+      "worker_hosts_agree": true
+    },
+    {
+      "name": "runaway_abort",
+      "cells": {
+        "deno-worker": {
+          "reason": "cancelled",
+          "ms": 282,
+          "frame_hex": null
+        },
+        "node-worker": {
+          "reason": "cancelled",
+          "ms": 291,
+          "frame_hex": null
+        },
+        "deno-inline": {
+          "reason": "timeout",
+          "ms": 4196,
+          "frame_hex": null
+        },
+        "node-inline": {
+          "reason": "timeout",
+          "ms": 4258,
+          "frame_hex": null
+        }
+      },
+      "frames_identical": true,
+      "worker_hosts_agree": true
+    },
+    {
+      "name": "after_kill_ok",
+      "cells": {
+        "deno-worker": {
+          "reason": "ok",
+          "ms": 74,
+          "frame_hex": "320000006ddbf25b"
+        },
+        "node-worker": {
+          "reason": "ok",
+          "ms": 101,
+          "frame_hex": "320000006ddbf25b"
+        },
+        "deno-inline": {
+          "reason": "ok",
+          "ms": 59,
+          "frame_hex": "320000006ddbf25b"
+        },
+        "node-inline": {
+          "reason": "ok",
+          "ms": 78,
+          "frame_hex": "320000006ddbf25b"
+        }
+      },
+      "frames_identical": true,
+      "worker_hosts_agree": true
+    },
+    {
+      "name": "resolver_skips_ollama",
+      "cells": {
+        "deno-worker": {
+          "reason": "signed-digits",
+          "frame_hex": null
+        },
+        "node-worker": {
+          "reason": "signed-digits",
+          "frame_hex": null
+        },
+        "deno-inline": {
+          "reason": "signed-digits",
+          "frame_hex": null
+        },
+        "node-inline": {
+          "reason": "signed-digits",
+          "frame_hex": null
+        }
+      },
+      "frames_identical": true,
+      "worker_hosts_agree": true
+    }
+  ],
+  "freeze_ms": {
+    "deno-worker": 193,
+    "node-worker": 150,
+    "deno-inline": 4210,
+    "node-inline": 4261
+  }
+}

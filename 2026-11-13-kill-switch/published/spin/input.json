@@ -1,0 +1,19 @@
+{
+  "data_classification": "public",
+  "input_ref": "input-1",
+  "input_schema_ref": "schema:demo-spin-in",
+  "input_schema_version": "1.0.0",
+  "max_output_bytes": 8,
+  "model_ref": {
+    "digest": "sha256:737598abe1a97fd0680a668609cf18e41ab6a6b002a6807c941e89b2b922155d",
+    "model_id": "demo.runaway-spin",
+    "version": "1.0.0"
+  },
+  "model_usage": "non_commercial",
+  "policy_ref": "policy:default-wasm-cpu",
+  "trust_root": {
+    "allowed_signers": [
+      "traverse-test-model-signing"
+    ]
+  }
+}

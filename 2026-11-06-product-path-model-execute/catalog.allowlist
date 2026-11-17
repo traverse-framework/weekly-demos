@@ -1,0 +1,4 @@
+# Capabilities this demo actually executes (namespace/id@version), one per line.
+# fetch.sh writes published/catalog.json with ONLY these entries (tools/minimal-catalog.mjs).
+# The digits model is a signed model package, not a catalog capability.
+model/model.execute@1.0.0

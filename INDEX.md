@@ -10,6 +10,8 @@ Links point into dated folders under this repo.
 
 ### Governed model execution (`model.execute`)
 
+
+- [2026-11-06-product-path-model-execute](2026-11-06-product-path-model-execute/) — Oct 16 red badge closed: catalog `model/model.execute@1.0.0` runs on **published** `BundleEmbedder.activateMediatedConnector` + `submitAsync` (Browser UI + Node + HTTP loader); freestyle refusals identical; Traverse v0.16.2 / `runtime-wasm-v0.16.2`. Blog: [product-path-model-execute](https://traverse-framework.com/blog/product-path-model-execute.html).
 - [2026-10-16-catalog-model-execute](2026-10-16-catalog-model-execute/) — Catalog `model/model.execute@1.0.0` runs a signed ONNX package of `onnxmodelzoo/mnist-12` on **Browser, Node and Native**; 14 scenarios byte-identical; `usage_undeclared` / `key_untrusted` / `pin_mismatch` / `digest_mismatch` / `package_revoked` / `connector_unavailable` identical on every host. Honest gap: published `runtime.wasm` can't link `connector_invoke` (traverse#1719). Blog: [catalog-model-execute](https://traverse-framework.com/blog/catalog-model-execute.html).
 
 ### Signed exact-ref models (Spec 138)
@@ -35,6 +37,7 @@ Links point into dated folders under this repo.
 ### Browser embedder + `runtime.wasm`
 
 - [2026-10-30-hash-converges](2026-10-30-hash-converges/) — `traverse-embedder-web@0.15.0` (npm) with main's `runtime.wasm` (`ec49cb76…`) swapped into the bundle, vs the v0.15.0-era `a254c161…` as the before column.
+- [2026-11-06-product-path-model-execute](2026-11-06-product-path-model-execute/) — `traverse-embedder-web@0.16.2` BundleEmbedder + `runtime-wasm-v0.16.2` (`b313b5c5…`) activates `exactModelMediatedConnector` for catalog `model.execute`.
 - [2026-10-23-agent-mcp](2026-10-23-agent-mcp/) — `traverse-embedder-web@0.15.0` BundleEmbedder over `runtime.wasm` (`a254c161…`) on Browser; same npm package under Node.
 - [2026-10-09-agent-mcp-exact-ref](2026-10-09-agent-mcp-exact-ref/) — `traverse-embedder-web@0.14.0` `ExactModelBrowserHost` on Browser; same npm host under Node backs the Node proof and the agent MCP façade.
 - [2026-10-02-signed-exact-ref](2026-10-02-signed-exact-ref/) — `traverse-embedder-web@0.14.0` `ExactModelBrowserHost` + `registerPackage` on Browser; same npm host under Node (not a separate native CLI).
@@ -54,6 +57,7 @@ Links point into dated folders under this repo.
 ### Multi-host / same-bytes
 
 - [2026-10-30-hash-converges](2026-10-30-hash-converges/) — Before/after on four columns: Browser (v0.15.0-era) `2a126b86…` → Browser, Node and agent on main all `51a64653…`, full output byte-identical from unsorted caller input (RFC 8785, traverse#1739).
+- [2026-11-06-product-path-model-execute](2026-11-06-product-path-model-execute/) — Same catalog WASM + signed model on NodeFs and HTTP-loader paths under published 0.16.2 BundleEmbedder; Browser UI live.
 - [2026-10-23-agent-mcp](2026-10-23-agent-mcp/) — One `core.authorize` WASM on three hosts caught a determinism bug: decisions match, `policy_hash` splits on key order; sorted-key input is byte-identical everywhere (traverse#1722).
 - [2026-10-16-catalog-model-execute](2026-10-16-catalog-model-execute/) — Same catalog WASM + same signed model on Browser, Node and Native, one fingerprint (`12fea82f…`).
 - [2026-10-09-agent-mcp-exact-ref](2026-10-09-agent-mcp-exact-ref/) — Browser ↔ Node ↔ agent MCP façade bit-identical classify on one pin digest (`3068f3ae…`).
@@ -66,6 +70,8 @@ Links point into dated folders under this repo.
 
 ### `model/model.execute@1.0.0`
 
+
+- [2026-11-06-product-path-model-execute](2026-11-06-product-path-model-execute/) — Published product path (no Spec 104 glue). Blog: [product-path-model-execute](https://traverse-framework.com/blog/product-path-model-execute.html).
 - [2026-10-16-catalog-model-execute](2026-10-16-catalog-model-execute/) — First cross-host run of the catalog governed-model capability over a signed ONNX package. Blog: [catalog-model-execute](https://traverse-framework.com/blog/catalog-model-execute.html).
 
 ### `traverse.digits-mlp@1.0.0` (exact-ref)
@@ -86,6 +92,8 @@ Links point into dated folders under this repo.
 
 - **2026-10-30** — [`2026-10-30-hash-converges`](./2026-10-30-hash-converges/) — Same `core.authorize@1.2.0` WASM, one `policy_hash` on Browser + Node + `traverse-mcp` (RFC 8785 canonical input, #1739); `traverse-mcp sync` against live `index-v412`; freestyle still fails closed (traverse main 70f3ee7, unreleased).
 
+- **2026-11-06** — [`2026-11-06-product-path-model-execute`](./2026-11-06-product-path-model-execute/) — Catalog `model.execute` on published BundleEmbedder Browser+Node; Oct 16 `connector_invoke` red badge closed (v0.16.2).
+
 - **2026-10-23** — [`2026-10-23-agent-mcp`](./2026-10-23-agent-mcp/) — Agent gets the real `traverse-mcp` 0.15.0 MCP server (Mode A, digest-verified cache) and still can't freestyle; `core.authorize@1.2.0` on Browser + Node + Agent; `policy_hash` finding (v0.15.0).
 
 - **2026-10-16** — [`2026-10-16-catalog-model-execute`](./2026-10-16-catalog-model-execute/) — Catalog `model.execute@1.0.0` over signed `mnist-12` on Browser + Node + Native; freestyle fail-closed with six stable reasons (v0.15.0).
@@ -105,5 +113,7 @@ Links point into dated folders under this repo.
 | 2026-10-16 | [2026-10-16-catalog-model-execute](2026-10-16-catalog-model-execute/) | model-execute, catalog, signed-exact-ref, same-bytes, multi-host, native, agent-guardrails, fail-closed, onnx |
 | 2026-10-23 | [2026-10-23-agent-mcp](2026-10-23-agent-mcp/) | agent-guardrails, agent-mcp, traverse-mcp, mode-a, deny-authority, core.authorize, multi-host, browser-embedder, runtime.wasm, MFA, dual-control, fail-closed, determinism |
 | 2026-10-30 | [2026-10-30-hash-converges](2026-10-30-hash-converges/) | determinism, canonical-json, rfc8785, multi-host, agent-mcp, traverse-mcp, mode-a, registry-sync, core.authorize, browser-embedder, runtime.wasm, fail-closed |
+| 2026-11-06 | [2026-11-06-product-path-model-execute](2026-11-06-product-path-model-execute/) | model-execute, catalog, product-path, mediated-connector, same-bytes, multi-host, browser-embedder, runtime.wasm, fail-closed, onnx |
+| 2026-11-13 | [2026-11-13-kill-switch](2026-11-13-kill-switch/) | model-execute, kill-switch, mid-run-interruption, host-ceilings, worker, deadline, cancellation, catalog, multi-host, deno, node, model-resolver, fail-closed, onnx |
 
 Full week table (with blog links): [README.md](README.md).
